@@ -20,7 +20,7 @@ function GOVCMS_STARTERKIT_form_system_theme_settings_alter(&$form, &$form_state
   // $form['GOVCMS_STARTERKIT_example'] = array(
   // '#type' => 'checkbox',
   // '#title' => t('GOVCMS_STARTERKIT sample setting'),
-  // '#default_value' => theme_get_setting('GOVCMS_STARTERKIT_example'),
+  /// '#default_value' => theme_get_setting('GOVCMS_STARTERKIT_example'),
   // );
   //
 
