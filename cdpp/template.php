@@ -37,3 +37,11 @@ function cdpp_js_alter(&$javascript) {
 function cdpp_menu_tree__menu_footer_sub_menu($variables) {
   return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
 }
+
+function cdpp_menu_tree__menu_top_menu($variables) {
+  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+}
+
+function cdpp_menu_tree__menu_secondary_menu($variables) {
+  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+}
