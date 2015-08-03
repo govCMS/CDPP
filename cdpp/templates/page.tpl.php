@@ -165,5 +165,10 @@
   </div>
 </div>
 <footer class="footer container">
-  <?php print render($page['footer']); ?>
+  <div id="region-top-footer">
+    <?php print render($page['top_footer']); ?>
+  </div>
+  <div id="region-bottom-footer">
+    <?php print render($page['bottom_footer']); ?>
+  </div>
 </footer>
