@@ -33,3 +33,7 @@ function cdpp_js_alter(&$javascript) {
     $javascript['misc/jquery.js']['data'] = '//code.jquery.com/jquery-2.1.4.min.js';
   }
 }
+
+function cdpp_menu_tree__menu_footer_sub_menu($variables) {
+  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+}
