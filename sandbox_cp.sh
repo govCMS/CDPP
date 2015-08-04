@@ -29,4 +29,6 @@ wget -qO- http://cdpp.dev/user &> /dev/null
 wget -qO- http://cdpp.dev/ &> /dev/null
 wget -qO- http://cdpp.local/user &> /dev/null
 wget -qO- http://cdpp.local/ &> /dev/null
+echo "Checking git theme status"
+git fetch -v --dry-run
 echo "✔ All done."
