@@ -81,14 +81,6 @@
           <?php print render($page['top_menu']); ?>
         </nav>
       <?php endif; ?>
-
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
     </div>
   </div>
 </div>
@@ -103,14 +95,28 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php if (!empty($page['header'])): ?>
-        <?php print render($page['header']); ?>
+        <div class="col-md-3 pull-right">
+          <div class="pull-right">
+            <?php print render($page['header']); ?>
+          </div>
+        </div>
       <?php endif; ?>
     <?php endif; ?>
   </div>
 </div>
+
 <?php if (!empty($page['navigation'])): ?>
-  <div id="region-navigation">
-    <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+  <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+    <div class="container">
+      <div id="region-navigation" class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
       <div class="navbar-collapse collapse">
         <nav role="navigation">
           <?php if (!empty($page['navigation'])): ?>
@@ -118,8 +124,8 @@
           <?php endif; ?>
         </nav>
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
 <?php endif; ?>
 
 

@@ -1,8 +1,49 @@
 // Header
 
-#region-header {
-  img {
-    width: 50%;
-    height: auto;
+#region-top-menu {
+  padding: 5px 0;
+  background-color: $footerBG;
+  margin-bottom: 10px;
+  a {
+    color: $lightTextColour;
+    margin-left: 15px;
   }
+}
+
+#region-header {
+  a {
+    img {
+      width: 420px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .col-md-3.pull-right {
+    padding-right: 0;
+    #block-menu-menu-secondary-menu {
+      margin-top: 5px;
+      float: right;
+      a {
+        color: $highlight;
+      }
+    }
+    #block-search-api-page-default-search {
+      .search-form-widget {
+        margin-top: 5px;
+        .form-group {
+          float: left;
+          min-width: 165px;
+          .form-text {
+            padding-right: 25px;
+          }
+        }
+        .btn.form-submit {
+          margin-left: -10px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+
 }
