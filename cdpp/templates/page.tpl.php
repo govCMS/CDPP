@@ -75,13 +75,11 @@
 ?>
 <div id="region-top-menu">
   <div class="container">
-    <div class="navbar-header">
+    <div class="navbar-header pull-right">
       <?php if (!empty($page['top_menu'])): ?>
-        <div class="navbar-collapse collapse">
-          <nav role="navigation">
-              <?php print render($page['top_menu']); ?>
-          </nav>
-        </div>
+        <nav role="navigation">
+          <?php print render($page['top_menu']); ?>
+        </nav>
       <?php endif; ?>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -96,17 +94,19 @@
 </div>
 
 <div id="region-header">
-<?php if ($logo): ?>
-  <?php if (!empty($site_name)): ?>
-    <a class="name navbar-brand sr-only" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-  <?php endif; ?>
-  <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-    <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-  </a>
-  <?php if (!empty($page['header'])): ?>
-    <?php print render($page['header']); ?>
-  <?php endif; ?>
-<?php endif; ?>
+  <div class="container">
+    <?php if ($logo): ?>
+      <?php if (!empty($site_name)): ?>
+        <a class="name navbar-brand sr-only" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+      <?php endif; ?>
+      <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+      </a>
+      <?php if (!empty($page['header'])): ?>
+        <?php print render($page['header']); ?>
+      <?php endif; ?>
+    <?php endif; ?>
+  </div>
 </div>
 <?php if (!empty($page['navigation'])): ?>
   <div id="region-navigation">

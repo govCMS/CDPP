@@ -1,5 +1,5 @@
 name = cdpp
-description = A Bootstrap Sub-theme.
+description = Coporate website for CDPP. A Bootstrap Sub-theme.
 core = 7.x
 base theme = bootstrap
 
@@ -36,11 +36,11 @@ stylesheets[all][] = css/style.css
 ; ;----------------------------------
 ; ; METHOD 1: Bootstrap Source Files
 ; ;----------------------------------
-; 
+;
 ; ;;;;;;;;;;;;;;;;;;;;;
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
-; 
+;
 ; scripts[] = 'bootstrap/js/affix.js'
 ; scripts[] = 'bootstrap/js/alert.js'
 ; scripts[] = 'bootstrap/js/button.js'
