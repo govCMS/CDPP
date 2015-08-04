@@ -1,0 +1,12 @@
+// Mixins
+
+@mixin background-gradient($colour) {
+  background-color: $colour;
+  background: linear-gradient(
+    25deg, darken($colour, 8%), lighten($colour, 8%) );
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
