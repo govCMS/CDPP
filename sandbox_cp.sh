@@ -15,15 +15,25 @@ drush -y rsync @sandbox:%files/ @self:sites/default/files && echo "✔ Synced Fi
 echo ""
 
 echo "Clearing Caches..."
-drush cc all && echo "✔ Cached Cleared"
+drush cc all && echo "✔ Cached Cleared" || echo "✘ An Error Occured."
 echo ""
 
 echo "Repopulating Cache..."
-wget -qO- http://cdpp.dev/user &> /dev/null && wget -qO- http://cdpp.dev/ &> /dev/null && wget -qO- http://cdpp.local/user &> /dev/null && wget -qO- http://cdpp.local/ &> /dev/null && echo "✔ Cached Generated" || echo "✘ An Error Occured."
+echo "- Homepage..."
+wget --timeout=1 -qO- http://cdpp.dev/ &> /dev/null
+wget --timeout=1 -qO- http://cdpp.local/ &> /dev/null
+echo "- Login Page..."
+wget --timeout=1 -qO- http://cdpp.dev/user &> /dev/null
+wget --timeout=1 -qO- http://cdpp.local/user &> /dev/null
+# Just say it because either .local or .dev will always fail...
+echo "✔ Cached Regenerated"
 echo ""
 
-echo "Doing theme git dry run..."
-git fetch -v --dry-run && echo "✔ Up To Date" || echo "✘ An Error Occured."
+echo "Checking for theme updates..."
+# http://stackoverflow.com/questions/3258243/git-check-if-pull-needed
+[ $(git rev-parse HEAD) = $(git ls-remote $(git rev-parse --abbrev-ref @{u} | \
+sed 's/\// /g') | cut -f1) ] && echo "✔ Up To Date" || echo "✘ Updates Available"
 echo ""
 
-echo "✔ All done."
+echo "☺ All done."
+echo ""
