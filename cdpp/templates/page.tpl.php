@@ -95,7 +95,7 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php if (!empty($page['header'])): ?>
-        <div class="col-md-3 pull-right">
+        <div class="col-md-6 pull-right">
           <div class="pull-right">
             <?php print render($page['header']); ?>
           </div>
@@ -107,7 +107,7 @@
 
 <?php if (!empty($page['navigation'])): ?>
   <nav id="navbar" class="navbar navbar-inverse" role="navigation">
-    <div id="region-navigation" role="banner" class="container <?php print $navbar_classes; ?>">
+    <div id="region-navigation" role="banner" class="<?php print $navbar_classes; ?>">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
