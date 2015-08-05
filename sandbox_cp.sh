@@ -1,8 +1,10 @@
 #!/bin/bash
+
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+#  Check Paul remembered the parameter :P
 if [[ $# -eq 0 ]] ; then
-    echo "✘ Try again with your username as first argument"
+    echo "✘ Try again with your username as first argument."
     exit 0
 fi
 
