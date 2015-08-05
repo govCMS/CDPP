@@ -45,5 +45,39 @@
       }
     }
   }
+}
 
+
+
+
+// Main nav
+#navbar {
+  background-color: $textColour;
+  a {
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+
+
+// footer
+footer {
+  a {
+    color: $textColour;
+  }
+  #region-top-footer {
+    color: $textColour;
+    background-color: $footerBG;
+  }
+  #region-bottom-footer {
+    background-color: $headerBG;
+    a {
+      color: #fff;
+    }
+  }
 }

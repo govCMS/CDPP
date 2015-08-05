@@ -106,26 +106,24 @@
 </div>
 
 <?php if (!empty($page['navigation'])): ?>
-  <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-    <div class="container">
-      <div id="region-navigation" class="navbar-header">
+  <nav id="navbar" class="navbar navbar-inverse" role="navigation">
+    <div id="region-navigation" role="banner" class="container <?php print $navbar_classes; ?>">
+      <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div class="navbar-collapse collapse">
-        <nav role="navigation">
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-        </nav>
+      <div id="main-nav" class="navbar-collapse collapse">
+        <?php if (!empty($page['navigation'])): ?>
+          <?php print render($page['navigation']); ?>
+        <?php endif; ?>
       </div>
     </div>
-  </header>
+  </nav>
 <?php endif; ?>
 
 
@@ -163,18 +161,22 @@
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <aside class="col-sm-5" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
 
   </div>
 </div>
-<footer class="footer container">
+<footer class="footer">
   <div id="region-top-footer">
-    <?php print render($page['top_footer']); ?>
+    <div class="container">
+      <?php print render($page['top_footer']); ?>
+    </div>
   </div>
   <div id="region-bottom-footer">
-    <?php print render($page['bottom_footer']); ?>
+    <div class="container">
+      <?php print render($page['bottom_footer']); ?>
+    </div>
   </div>
 </footer>
