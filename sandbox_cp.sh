@@ -13,7 +13,7 @@ drush -y @sandbox sql-dump --result-file=/tmp/cdpp.sql && rsync $1@sandbox:/tmp/
 echo ""
 
 echo "Syncing Files..."
-drush -y rsync @sandbox:%files/ @self:sites/default/files && echo "✔ Synced Files" || echo "✘ An Error Occured."
+drush -y rsync @sandbox:%files/ -O @self:sites/default/files && echo "✔ Synced Files" || echo "✘ An Error Occured."
 echo ""
 
 echo "Clearing Caches..."
