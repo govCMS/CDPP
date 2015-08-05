@@ -73,10 +73,10 @@ function cdpp_menu_link(array $variables) {
     // Check if this element is nested within another
     if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
 
-      unset($element['#attributes']['class']); // removed flyout class
+      //unset($element['#attributes']['class']); // removed flyout class
     }
     else {
-      unset($element['#attributes']['class']); // unset flyout class
+      //unset($element['#attributes']['class']); // unset flyout class
       $element['#localized_options']['html'] = TRUE;
       $element['#title'] .= ''; // removed carat spans flyout
     }
