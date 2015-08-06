@@ -50,6 +50,10 @@ function cdpp_menu_tree__menu_block__1($variables) {
   return '<ul>' . $variables['tree'] . '</ul>';
 }
 
+function cdpp_menu_tree__menu_block__4($variables) {
+  return '<ul>' . $variables['tree'] . '</ul>';
+}
+
 function cdpp_menu_tree__menu_govcms_menu_block_sidebar($variables) {
   return '<ul>' . $variables['tree'] . '</ul>';
 }
@@ -59,20 +63,19 @@ function cdpp_menu_tree(&$variables) {
 }
 
 
-function cdpp_menu_link(array $variables) {
+function cdpp_menu_link($variables) {
   $element = $variables['element'];
   $sub_menu = '';
-
   if ($element['#below']) {
     // Ad our own wrapper
     unset($element['#below']['#theme_wrappers']);
     $sub_menu = '<ul>' . drupal_render($element['#below']) . '</ul>'; // removed flyout class in ul
+
     unset($element['#localized_options']['attributes']['class']); // removed flydown class
     unset($element['#localized_options']['attributes']['data-toggle']); // removed data toggler
 
     // Check if this element is nested within another
     if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
-
       //unset($element['#attributes']['class']); // removed flyout class
     }
     else {
