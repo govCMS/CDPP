@@ -2,7 +2,7 @@
 
 #region-top-menu {
   padding: 5px 0;
-  background-color: $footerBG;
+  background-color: $lightBG;
   margin-bottom: 10px;
   a {
     color: $lightTextColour;
@@ -26,13 +26,15 @@
   }
   .pull-right {
     padding-right: 0;
-    #block-menu-menu-secondary-menu {
+    // Secondary Menu
+    #block-menu-block-3 {
       margin-top: 5px;
       float: right;
       a {
         color: $highlight;
       }
     }
+    // Search
     #block-search-api-page-default-search {
       .search-form-widget {
         margin-top: 5px;
@@ -57,7 +59,7 @@
 
 
 
-// Main nav
+// Main Nav
 #navbar {
   background-color: $textColour;
   border-radius: 0;
@@ -79,12 +81,11 @@
 
 
 
-// footer
+// Footer
 footer {
   border-top: 0;
   a {
     color: $textColour;
-    //text-decoration: none;
     &:hover,
     &:active,
     &:focus {
@@ -93,11 +94,9 @@ footer {
   }
   #region-top-footer {
     color: $textColour;
-    background-color: $footerBG;
+    background-color: $lightBG;
     padding: 20px 0;
     .block {
-      //padding-left: 0;
-      //padding-right: 20px;
       li {
         a {
           padding: 10px 0;
@@ -106,9 +105,12 @@ footer {
     }
   }
   #region-bottom-footer {
-    background-color: $headerBG;
+    background-color: $darkBG;
     li {
-      margin: 15px 60px 5px 0;
+      margin: 15px 69px 5px 0;
+      &:last-of-type {
+        margin-right: 0;
+      }
       a {
         color: #fff;
       }
