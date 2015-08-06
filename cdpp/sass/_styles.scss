@@ -1,3 +1,10 @@
+// set html colour, so the footer doesn't cut to white on short pages...
+html {
+  background-color: $darkBG;
+}
+
+
+
 // Header
 
 #region-top-menu {
@@ -76,14 +83,48 @@
 
 
 
+// Sidebar
+.region-sidebar-first {
+  border: 0;
+  background-color: lighten($lightBG, 5%);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+// Breadcrumb
+.breadcrumb {
+  border: 0;
+  background-color: lighten($lightBG, 5%);
+}
+
+
+
+
+
+// Content
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
+
+
+
+
+
+
 
 
 
 
 
 // Footer
-footer {
+footer.footer {
   border-top: 0;
+  padding-bottom: 0;
   a {
     color: $textColour;
     &:hover,
