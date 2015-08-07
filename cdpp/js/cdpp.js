@@ -42,7 +42,7 @@ var Drupal = Drupal || {};
     jQuery(window).load(function() {
         if(jQuery(window).width() >= 650){
             equalheight('body.front div.panel-col-bottom div.panel-pane div.panel-default div.panel-body > div.row');
-            equalheight('body.front div.panel-col-top div.panel-pane div.pane-content > div.node-page > div.content');
+            equalheight('body.front div.panel-col-top div.jumbotron');
         }
     });
 
