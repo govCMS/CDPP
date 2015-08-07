@@ -27,6 +27,7 @@ regions[bottom_footer]  = 'Bottom Footer'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
+stylesheets[all][] = libraries/gray/css/gray.min.css
 
 
 ; For information on choosing the desired method, please read the Drupal
@@ -58,6 +59,7 @@ stylesheets[all][] = css/style.css
 ; settings[bootstrap_cdn] = ''
 scripts[] = 'js/cdpp.js'
 scripts[] = js/jquery.browser.min.js
+scripts[] = libraries/gray/js/jquery.gray.js
 
 ; ;-------------------------
 ; ; METHOD 2: Bootstrap CDN
