@@ -130,9 +130,9 @@
 <?php endif; ?>
 
 <?php if (!empty($page['highlighted'])): ?>
-  <div class="carousel container">
+  <div class="carousel">
     <div class="row">
-      <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+      <div class="highlighted container"><?php print render($page['highlighted']); ?></div>
     </div>
   </div>
 <?php endif; ?>
