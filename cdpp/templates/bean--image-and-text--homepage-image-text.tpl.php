@@ -48,29 +48,22 @@
 
   <div class="content"<?php print $content_attributes; ?>>
 
-    <div class="image-title">
+    <div class="thumbnail grayscale grayscale-fade">
       <?php if (!empty($content['field_bean_image'])) : ?>
-        <div class="image grayscale grayscale-fade">
         <?php if (!empty($content['field_link_to'])) : ?>
           <a href="<?php print render($content['field_link_to'][0]); ?>"><?php print render($content['field_bean_image']); ?></a>
         <?php else : ?>
           <?php print render($content['field_bean_image']); ?>
         <?php endif; ?>
-        </div>
       <?php endif; ?>
-
-      <?php if (!empty($title)): ?>
-        <h2<?php print $title_attributes; ?>><?php print $title ?></h2>
-      <?php endif;?>
-    </div>
-
-    <div class="summary-text">
+      <p>
+        <?php if (!empty($title)): ?>
+          <h2<?php print $title_attributes; ?>><?php print $title ?></h2>
+        <?php endif;?>
       <?php if (!empty($content['field_bean_text'])) : ?>
-        <div class="text">
           <?php print render($content['field_bean_text']); ?>
-        </div>
       <?php endif; ?>
+      </p>
     </div>
-
   </div>
 </div>
