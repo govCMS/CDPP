@@ -24,8 +24,8 @@
 		},
 	"\/js\/cdpp.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/cdpp.js",
 		"outputAbbreviatedPath": "\/js\/min\/cdpp-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -35,8 +35,8 @@
 		},
 	"\/js\/jquery.browser.min.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/jquery.browser.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/jquery.browser.min-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -46,8 +46,8 @@
 		},
 	"\/js\/responsiveslides.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/responsiveslides.js",
 		"outputAbbreviatedPath": "\/js\/min\/responsiveslides-min.js",
 		"outputPathIsOutsideProject": 0,
