@@ -91,3 +91,19 @@ function cdpp_menu_link($variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function cdpp_preprocess_node(&$variables) {
+
+  // Slides get a special read more link.
+  if ($variables['type'] == 'slide') {
+    if (!empty($variables['field_read_more'][0]['url'])) {
+      $variables['title_link'] = l($variables['title'], $variables['field_read_more'][0]['url']);
+    }
+    else {
+      $variables['title_link'] = check_plain($variables['title']);
+    }
+  }
+}
