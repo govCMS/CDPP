@@ -1,9 +1,53 @@
-// Mixins
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+.un-sr-only {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: initial;
+}
+
+@mixin blurBG() {
+  $blurAmount: 10px;
+  backdrop-filter: blur($blurAmount);
+  -webkit-backdrop-filter: blur($blurAmount);
+}
+
 
 @mixin background-gradient($colour) {
   background-color: $colour;
   background: linear-gradient(
-    25deg, darken($colour, 8%), lighten($colour, 8%) );
+    25deg, darken($colour, 18%), lighten($colour, 8%) );
+  background-size: 400% 400%;
+  -webkit-animation: bg 30s ease infinite;
+  -moz-animation: bg 30s ease infinite;
+  animation: bg 30s ease infinite;
+  @-webkit-keyframes bg {
+    0%{background-position:90% 0%}
+    50%{background-position:11% 100%}
+    100%{background-position:90% 0%}
+  }
+  @-moz-keyframes bg {
+    0%{background-position:90% 0%}
+    50%{background-position:11% 100%}
+    100%{background-position:90% 0%}
+  }
+  @keyframes bg {
+    0%{background-position:90% 0%}
+    50%{background-position:11% 100%}
+    100%{background-position:90% 0%}
+  }
 
   -webkit-background-size: cover;
   -moz-background-size: cover;

@@ -11,6 +11,10 @@ h4 {
   font-weight: 300;
 }
 
+h2 {
+  font-size: 26px;
+}
+
 .btn-primary {
   background-color: $darkBG;
   border-color: $textColour;
@@ -98,6 +102,9 @@ h4 {
 
 
 // Main Nav
+body.front #navbar {
+  margin-bottom: 0;
+}
 #navbar {
   background-color: $textColour;
   border-radius: 0;
@@ -119,10 +126,15 @@ h4 {
           padding: 18px 40px 18px 52px;
           &:hover,
           &:active,
-          &:focus {
+          &:focus,
+           {
             background: rgba(#fff,0.1);
             text-decoration: underline;
           }
+        }
+        &.sfHover > a {
+          background: rgba(#fff,0.1);
+          text-decoration: underline;
         }
 
         &:before {
@@ -154,6 +166,23 @@ h4 {
           }
         }
       }
+      ul ul {
+        background-color: $darkBG;
+        width: 100% !important;
+        padding: 20px;
+        margin-top: 1.5em;
+        opacity: 0.9;
+        @include blurBG();
+        li {
+          padding-bottom: 15px;
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+          a {
+            padding: 5px 1px;
+          }
+        }
+      }
     }
   }
 }
@@ -178,6 +207,22 @@ h4 {
 
 
 
+// Homepage Carousel
+.carousel {
+  @include background-gradient($highlight);
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+
+
+
+
 
 // Content
 
@@ -186,9 +231,87 @@ h4 {
     background-color: $lighterBG;
     text-transform: uppercase;
     text-align: right;
+    font-size: 25px;
+    color: $highlight;
   }
   .panel-body {
 
+  }
+}
+.region-content {
+  .panel-panel {
+    .panel-pane {
+      &:first-of-type .jumbotron {
+        background-color: $caseReportsColour;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:nth-of-type(3) .jumbotron {
+        background-color: $prosecuteColour;
+        border-radius: 0;
+      }
+      &:last-of-type .jumbotron {
+        background-color: $victimColour;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+    .jumbotron {
+      color: #fff;
+      border-radius: 4px;
+      padding: 30px;
+      h2 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-top: 0;
+        .hide-hover {
+          //@extend .sr-only;
+          color: $textColour;
+          opacity: 0;
+          transition: 0.26s opacity, 0.9s color;
+        }
+      }
+      p {
+        &:last-of-type {
+          margin-top: 10px;
+          text-decoration: underline;
+        }
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.85;
+        h2 .hide-hover {
+          //@extend .un-sr-only;
+          opacity: 1;
+          color: #fff;
+        }
+        p {
+          &:last-of-type {
+            //text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .thumbnail.grayscale {
+    padding: 0;
+    border: 0;
+    .caption {
+      position: relative;
+      margin-top: -6.8em;
+      background-color: rgba($darkBG,0.85);
+      @include blurBG();
+      color: #fff;
+      h2 {
+        text-transform: uppercase;
+        margin-top: 0;
+        a {
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
