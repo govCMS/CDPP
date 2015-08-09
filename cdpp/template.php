@@ -35,50 +35,62 @@ function cdpp_js_alter(&$javascript) {
 }
 
 function cdpp_menu_tree__menu_footer_sub_menu($variables) {
-  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+  return _cdpp_menu_tree_inline($variables);
 }
 
 function cdpp_menu_tree__menu_top_menu($variables) {
-  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+  return _cdpp_menu_tree_inline($variables);
 }
 
 function cdpp_menu_tree__menu_secondary_menu($variables) {
-  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+  return _cdpp_menu_tree_inline($variables);
 }
 
 function cdpp_menu_tree__menu_block__1($variables) {
-  return '<ul>' . $variables['tree'] . '</ul>';
+  return _cdpp_menu_tree_no_class($variables);
 }
 
 function cdpp_menu_tree__menu_block__4($variables) {
-  return '<ul>' . $variables['tree'] . '</ul>';
+  return _cdpp_menu_tree_no_class($variables);
 }
 
 function cdpp_menu_tree__menu_govcms_menu_block_sidebar($variables) {
-  return '<ul>' . $variables['tree'] . '</ul>';
+  return _cdpp_menu_tree_no_class($variables);
 }
 
 function cdpp_menu_tree(&$variables) {
-  return '<div class="nav-collapse"><ul class="menu nav">' . $variables['tree'] . '</ul></div>'; // added the nav-collapse wrapper so you can hide the nav at small size
+  return '<div class="nav-collapse"><ul class="menu nav list-group">' . $variables['tree'] . '</ul></div>'; // added the nav-collapse wrapper so you can hide the nav at small size
+}
+
+
+function cdpp_menu_link__menu_block__govcms_menu_block_sidebar($variables) {
+  return _cdpp_menu_link_with_bootstrap($variables);
+}
+
+function cdpp_menu_link__menu_block__1($variables) {
+  return _cdpp_menu_link_with_bootstrap($variables);
+}
+
+function cdpp_menu_link__menu_block__4($variables) {
+  return _cdpp_menu_link_with_bootstrap($variables);
 }
 
 
 function cdpp_menu_link($variables) {
   $element = $variables['element'];
   $sub_menu = '';
+  //var_dump($element);
   if ($element['#below']) {
     // Ad our own wrapper
     unset($element['#below']['#theme_wrappers']);
-    $sub_menu = '<ul>' . drupal_render($element['#below']) . '</ul>'; // removed flyout class in ul
+    $sub_menu = '<ul class="list-group">' . drupal_render($element['#below']) . '</ul>'; // removed flyout class in ul
 
     unset($element['#localized_options']['attributes']['class']); // removed flydown class
     unset($element['#localized_options']['attributes']['data-toggle']); // removed data toggler
-
     // Check if this element is nested within another
     if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
       //unset($element['#attributes']['class']); // removed flyout class
-    }
-    else {
+    } else {
       //unset($element['#attributes']['class']); // unset flyout class
       $element['#localized_options']['html'] = TRUE;
       $element['#title'] .= ''; // removed carat spans flyout
@@ -87,7 +99,6 @@ function cdpp_menu_link($variables) {
     // Set dropdown trigger element to # to prevent inadvertent page loading with submenu click
     $element['#localized_options']['attributes']['data-target'] = '#'; // You could unset this too as its no longer necessary.
   }
-
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
@@ -106,4 +117,41 @@ function cdpp_preprocess_node(&$variables) {
       $variables['title_link'] = check_plain($variables['title']);
     }
   }
+}
+
+function _cdpp_menu_tree_inline($variables) {
+  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+}
+
+function _cdpp_menu_tree_no_class($variables) {
+  return '<ul>' . $variables['tree'] . '</ul>';
+}
+
+function _cdpp_menu_link_with_bootstrap($variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  if ($element['#below']) {
+    // Ad our own wrapper
+    unset($element['#below']['#theme_wrappers']);
+    $sub_menu = '<ul class="list-group">' . drupal_render($element['#below']) . '</ul>'; // removed flyout class in ul
+
+    unset($element['#localized_options']['attributes']['class']); // removed flydown class
+    unset($element['#localized_options']['attributes']['data-toggle']); // removed data toggler
+    // Check if this element is nested within another
+    if ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
+      //unset($element['#attributes']['class']); // removed flyout class
+      $element['#attributes']['class'][] = 'list-group-item';
+    } else {
+      //unset($element['#attributes']['class']); // unset flyout class
+      $element['#attributes']['class'][] = 'list-group-item';
+      $element['#localized_options']['html'] = TRUE;
+      $element['#title'] .= ''; // removed carat spans flyout
+    }
+
+    // Set dropdown trigger element to # to prevent inadvertent page loading with submenu click
+    $element['#localized_options']['attributes']['data-target'] = '#'; // You could unset this too as its no longer necessary.
+  }
+  $element['#attributes']['class'][] = 'list-group-item';
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
