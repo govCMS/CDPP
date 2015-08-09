@@ -34,6 +34,24 @@ var Drupal = Drupal || {};
                 });
             });
 
+            jQuery('#prevSlides').click(function() {
+                clearInterval(interval);
+                if(jQuery("li.rslides_here").is(':nth-child(2)')) {
+                    jQuery("li.rslides_here").next().find("a").not('.skip').click();
+                } else {
+                    jQuery("a.rslides1_s1").click();
+                }
+            });
+
+            jQuery('#nextSlides').click(function() {
+                clearInterval(interval);
+                if(jQuery("li.rslides_here").is(':nth-last-child(3)')) {
+                    jQuery("a.rslides1_s1").click();
+                } else {
+                    jQuery("li.rslides_here").next().find("a").not('.skip').click();
+                }
+            });
+
             jQuery("#stopStartSlide").click(function() {
                 if(jQuery(this).hasClass("started")) {
                     clearInterval(interval);
