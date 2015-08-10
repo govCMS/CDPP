@@ -12,11 +12,11 @@ var Drupal = Drupal || {};
             jQuery("ul.rslides_tabs").prepend("<li><a href='#' id='prevSlides' title='Select to go to previous' class='skip'>&#60;</a></li>");
             jQuery("ul.rslides_tabs").append("<li><a href='#' id='nextSlides' title='Select to go to next' class='skip'>&#62;</a></li>");
 
-            jQuery("ul.rslides_tabs").append("<li><a href='#' id='stopStartSlide' title='Select to Pause' class='started skip'>&#9614;&#9614;</a></li>");
+            //jQuery("ul.rslides_tabs").append("<li><a href='#' id='stopStartSlide' title='Select to Pause' class='started skip'>&#9614;&#9614;</a></li>");
 
             //Slideshow exists... lets change them every 7 seconds
             var interval = setInterval(function() {
-                if(jQuery("li.rslides_here").is(':nth-last-child(3)')) {
+                if(jQuery("li.rslides_here").is(':nth-last-child(2)')) {
                     jQuery("a.rslides1_s1").click();
                 } else {
                     jQuery("li.rslides_here").next().find("a").not('.skip').click();
@@ -45,7 +45,7 @@ var Drupal = Drupal || {};
 
             jQuery('#nextSlides').click(function() {
                 clearInterval(interval);
-                if(jQuery("li.rslides_here").is(':nth-last-child(3)')) {
+                if(jQuery("li.rslides_here").is(':nth-last-child(2)')) {
                     jQuery("a.rslides1_s1").click();
                 } else {
                     jQuery("li.rslides_here").next().find("a").not('.skip').click();
