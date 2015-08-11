@@ -59,9 +59,8 @@ function cdpp_menu_tree__menu_govcms_menu_block_sidebar($variables) {
 }
 
 function cdpp_menu_tree(&$variables) {
-  return '<div class="nav-collapse"><ul class="menu nav list-group">' . $variables['tree'] . '</ul></div>'; // added the nav-collapse wrapper so you can hide the nav at small size
+  return '<div class="nav-collapse"><ul class="menu list-group">' . $variables['tree'] . '</ul></div>'; // added the nav-collapse wrapper so you can hide the nav at small size
 }
-
 
 function cdpp_menu_link__menu_block__govcms_menu_block_sidebar($variables) {
   return _cdpp_menu_link_with_bootstrap($variables);

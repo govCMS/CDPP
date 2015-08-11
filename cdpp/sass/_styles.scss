@@ -15,7 +15,8 @@ h2 {
   font-size: 26px;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-info {
   background-color: $darkBG;
   border-color: $textColour;
   transition: 0.2s all;
@@ -211,16 +212,16 @@ body.front #navbar {
     li {
       &.expanded.active-trail {
         padding-bottom: 0;
-        a.active {
-          color: $highlight;
-          font-weight: 600;
-        }
         //ul li a {
         //  color: $lightTextColour;
         //}
       }
       a {
         color: $lightTextColour;
+        &.active {
+          color: $highlight;
+          font-weight: 600;
+        }
       }
       ul.list-group {
         margin: 10px -16px 0 -16px;
@@ -235,6 +236,16 @@ body.front #navbar {
         }
       }
     }
+  }
+  #edit-field-date-value-wrapper {
+    width: 100%;
+  }
+  #edit-submit-news-and-media-releases-views.btn {
+    margin-top: 0;
+  }
+  .views-exposed-form label {
+    font-weight: 400;
+    color: $lightTextColour;
   }
 }
 
@@ -304,6 +315,9 @@ body.front #navbar {
 
   }
 }
+.page-header {
+  color: $highlight;
+}
 .region-content {
   .panel-panel {
     margin-top: 2em;
@@ -330,6 +344,7 @@ body.front #navbar {
       padding: 30px;
       margin-bottom: 0;
       h2 {
+        //text-decoration: underline;
         text-transform: uppercase;
         margin-bottom: 20px;
         margin-top: 0;
@@ -341,6 +356,7 @@ body.front #navbar {
         }
       }
       p {
+        text-decoration: underline;
         &:last-of-type {
           margin-top: 10px;
           text-decoration: underline;
@@ -364,7 +380,7 @@ body.front #navbar {
     }
   }
 
-  .thumbnail.grayscale {
+  .thumbnail {
     padding: 0;
     border: 0;
     margin-bottom: 0;
@@ -383,6 +399,25 @@ body.front #navbar {
       }
     }
   }
+
+  // News and media page
+   .view-news-and-media-releases-views {
+     h2 {
+       margin-top: 0;
+       a {
+         color: $textColour;
+         text-decoration: underline;
+       }
+     }
+   }
+   .views-row {
+     margin-top: 1.5em;
+   }
+   .field-name-post-date,
+   .date-display-single {
+     color: $highlight;
+     text-transform: uppercase;
+   }
 }
 
 .no-right-padding {
