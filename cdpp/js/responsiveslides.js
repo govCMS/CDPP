@@ -65,7 +65,7 @@
         slideClassPrefix = namespaceIdx + "_s",
 
         // Pager
-        $pager = $("<ul class='" + namespace + "_tabs col-md-offset-10 col-md-2 " + namespaceIdx + "_tabs list-inline' />"),
+        $pager = $("<ul class='" + namespace + "_tabs col-md-offset-8 col-md-4 " + namespaceIdx + "_tabs list-inline' />"),
 
         // Styles for visible and hidden slides
         visible = {"float": "left", "position": "relative"},

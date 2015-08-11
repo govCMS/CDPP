@@ -126,6 +126,7 @@ var Drupal = Drupal || {};
                 "auto": false,
                 "pager": true,         // Boolean: Show pager, true or false
                 "pauseButton": false   // Boolean: Create Pause Button
+                // "pauseButton": true   // Boolean: Create Pause Button
             });
 
         }

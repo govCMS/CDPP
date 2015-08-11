@@ -131,8 +131,10 @@
 
 <?php if (!empty($page['highlighted'])): ?>
   <div class="carousel">
-    <div class="row">
-      <div class="highlighted container"><?php print render($page['highlighted']); ?></div>
+    <div class="highlighted container">
+      <div class="row">
+        <?php print render($page['highlighted']); ?>
+      </div>
     </div>
   </div>
 <?php endif; ?>

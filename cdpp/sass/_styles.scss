@@ -164,6 +164,9 @@ body.front #navbar {
           a {
             color: $textColour;
           }
+          ul {
+            background-color: #fff;
+          }
         }
       }
       ul ul {
@@ -180,7 +183,15 @@ body.front #navbar {
           }
           a {
             padding: 5px 1px;
+            &.menuparent:after {
+              content: ">";
+              float: right;
+              opacity: 0.5;
+            }
           }
+        }
+        ul {
+          margin-top: -0.5em;
         }
       }
     }
@@ -195,6 +206,36 @@ body.front #navbar {
   background-color: $lighterBG;
   border-radius: 0;
   box-shadow: none;
+  ul {
+    padding-left: 0;
+    li {
+      &.expanded.active-trail {
+        padding-bottom: 0;
+        a.active {
+          color: $highlight;
+          font-weight: 600;
+        }
+        //ul li a {
+        //  color: $lightTextColour;
+        //}
+      }
+      a {
+        color: $lightTextColour;
+      }
+      ul.list-group {
+        margin: 10px -16px 0 -16px;
+        margin-bottom: 0;
+        li {
+          padding-left: 40px;
+          &:first-child,
+          &:last-child {
+            border-radius: 0;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Breadcrumb
@@ -216,6 +257,31 @@ body.front #navbar {
   }
   ul {
     list-style: none;
+  }
+  .field-name-field-read-more a {
+    margin-top: 1.5em;
+    display: block;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+  .rslides {
+    margin-bottom: 0;
+  }
+  .rslides_tabs {
+    margin-top: -3em;
+    padding-left: 30px;
+  }
+  .group-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .group-right {
+    h2 a {
+      text-transform: uppercase;
+    }
+  }
+  .img-responsive {
+    margin-left: -17px;
   }
 }
 
@@ -240,6 +306,7 @@ body.front #navbar {
 }
 .region-content {
   .panel-panel {
+    margin-top: 2em;
     .panel-pane {
     //.panels-ipe-portlet-wrapper {
       &:first-of-type .jumbotron {
@@ -261,6 +328,7 @@ body.front #navbar {
       color: #fff;
       border-radius: 4px;
       padding: 30px;
+      margin-bottom: 0;
       h2 {
         text-transform: uppercase;
         margin-bottom: 20px;
@@ -299,6 +367,7 @@ body.front #navbar {
   .thumbnail.grayscale {
     padding: 0;
     border: 0;
+    margin-bottom: 0;
     .caption {
       position: relative;
       margin-top: -6.8em;
@@ -324,12 +393,22 @@ body.front #navbar {
 }
 
 
+// Case Reports page
+.page-node-130 {
+  // Hide input on Case reports page, as we duplicate this funcionalty with the img grid..
+  #edit-field-category-tid-wrapper {
+    display: none;
+  }
+}
+
+
 
 
 // Footer
 footer.footer {
   border-top: 0;
   padding-bottom: 0;
+  padding-top: 0;
   a {
     color: $textColour;
     &:hover,
