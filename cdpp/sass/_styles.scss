@@ -176,18 +176,18 @@ h2 {
     padding: 0;
     border: 0;
     margin-bottom: 0;
+    position: relative;
     .caption {
-      //position: relative;
       position: absolute;
       margin-top: -6.8em;
       background-color: rgba($darkBG,0.85);
       @include blurBG();
       color: #fff;
       top: auto;
-      bottom: 20px;
+      bottom: 0;
       display: inline-block;
-      width: 89.9%; // this isnt ideal... (look on a small screen)
-      //max-width: 350px;
+      width: 100%;
+      // text-align: center;    // ...just don't.
       h2 {
         text-transform: uppercase;
         margin: 0;
@@ -225,6 +225,13 @@ h2 {
   padding-left: 0px;
 }
 
+.node-page {
+  .thumbnail {
+    .caption {
+      bottom: 20px; // for case reports page etc.
+    }
+  }
+}
 
 // Case Reports page
 .page-node-130 {
