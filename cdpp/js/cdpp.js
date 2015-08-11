@@ -75,6 +75,13 @@ var Drupal = Drupal || {};
                 }
             });
         }
+
+        jQuery('.custom-grayscale').each(function() {
+            jQuery(this).hover(
+                function() {jQuery(this).addClass('grayscale')},
+                function() {jQuery(this).removeClass('grayscale')}
+            );
+        });
     });
 
     equalheight = function(container){
