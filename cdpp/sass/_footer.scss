@@ -1,0 +1,40 @@
+
+// Footer
+footer.footer {
+  border-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  a {
+    color: $textColour;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  #region-top-footer {
+    color: $textColour;
+    background-color: $lightBG;
+    padding: 20px 0;
+    .block {
+      li {
+        margin-top: 1.5em;
+        a {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  #region-bottom-footer {
+    background-color: $darkBG;
+    li {
+      margin: 15px 68px 5px 0;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

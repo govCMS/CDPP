@@ -1,4 +1,4 @@
-// Generic
+// Generic Rules
 
 html {
   background-color: $darkBG;    // set html colour, so the footer doesn't cut to white on short pages...
@@ -10,7 +10,6 @@ h3,
 h4 {
   font-weight: 300;
 }
-
 h2 {
   font-size: 26px;
 }
@@ -31,229 +30,6 @@ h2 {
 
 
 
-// Header
-
-#region-top-menu {
-  padding: 5px 0;
-  background-color: $lightBG;
-  margin-bottom: 10px;
-  a {
-    color: $lightTextColour;
-    margin-left: 15px;
-    text-decoration: underline;
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-    }
-  }
-  #skip-link {
-    float: left;
-    a {
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-#region-header {
-  a {
-    img {
-      width: 420px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-  }
-  .pull-right {
-    padding-right: 0;
-    // Secondary Menu
-    #block-menu-block-3 {
-      margin-top: 5px;
-      float: right;
-      a {
-        color: $highlight;
-      }
-    }
-    // Search
-    #block-search-api-page-default-search {
-      .search-form-widget {
-        margin-top: 5px;
-        .form-group {
-          float: left;
-          min-width: 85.5%;
-          min-width: calc( 100% - 4.5em );
-          .form-text {
-            padding-right: 25px;
-          }
-        }
-        .btn.form-submit {
-          margin-left: -10px;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-      }
-    }
-  }
-}
-
-
-
-
-// Main Nav
-body.front #navbar {
-  margin-bottom: 0;
-}
-#navbar {
-  background-color: $textColour;
-  border-radius: 0;
-  border: 0;
-  #region-navigation.navbar {
-    background-color: transparent;
-    border-color: transparent;
-    margin: 0 auto;
-    padding: 0;
-    border: 0;
-    #main-nav {
-      padding-left: 0;
-      padding-right: 0;
-      .block-superfish > ul > li {
-        a {
-          color: #fff;
-        }
-        & > a {
-          padding: 18px 40px 18px 52px;
-          &:hover,
-          &:active,
-          &:focus,
-           {
-            background: rgba(#fff,0.1);
-            text-decoration: underline;
-          }
-        }
-        &.sfHover > a {
-          background: rgba(#fff,0.1);
-          text-decoration: underline;
-        }
-
-        &:before {
-          width: 8px;
-          background-color: $highlight;
-          content: "";
-          float: left;
-          min-height: 4em;
-        }
-        &:nth-of-type(2):before {
-          background-color: $processColour;
-        }
-        &:nth-of-type(3):before {
-          background-color: $prosecuteColour;
-        }
-        &:nth-of-type(4):before {
-          background-color: $caseReportsColour;
-        }
-        &:nth-of-type(5):before {
-          background-color: $statsColour;
-        }
-        &:nth-of-type(6):before {
-          background-color: $victimColour;
-        }
-        &.active-trail {
-          background-color: #fff;
-          a {
-            color: $textColour;
-          }
-          ul {
-            background-color: #fff;
-          }
-        }
-      }
-      ul ul {
-        background-color: $darkBG;
-        width: 100% !important;
-        padding: 20px;
-        margin-top: 1.5em;
-        opacity: 0.9;
-        @include blurBG();
-        li {
-          padding-bottom: 15px;
-          &:last-of-type {
-            padding-bottom: 0;
-          }
-          a {
-            padding: 5px 1px;
-            &.menuparent:after {
-              content: ">";
-              float: right;
-              opacity: 0.5;
-            }
-          }
-        }
-        ul {
-          margin-top: -0.5em;
-        }
-      }
-    }
-  }
-}
-
-
-
-// Sidebar
-.region-sidebar-first {
-  border: 0;
-  background-color: $lighterBG;
-  border-radius: 0;
-  box-shadow: none;
-  ul {
-    padding-left: 0;
-    li {
-      &.expanded.active-trail {
-        padding-bottom: 0;
-        //ul li a {
-        //  color: $lightTextColour;
-        //}
-      }
-      a {
-        color: $lightTextColour;
-        &.active {
-          color: $highlight;
-          font-weight: 600;
-        }
-      }
-      ul.list-group {
-        margin: 10px -16px 0 -16px;
-        margin-bottom: 0;
-        li {
-          padding-left: 40px;
-          &:first-child,
-          &:last-child {
-            border-radius: 0;
-            border-bottom: none;
-          }
-        }
-      }
-    }
-  }
-  #edit-field-date-value-wrapper {
-    width: 100%;
-  }
-  #edit-submit-news-and-media-releases-views.btn {
-    margin-top: 0;
-  }
-  .views-exposed-form label {
-    font-weight: 400;
-    color: $lightTextColour;
-  }
-}
-
-// Breadcrumb
-.breadcrumb {
-  border: 0;
-  background-color: $lighterBG;
-}
 
 
 
@@ -295,6 +71,21 @@ body.front #navbar {
     margin-left: -17px;
   }
 }
+
+
+
+
+
+
+
+
+// Breadcrumb
+.breadcrumb {
+  border: 0;
+  background-color: $lighterBG;
+}
+
+
 
 
 
@@ -434,47 +225,5 @@ body.front #navbar {
   // Hide input on Case reports page, as we duplicate this funcionalty with the img grid..
   #edit-field-category-tid-wrapper {
     display: none;
-  }
-}
-
-
-
-
-// Footer
-footer.footer {
-  border-top: 0;
-  padding-bottom: 0;
-  padding-top: 0;
-  a {
-    color: $textColour;
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-  #region-top-footer {
-    color: $textColour;
-    background-color: $lightBG;
-    padding: 20px 0;
-    .block {
-      li {
-        a {
-          padding: 10px 0;
-        }
-      }
-    }
-  }
-  #region-bottom-footer {
-    background-color: $darkBG;
-    li {
-      margin: 15px 69px 5px 0;
-      &:last-of-type {
-        margin-right: 0;
-      }
-      a {
-        color: #fff;
-      }
-    }
   }
 }
