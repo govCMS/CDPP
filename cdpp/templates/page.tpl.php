@@ -140,6 +140,13 @@
 <?php endif; ?>
 
 <div class="main-container container">
+  <?php if (!empty($breadcrumb)): ?>
+    <div class="row breadcrumb-row">
+      <div class="col-md-12">
+          <?php print $breadcrumb; ?>
+      </div>
+    </div>
+  <?php endif; ?>
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
@@ -149,7 +156,6 @@
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
