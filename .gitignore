@@ -2,5 +2,6 @@
 .idea/
 .idea/*
 sandbox_cp.sh
+cdpp/sass/.sass-cache
 test.html
 test.php
