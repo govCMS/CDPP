@@ -1,0 +1,170 @@
+
+
+// Header
+
+#region-top-menu {
+  padding: 5px 0;
+  background-color: $lightBG;
+  margin-bottom: 10px;
+  a {
+    color: $lightTextColour;
+    margin-left: 15px;
+    text-decoration: underline;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  #skip-link {
+    float: left;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#region-header {
+  a {
+    img {
+      width: 420px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .pull-right {
+    padding-right: 0;
+    // Secondary Menu
+    #block-menu-block-3 {
+      margin-top: 5px;
+      float: right;
+      a {
+        color: $highlight;
+      }
+    }
+    // Search
+    #block-search-api-page-default-search {
+      .search-form-widget {
+        margin-top: 5px;
+        .form-group {
+          float: left;
+          min-width: 85.5%;
+          min-width: calc( 100% - 4.5em );
+          .form-text {
+            padding-right: 25px;
+          }
+        }
+        .btn.form-submit {
+          margin-left: -10px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// Main Nav
+body.front #navbar {
+  margin-bottom: 0;
+}
+#navbar {
+  background-color: $textColour;
+  border-radius: 0;
+  border: 0;
+  #region-navigation.navbar {
+    background-color: transparent;
+    border-color: transparent;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    #main-nav {
+      padding-left: 0;
+      padding-right: 0;
+      .block-superfish > ul > li {
+        a {
+          color: #fff;
+        }
+        & > a {
+          padding: 18px 40px 18px 52px;
+          &:hover,
+          &:active,
+          &:focus,
+           {
+            background: rgba(#fff,0.1);
+            text-decoration: underline;
+          }
+        }
+        &.sfHover > a {
+          background: rgba(#fff,0.1);
+          text-decoration: underline;
+        }
+
+        &:before {
+          width: 8px;
+          background-color: $highlight;
+          content: "";
+          float: left;
+          min-height: 4em;
+        }
+        &:nth-of-type(2):before {
+          background-color: $processColour;
+        }
+        &:nth-of-type(3):before {
+          background-color: $prosecuteColour;
+        }
+        &:nth-of-type(4):before {
+          background-color: $caseReportsColour;
+        }
+        &:nth-of-type(5):before {
+          background-color: $statsColour;
+        }
+        &:nth-of-type(6):before {
+          background-color: $victimColour;
+        }
+        &.active-trail {
+          background-color: #fff;
+          a {
+            color: $textColour;
+          }
+          ul {
+            background-color: #fff;
+          }
+        }
+      }
+      ul ul {
+        background-color: $darkBG;
+        width: 100% !important;
+        padding: 20px;
+        margin-top: 1.5em;
+        opacity: 0.9;
+        @include blurBG();
+        li {
+          padding-bottom: 15px;
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+          a {
+            padding: 5px 1px;
+            &.menuparent:after {
+              content: ">";
+              float: right;
+              opacity: 0.5;
+            }
+          }
+        }
+        ul {
+          margin-top: -0.5em;
+          margin-left: 2.5em;
+        }
+      }
+    }
+  }
+}

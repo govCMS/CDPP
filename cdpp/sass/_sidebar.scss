@@ -1,0 +1,44 @@
+// Sidebar
+.region-sidebar-first {
+  border: 0;
+  background-color: $lighterBG;
+  border-radius: 0;
+  box-shadow: none;
+  ul {
+    padding-left: 0;
+    li {
+      &.expanded.active-trail {
+        padding-bottom: 0;
+      }
+      a {
+        color: $lightTextColour;
+        &.active {
+          color: $highlight;
+          font-weight: 600;
+        }
+      }
+      ul.list-group {
+        margin: 10px -16px 0 -16px;
+        margin-bottom: 0;
+        li {
+          padding-left: 40px;
+          &:first-child,
+          &:last-child {
+            border-radius: 0;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+  #edit-field-date-value-wrapper {
+    width: 100%;
+  }
+  #edit-submit-news-and-media-releases-views.btn {
+    margin-top: 0;
+  }
+  .views-exposed-form label {
+    font-weight: 400;
+    color: $lightTextColour;
+  }
+}
