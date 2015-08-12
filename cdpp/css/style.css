@@ -244,6 +244,9 @@ div.breadcrumb-row {
       color: #FFFFFF; }
       div.breadcrumb-row .breadcrumb li a {
         color: #000000; }
+    div.breadcrumb-row .breadcrumb li + li::before {
+      content: "\E80B ";
+      padding: 0 5px; }
 
 .panel .panel-heading {
   background-color: #f9f9f7;

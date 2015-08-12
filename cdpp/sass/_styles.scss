@@ -87,11 +87,12 @@ div.breadcrumb-row {
         color: #000000;
       }
     }
+    li + li::before {
+      content: "\E80B ";
+      padding: 0 5px;
+    }
   }
 }
-
-
-
 
 
 
