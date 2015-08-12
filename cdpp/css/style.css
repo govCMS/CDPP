@@ -34,7 +34,7 @@
 }
 */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "cdpp";
+  font-family: "cdpp-icons";
   font-style: normal;
   font-weight: normal;
   speak: none;
