@@ -13,13 +13,13 @@ footer.footer {
     }
   }
   #region-top-footer {
-    color: $textColour;
-    background-color: $lightBG;
+    background: rgba(0, 0, 0, 0) linear-gradient(573deg, #4c3e2b, #a1835b) repeat scroll 0 0 / cover;
     padding: 20px 0;
     .block {
       li {
         margin-top: 1.5em;
         a {
+          color: #fff;
           padding: 10px 0;
         }
       }
