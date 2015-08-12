@@ -138,15 +138,16 @@
     </div>
   </div>
 <?php endif; ?>
-
-<div class="main-container container">
   <?php if (!empty($breadcrumb)): ?>
     <div class="row breadcrumb-row">
-      <div class="col-md-12">
+      <div class="container">
+        <div class="col-md-12">
           <?php print $breadcrumb; ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
+<div class="main-container container">
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>

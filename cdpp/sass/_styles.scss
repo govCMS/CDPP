@@ -73,16 +73,21 @@ h2 {
 }
 
 
-
-
-
-
-
-
 // Breadcrumb
-.breadcrumb {
+div.breadcrumb-row {
   border: 0;
-  background-color: $lighterBG;
+  background: rgba(0, 0, 0, 0) linear-gradient(573deg, #4c3e2b, #a1835b) repeat scroll 0 0 / cover;
+  .breadcrumb {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    li {
+      color: #FFFFFF;
+      a{
+        color: #000000;
+      }
+    }
+  }
 }
 
 
