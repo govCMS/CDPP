@@ -89,6 +89,7 @@ div.breadcrumb-row {
       }
     }
     li + li::before {
+      font-family: "cdpp-icons";
       content: "\E80B ";
       padding: 0 5px;
     }
