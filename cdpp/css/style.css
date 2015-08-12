@@ -336,6 +336,9 @@ div.breadcrumb-row {
 .node-page .thumbnail .caption {
   bottom: 20px; }
 
+div.main-container {
+  margin-top: 15px; }
+
 .page-node-130 #edit-field-category-tid-wrapper {
   display: none; }
 
