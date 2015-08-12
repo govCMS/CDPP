@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'cdpp';
+  src: url('../font/cdpp.eot?232644');
+  src: url('../font/cdpp.eot?232644#iefix') format('embedded-opentype'),
+       url('../font/cdpp.woff?232644') format('woff'),
+       url('../font/cdpp.ttf?232644') format('truetype'),
+       url('../font/cdpp.svg?232644#cdpp') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'cdpp';
+    src: url('../font/cdpp.svg?232644#cdpp') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "cdpp";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-circle:before { content: '\e800'; } /* '' */
+.icon-circle-empty:before { content: '\e801'; } /* '' */
+.icon-angle-circled-right:before { content: '\e802'; } /* '' */
+.icon-angle-circled-left:before { content: '\e803'; } /* '' */
+.icon-home:before { content: '\e804'; } /* '' */
+.icon-link-ext:before { content: '\e805'; } /* '' */
+.icon-legal:before { content: '\e806'; } /* '' */
+.icon-rss:before { content: '\e807'; } /* '' */
+.icon-search:before { content: '\e808'; } /* '' */
+.icon-newspaper:before { content: '\e809'; } /* '' */
+.icon-leaf:before { content: '\e80a'; } /* '' */
+.icon-angle-right:before { content: '\e80b'; } /* '' */
+.icon-gavel:before { content: '\e80c'; } /* '' */
+.icon-shield:before { content: '\e80d'; } /* '' */
+.icon-fraud:before { content: '\e80e'; } /* '' */
+.icon-screen-x-1:before { content: '\e80f'; } /* '' */
+.icon-ball-chain:before { content: '\e810'; } /* '' */
+.icon-people:before { content: '\e811'; } /* '' */
+.icon-money:before { content: '\e812'; } /* '' */
+.icon-drugs-1:before { content: '\e813'; } /* '' */
+.icon-camera:before { content: '\e814'; } /* '' */
+.icon-drugs:before { content: '\e815'; } /* '' */
+.icon-suitcase:before { content: '\e816'; } /* '' */
+.icon-laptop:before { content: '\e817'; } /* '' */
+.icon-chains:before { content: '\e818'; } /* '' */
+.icon-wifi:before { content: '\e819'; } /* '' */
+.icon-signal:before { content: '\e81a'; } /* '' */
+.icon-screen-x:before { content: '\e81b'; } /* '' */
