@@ -318,9 +318,9 @@ div.breadcrumb-row {
       margin: 0; }
       .region-content .thumbnail .caption h2 a {
         color: #fff; }
-.region-content .view-news-and-media-releases-views h2 {
+.region-content .view-news-and-media-releases-views h2, .region-content .view-case-reports-views h2, .region-content .view-publications-and-policies-views h2 {
   margin-top: 0; }
-  .region-content .view-news-and-media-releases-views h2 a {
+  .region-content .view-news-and-media-releases-views h2 a, .region-content .view-case-reports-views h2 a, .region-content .view-publications-and-policies-views h2 a {
     color: #444;
     text-decoration: underline; }
 .region-content .views-row {
@@ -350,8 +350,6 @@ div.ds-2col-fluid .field-name-field-year {
 div.ds-2col-fluid h2 {
   margin-top: 0px;
   margin-bottom: 5px; }
-  div.ds-2col-fluid h2 a {
-    color: #666; }
 div.ds-2col-fluid div.field-type-taxonomy-term-reference {
   font-weight: bold; }
 

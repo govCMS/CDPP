@@ -208,7 +208,7 @@ div.breadcrumb-row {
   }
 
   // News and media page
-   .view-news-and-media-releases-views {
+   .view-news-and-media-releases-views, .view-case-reports-views, .view-publications-and-policies-views  {
      h2 {
        margin-top: 0;
        a {
@@ -262,10 +262,6 @@ div.ds-2col-fluid {
   h2 {
     margin-top: 0px;
     margin-bottom: 5px;
-    a {
-      color: $lightTextColour;
-
-    }
   }
   
   div.field-type-taxonomy-term-reference {
