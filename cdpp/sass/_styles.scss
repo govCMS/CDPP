@@ -253,3 +253,22 @@ div.main-container {
     display: none;
   }
 }
+
+div.ds-2col-fluid {
+  .field-name-field-year {
+    color: $highlight;
+  }
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    a {
+      color: $lightTextColour;
+
+    }
+  }
+  
+  div.field-type-taxonomy-term-reference {
+    font-weight: bold;
+  }
+}

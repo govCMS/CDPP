@@ -345,6 +345,16 @@ div.main-container {
 .page-node-130 #edit-field-category-tid-wrapper {
   display: none; }
 
+div.ds-2col-fluid .field-name-field-year {
+  color: #876E4C; }
+div.ds-2col-fluid h2 {
+  margin-top: 0px;
+  margin-bottom: 5px; }
+  div.ds-2col-fluid h2 a {
+    color: #666; }
+div.ds-2col-fluid div.field-type-taxonomy-term-reference {
+  font-weight: bold; }
+
 footer.footer {
   border-top: 0;
   padding-bottom: 0;
