@@ -81,6 +81,7 @@ div.breadcrumb-row {
     margin-top: 10px;
     margin-bottom: 10px;
     background: transparent;
+    padding-left: 0px;
     li {
       color: #FFFFFF;
       a{
@@ -92,9 +93,11 @@ div.breadcrumb-row {
       padding: 0 5px;
     }
   }
+
+  .col-md-12 {
+    padding-left: 8px;
+  }
 }
-
-
 
 
 

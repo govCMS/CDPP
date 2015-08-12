@@ -239,7 +239,8 @@ div.breadcrumb-row {
   div.breadcrumb-row .breadcrumb {
     margin-top: 10px;
     margin-bottom: 10px;
-    background: transparent; }
+    background: transparent;
+    padding-left: 0px; }
     div.breadcrumb-row .breadcrumb li {
       color: #FFFFFF; }
       div.breadcrumb-row .breadcrumb li a {
@@ -247,6 +248,8 @@ div.breadcrumb-row {
     div.breadcrumb-row .breadcrumb li + li::before {
       content: "\E80B ";
       padding: 0 5px; }
+  div.breadcrumb-row .col-md-12 {
+    padding-left: 8px; }
 
 .panel .panel-heading {
   background-color: #f9f9f7;
