@@ -408,6 +408,9 @@ div.breadcrumb-row {
   div.breadcrumb-row .col-md-12 {
     padding-left: 8px; }
 
+.grid-icons .icon-* {
+  font-size: 60px; }
+
 .panel .panel-heading {
   background-color: #f9f9f7;
   text-transform: uppercase;
