@@ -3,6 +3,9 @@
 html {
   background-color: $darkBG;    // set html colour, so the footer doesn't cut to white on short pages...
 }
+body {
+  background-color: $lighterBG;
+}
 
 h1,
 h2,
@@ -291,5 +294,16 @@ div.ds-2col-fluid {
 
   div.field-type-taxonomy-term-reference {
     font-weight: bold;
+  }
+}
+
+
+// Crimes we prosecute page, etc.
+.grid-icons {
+  .col-md-3{
+    color: $highlight;
+    i {
+      font-size: 9em;
+    }
   }
 }

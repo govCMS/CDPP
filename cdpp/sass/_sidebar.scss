@@ -72,22 +72,27 @@
 
 
 // RHS, Secondary sidebar
-.region-sidebar-second {
+aside.well {
 //aside.col-md-3 {
   border: 0;
   background-color: $lighterBG;
   border-radius: 0;
   box-shadow: none;
-  h2 {
-    //
-  }
-  h3 {
-    font-size: 130%;
-    a {
-      color: $highlight;
+  .region-sidebar-second {
+    section {
+      
     }
-  }
-  .date-display-single {
-    color: $lightTextColour;
+    h2 {
+      //
+    }
+    h3 {
+      font-size: 130%;
+      a {
+        color: $highlight;
+      }
+    }
+    .date-display-single {
+      color: $lightTextColour;
+    }
   }
 }

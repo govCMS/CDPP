@@ -3,9 +3,9 @@
 // Header
 
 #region-top-menu {
-  padding: 5px 0;
+  padding: 8px 0 0 0;
   background-color: $lightBG;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
   a {
     color: $lightTextColour;
     margin-left: 15px;
@@ -29,11 +29,13 @@
 }
 
 #region-header {
+  background-color: #fff;
+  padding-top: 10px;
   a {
     img {
       width: 420px;
       height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
   .pull-right {
