@@ -201,8 +201,6 @@ div.breadcrumb-row {
     border: 0;
     margin-bottom: 0;
     position: relative;
-    border-radius: $borderRadius;
-    overflow: hidden;
     .caption {
       position: absolute;
       margin-top: -6.8em;
@@ -244,6 +242,13 @@ div.breadcrumb-row {
    }
 }
 
+
+// Make consistent with rest of homepage elements
+body.front .thumbnail {
+  border-radius: $borderRadius;
+  overflow: hidden;
+}
+
 .no-right-padding {
   padding-right: 0px;
 }
@@ -254,7 +259,7 @@ div.breadcrumb-row {
 .node-page {
   .thumbnail {
     .caption {
-      bottom: 20px; // for case reports page etc.
+      bottom: 19px; // for case reports page etc.
     }
   }
 }

@@ -198,15 +198,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/sass\/_font-icons.scss": {
+	"\/sass\/_cdpp-icons.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/_font-icons.scss",
-		"outputAbbreviatedPath": "\/css\/_font-icons.css",
+		"inputAbbreviatedPath": "\/sass\/_cdpp-icons.scss",
+		"outputAbbreviatedPath": "\/css\/_cdpp-icons.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

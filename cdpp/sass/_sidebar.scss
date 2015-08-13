@@ -41,4 +41,53 @@
     font-weight: 400;
     color: $lightTextColour;
   }
+  .views-exposed-form .views-exposed-widget {
+    float: left;
+    padding: .5em 1em 0 0;
+    width: 100%;
+  }
+  .views-exposed-widget.views-submit-button {
+    .btn {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// RHS, Secondary sidebar
+.region-sidebar-second {
+//aside.col-md-3 {
+  border: 0;
+  background-color: $lighterBG;
+  border-radius: 0;
+  box-shadow: none;
+  h2 {
+    //
+  }
+  h3 {
+    font-size: 130%;
+    a {
+      color: $highlight;
+    }
+  }
+  .date-display-single {
+    color: $lightTextColour;
+  }
 }
