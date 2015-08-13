@@ -104,24 +104,32 @@ div.breadcrumb-row {
 
 // Content
 
-.grid-icons {
-  .icon-* {
-    font-size: 60px;
-  }
-}
 .panel {
   .panel-heading {
     background-color: $lighterBG;
-    text-transform: uppercase;
-    text-align: right;
-    font-size: 25px;
-    color: $highlight;
+      h2 {
+      text-transform: uppercase;
+      text-align: right;
+      font-size: 25px;
+      color: $highlight;
+      margin: 0;
+      font-weight: 400;
+      i {
+        float: left;
+        &.icon-signal {
+          font-size: 88%;
+        }
+        &.icon-legal {
+          font-size: 135%;
+          margin-top: -5px;
+        }
+      }
+    }
   }
   .panel-body {
 
   }
 }
-
 .page-header {
   color: $highlight;
 }
@@ -146,7 +154,7 @@ div.breadcrumb-row {
       }
     }
     .jumbotron {
-      border-radius: 4px;
+      border-radius: $borderRadius;
       padding: 30px;
       margin-bottom: 0;
       a {
@@ -234,6 +242,13 @@ div.breadcrumb-row {
    }
 }
 
+
+// Make consistent with rest of homepage elements
+body.front .thumbnail {
+  border-radius: $borderRadius;
+  overflow: hidden;
+}
+
 .no-right-padding {
   padding-right: 0px;
 }
@@ -244,7 +259,7 @@ div.breadcrumb-row {
 .node-page {
   .thumbnail {
     .caption {
-      bottom: 20px; // for case reports page etc.
+      bottom: 19px; // for case reports page etc.
     }
   }
 }
@@ -270,7 +285,7 @@ div.ds-2col-fluid {
     margin-top: 0px;
     margin-bottom: 5px;
   }
-  
+
   div.field-type-taxonomy-term-reference {
     font-weight: bold;
   }
