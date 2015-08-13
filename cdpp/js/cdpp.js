@@ -9,10 +9,24 @@ var Drupal = Drupal || {};
 
         if(jQuery("ul.rslides_tabs").length) {
             //Put in a previous and next button
-            jQuery("ul.rslides_tabs").prepend("<li><a href='#' id='prevSlides' title='Select to go to previous' class='skip'>&#60;</a></li>");
-            jQuery("ul.rslides_tabs").append("<li><a href='#' id='nextSlides' title='Select to go to next' class='skip'>&#62;</a></li>");
+            jQuery("ul.rslides_tabs").prepend("<li><a href='#' id='prevSlides' title='Select to go to previous' class='skip'><i class='icon-angle-circled-left'></i></a></li>");
+            jQuery("ul.rslides_tabs").append("<li><a href='#' id='nextSlides' title='Select to go to next' class='skip'><i class='icon-angle-circled-right'></i></a></li>");
 
             //jQuery("ul.rslides_tabs").append("<li><a href='#' id='stopStartSlide' title='Select to Pause' class='started skip'>&#9614;&#9614;</a></li>");
+
+            jQuery("ul.rslides_tabs").find('a').not('.skip').each(function() {
+                jQuery(this).on('click', function() {
+                    jQuery("ul.rslides_tabs").find('a').not('.skip').each(function() {
+                        if(jQuery(this).parent().hasClass('rslides_here')) {
+                            jQuery(this).find('i').addClass('icon-circle');
+                            jQuery(this).find('i').removeClass('icon-circle-empty');
+                        } else {
+                            jQuery(this).find('i').addClass('icon-circle-empty');
+                            jQuery(this).find('i').removeClass('icon-circle');
+                        }
+                    });
+                });
+            });
 
             //Slideshow exists... lets change them every 7 seconds
             var interval = setInterval(function() {
