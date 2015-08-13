@@ -133,10 +133,17 @@
           var tabMarkup = [];
           $slide.each(function (i) {
             var n = i + 1;
-            tabMarkup +=
-              "<li>" +
-              "<a href='#' class='" + slideClassPrefix + n + "'>" + '&#9679;' + "</a>" +
-              "</li>";
+            if(n == 1) {
+              tabMarkup +=
+                  "<li>" +
+                  "<a href='#' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle"></i>' + "</a>" +
+                  "</li>";
+            } else {
+              tabMarkup +=
+                  "<li>" +
+                  "<a href='#' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle-empty"></i>' + "</a>" +
+                  "</li>";
+            }
           });
           $pager.append(tabMarkup);
 
