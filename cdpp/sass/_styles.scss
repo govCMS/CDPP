@@ -154,7 +154,7 @@ div.breadcrumb-row {
       }
     }
     .jumbotron {
-      border-radius: 4px;
+      border-radius: $borderRadius;
       padding: 30px;
       margin-bottom: 0;
       a {
@@ -201,6 +201,8 @@ div.breadcrumb-row {
     border: 0;
     margin-bottom: 0;
     position: relative;
+    border-radius: $borderRadius;
+    overflow: hidden;
     .caption {
       position: absolute;
       margin-top: -6.8em;
