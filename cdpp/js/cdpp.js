@@ -133,6 +133,7 @@ var Drupal = Drupal || {};
         if(jQuery(window).width() >= 650){
             equalheight('body.front div.panel-col-bottom div.panel-pane div.panel-default div.panel-body > div.row');
             equalheight('body.front div.panel-col-top div.jumbotron');
+            equalheight('.grid-icons .row .wrapper');
         }
     });
 
