@@ -35,8 +35,33 @@ h2 {
 }
 
 
-
-
+// Search
+.search-form,
+.search-form-widget {
+  margin-top: 5px;
+  .form-group {
+    float: left;
+    min-width: 85.5%;
+    min-width: calc( 100% - 4.5em );
+    .form-text {
+      padding-right: 25px;
+    }
+  }
+  .btn.form-submit {
+    margin-left: -10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.search-form {
+  .form-submit {
+    margin-top: 1.8em;
+  }
+}
+.search-api-page-results .search-performance {
+  margin-top: 2em;
+  font-size: 95%;
+}
 
 
 
