@@ -78,7 +78,7 @@ h2 {
   }
   .icon-circle-empty,
   .icon-circle {
-    top: -5px;
+    top: -7px;
     position: relative;
   }
   .icon-angle-circled-left,
@@ -98,9 +98,9 @@ div.breadcrumb-row {
     background: transparent;
     padding-left: 0px;
     li {
-      color: #FFFFFF;
+      color: #fff;
       a{
-        color: #000000;
+        color: #000;
       }
     }
     li + li::before {
@@ -121,12 +121,15 @@ div.breadcrumb-row {
 
 .panel {
   .panel-heading {
-    background-color: $lighterBG;
+    //background-color: $lighterBG;
+    //@include background-gradient($highlight);
+    background-color: $highlight;
       h2 {
       text-transform: uppercase;
-      text-align: right;
+      //text-align: right;
       font-size: 25px;
-      color: $highlight;
+      //color: $highlight;
+      color: #fff;
       margin: 0;
       font-weight: 400;
       i {
@@ -258,6 +261,11 @@ div.breadcrumb-row {
      color: $highlight;
      text-transform: uppercase;
    }
+
+   .icon-rss {
+     background-color: #ff6602;
+     color: #fff;
+   }
 }
 
 
@@ -265,13 +273,6 @@ div.breadcrumb-row {
 body.front .thumbnail {
   border-radius: $borderRadius;
   overflow: hidden;
-}
-
-.no-right-padding {
-  padding-right: 0px;
-}
-.no-left-padding {
-  padding-left: 0px;
 }
 
 .node-page {
@@ -312,10 +313,45 @@ div.ds-2col-fluid {
 
 // Crimes we prosecute page, etc.
 .grid-icons {
-  .col-md-3{
+  margin-top: 1em;
+  a {
     color: $highlight;
-    i {
-      font-size: 9em;
+    //text-align: center;
+  }
+  .col-md-3 {
+    margin-bottom: 3em;
+    .wrapper {
+      border: 2px solid $highlight;
+      background-color: #fff;
+      i:before {
+        font-size: 9em;
+        display: inline-table;
+        margin-left: 0;
+        width: 100%;
+        min-height: 128px;
+        @include color-gradient($highlight);
+      }
+      h2 {
+        margin-top: 0;
+      }
+      h2, h3, p, a {
+        text-align: center;
+      }
+      &:hover,
+      &:hover,
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+        @include background-gradient($highlight);
+        i:before {
+          font-size: 9em;
+          display: inline-table;
+          margin-left: 0;
+          width: 100%;
+          min-height: 128px;
+          color: #fff;
+        }
+      }
     }
   }
 }

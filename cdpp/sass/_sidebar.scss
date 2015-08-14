@@ -1,7 +1,8 @@
 // Sidebar
 .region-sidebar-first {
   border: 0;
-  background-color: $lighterBG;
+  //background-color: $lighterBG;
+  background-color: transparent;
   border-radius: 0;
   box-shadow: none;
   ul {
@@ -41,6 +42,7 @@
     font-weight: 400;
     color: $lightTextColour;
   }
+  .form-item ,
   .views-exposed-form .views-exposed-widget {
     float: left;
     padding: .5em 1em 0 0;
@@ -75,12 +77,12 @@
 aside.well {
 //aside.col-md-3 {
   border: 0;
-  background-color: $lighterBG;
   border-radius: 0;
   box-shadow: none;
+  background-color: transparent;
   .region-sidebar-second {
     section {
-      
+      margin-bottom: 2em;
     }
     h2 {
       //

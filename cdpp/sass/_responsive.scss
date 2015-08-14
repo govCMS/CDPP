@@ -5,9 +5,20 @@
 
 // 1100px - 1200px
 
+// => 768px
+@media screen and (min-width: 768px) {
+  .no-right-padding {
+    padding-right: 0px;
+  }
+  .no-left-padding {
+    padding-left: 0px;
+  }
+}
+
 // <= 768px
 @media screen and (max-width: 768px) {
 
 }
+
 
 // <=320px

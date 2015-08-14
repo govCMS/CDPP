@@ -28,7 +28,7 @@
 @mixin background-gradient($colour) {
   background-color: $colour;
   background: linear-gradient(
-    573deg, darken($colour, 18%), lighten($colour, 8%) );
+    573deg, darken($colour, 8%), lighten($colour, 8%) );
   background-size: 400% 400%;
   -webkit-animation: bg 30s ease infinite;
   -moz-animation: bg 30s ease infinite;
@@ -53,4 +53,11 @@
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+@mixin color-gradient($colour) {
+  color: $colour;
+  background: -webkit-linear-gradient( 573deg, darken($colour, 8%), lighten($colour, 8%) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
