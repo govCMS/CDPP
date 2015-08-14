@@ -41,7 +41,7 @@ h2 {
 
 
 
-// Homepage Carousel
+// Homepage Carousel/Slider
 .carousel {
   @include background-gradient($highlight);
   color: #fff;
@@ -84,6 +84,12 @@ h2 {
   .icon-angle-circled-left,
   .icon-angle-circled-right {
     font-size: 200%;
+  }
+  .icon-angle-circled-left {
+    margin-right: 15px;
+  }
+  .icon-angle-circled-right {
+    margin-left: 15px;
   }
 }
 
@@ -262,9 +268,17 @@ div.breadcrumb-row {
      text-transform: uppercase;
    }
 
-   .icon-rss {
-     background-color: #ff6602;
+   .icon-rss:before {
+     background-color: #F29100;
      color: #fff;
+     padding: 2px 2px 1px 2px;
+     width: 1.2em;
+   }
+   article .field {
+     margin-bottom: 1em;
+     .field-label {
+       color: $lightTextColour;
+     }
    }
 }
 
@@ -323,6 +337,7 @@ div.ds-2col-fluid {
     .wrapper {
       border: 2px solid $highlight;
       background-color: #fff;
+      padding: 5px;
       i:before {
         font-size: 9em;
         display: inline-table;
