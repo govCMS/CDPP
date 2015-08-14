@@ -154,9 +154,20 @@
           a {
             padding: 5px 1px;
             &.menuparent:after {
-              content: ">";
+              font-family: "cdpp-icons";
+              font-style: normal;
+              font-weight: normal;
+              speak: none;
+              content: '\e80b';
               float: right;
               opacity: 0.5;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+              &.menuparent:after {
+                opacity: 1;
+              }
             }
           }
         }

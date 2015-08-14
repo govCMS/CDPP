@@ -42,17 +42,30 @@
     font-weight: 400;
     color: $lightTextColour;
   }
-  .form-item ,
+  .form-item,
+  .form-item div,
+  .views-exposed-form,
+  .views-exposed-form div,
+  .views-exposed-widget {
+    width: 100%;
+    padding: 0;
+  }
+  .form-item,
   .views-exposed-form .views-exposed-widget {
     float: left;
     padding: .5em 1em 0 0;
-    width: 100%;
   }
-  .views-exposed-widget.views-submit-button {
-    .btn {
-      margin-top: 10px;
+  .views-exposed-widget {
+    margin-bottom: 10px;
+    &:nth-last-of-type() {
+      margin-bottom: 0;
     }
   }
+  //.views-exposed-widget.views-submit-button {
+  //  .btn {
+  //    //margin-top: 10px;
+  //  }
+  //}
 }
 
 
