@@ -1,5 +1,9 @@
 // responsive overrides in here
 
+.img-responsive {
+  width: 100%;
+}
+
 
 // 1200px +
 @media screen and (min-width: 1200px) {
@@ -63,18 +67,78 @@
 
 }
 
+
+
+// <= 991px
+@media screen and (max-width: 991px) {
+  // front page only
+  body.front {
+    // Slider
+    .carousel .rslides_tabs {
+      margin-top: 10px;
+      text-align: center;
+    }
+    // Main content
+    .main-container {
+      .jumbotron,
+      .panel.panel-default,
+      .panel.panel-default .panel-heading,
+      .panel.panel-default .panel-body,
+      .thumbnail {
+        border-radius: 0;
+      }
+      .panel-pane,
+      .no-right-padding,
+      .no-left-padding {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+
 // => 768px
 @media screen and (min-width: 768px) {
-  .no-right-padding {
-    padding-right: 0px;
-  }
-  .no-left-padding {
-    padding-left: 0px;
-  }
+  //
 }
 
 // <= 768px
 @media screen and (max-width: 768px) {
+  //
+}
+
+// <= 725px
+@media screen and (max-width: 725px) {
+  // Header layout
+  #region-header {
+    .pull-right {
+      float: none !important;
+      .pull-right {
+        width: 100%;
+      }
+    }
+    .region-header {
+      section.block {
+        width: 50%;
+        float: left !important;
+        .list-inline li {
+          float: left;
+        }
+      }
+    }
+  }
+  // Main Nav
+  #main-nav {
+    padding-bottom: 10px;
+    ul#superfish-1 {
+      li {
+        width: 100%;
+        ul {
+          display: none !important;
+        }
+      }
+    }
+  }
 
 }
 

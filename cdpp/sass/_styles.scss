@@ -297,6 +297,13 @@ body.front .thumbnail {
   }
 }
 
+.no-right-padding {
+  padding-right: 0px;
+}
+.no-left-padding {
+  padding-left: 0px;
+}
+
 div.main-container {
   margin-top: 15px;
 }
@@ -334,10 +341,15 @@ div.ds-2col-fluid {
   }
   .col-md-3 {
     margin-bottom: 3em;
+    a {
+      //background-color: #fff;
+      //padding: 10px;
+      display: block;
+    }
     .wrapper {
       border: 2px solid $highlight;
       background-color: #fff;
-      padding: 5px;
+      padding: 10px;
       i:before {
         font-size: 9em;
         display: inline-table;
@@ -352,19 +364,27 @@ div.ds-2col-fluid {
       h2, h3, p, a {
         text-align: center;
       }
+    }
+    & > .wrapper,
+    & > a {
       &:hover,
       &:hover,
       &:hover {
         border-color: #fff;
         color: #fff;
         @include background-gradient($highlight);
+        text-decoration: none;
+        .wrapper {
+          border-color: #fff;
+          background-color: transparent;
+        }
         i:before {
           font-size: 9em;
           display: inline-table;
           margin-left: 0;
           width: 100%;
           min-height: 128px;
-          color: #fff;
+          @include color-gradient(#fff);
         }
       }
     }
