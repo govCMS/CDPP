@@ -48,25 +48,6 @@
         color: $highlight;
       }
     }
-    // Search
-    #block-search-api-page-default-search {
-      .search-form-widget {
-        margin-top: 5px;
-        .form-group {
-          float: left;
-          min-width: 85.5%;
-          min-width: calc( 100% - 4.5em );
-          .form-text {
-            padding-right: 25px;
-          }
-        }
-        .btn.form-submit {
-          margin-left: -10px;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-      }
-    }
   }
 }
 
@@ -176,6 +157,26 @@
           margin-left: 2.5em;
         }
       }
+    }
+  }
+
+  // Mobile
+  button.navbar-toggle {
+    float: left;
+    margin-left: 20px;
+    &:before {
+      content: "Menu";
+      float: left;
+      //padding-right: 0;
+      padding-left: 2.3em;
+      //padding-bottom: 3px;
+      //padding: 3px 0 3px 2.3em;
+      color: #fff;
+      //top: -3px;
+      position: relative;
+    }
+    .icon-bar {
+      margin-top: 3px;
     }
   }
 }

@@ -98,7 +98,7 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php if (!empty($page['header'])): ?>
-        <div class="col-md-6 pull-right">
+        <div class="col-sm-12 col-md-6 pull-right">
           <div class="pull-right">
             <?php print render($page['header']); ?>
           </div>
@@ -151,7 +151,7 @@
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <aside class="col-sm-12 col-md-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
