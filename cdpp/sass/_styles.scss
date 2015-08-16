@@ -58,11 +58,15 @@ h2 {
     margin-top: 1.8em;
   }
 }
-.search-api-page-results .search-performance {
-  margin-top: 2em;
-  font-size: 95%;
+.search-api-page-results {
+  .search-info {
+    display: none;
+  }
+  .search-performance {
+    margin-top: 2em;
+    font-size: 95%;
+  }
 }
-
 
 
 
