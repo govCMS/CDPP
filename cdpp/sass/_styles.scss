@@ -189,16 +189,18 @@ div.breadcrumb-row {
   .panel-panel {
     margin-top: 2em;
     .panel-pane {
-    //.panels-ipe-portlet-wrapper {
+      .panels-ipe-paneid-6 .jumbotron,
       &:first-of-type .jumbotron {
         background-color: $caseReportsColour;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
       }
+      .panels-ipe-paneid-7 .jumbotron,
       &:nth-of-type(3) .jumbotron {
         background-color: $prosecuteColour;
         border-radius: 0;
       }
+      .panels-ipe-paneid-8 .jumbotron,
       &:last-of-type .jumbotron {
         background-color: $victimColour;
         border-top-left-radius: 0;

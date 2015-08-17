@@ -143,4 +143,46 @@
 }
 
 
-// <=320px
+// <=455px
+@media screen and (max-width: 455px) {
+  #region-header {
+    a img {
+      width: 100%;
+    }
+    .region-header section.block {
+      width: 100%;
+    }
+    .menu-name-menu-secondary-menu ul {
+      padding-bottom: 20px;
+      li {
+        padding-right: 16px;
+      }
+    }
+    .search-form-widget {
+      .form-group .form-text {
+        margin-left: -10px;
+      }
+      .btn.form-submit {
+        margin-left: -12px;
+      }
+    }
+  }
+  .navbar-header {
+    margin: 0 !important;
+  }
+  body.front .carousel {
+    .group-right {
+      padding-left: 0;
+      margin-left: -15px;
+    }
+    .rslides_tabs {
+      padding-left: 10px;
+      text-align: left;
+      li {
+        margin-top: 20px;
+        padding-right: 4px;
+        padding-left: 4px;
+      }
+    }
+  }
+}
