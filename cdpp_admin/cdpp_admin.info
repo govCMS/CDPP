@@ -5,6 +5,13 @@ base theme = shiny
 
 scripts[] = js/cdpp_admin.js
 
+stylesheets[screen][] = css/reset.css
+stylesheets[screen][] = css/style.css
+; Contrib Module Admin Styles
+stylesheets[screen][] = css/contrib.css
+; Install and Maintenance Pages
+stylesheets[all][] = css/shiny.css
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
