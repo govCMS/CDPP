@@ -35,6 +35,7 @@
     img {
       width: 420px;
       height: auto;
+      max-height: 71px;
       margin-bottom: 15px;
     }
   }
@@ -123,17 +124,17 @@
       ul ul {
         background-color: $darkBG;
         width: 100% !important;
-        padding: 20px;
+        //padding: 20px;
         margin-top: 1.5em;
         opacity: 0.9;
         @include blurBG();
         li {
-          padding-bottom: 15px;
-          &:last-of-type {
-            padding-bottom: 0;
-          }
+          //padding-bottom: 15px;
+          //&:last-of-type {
+          //  padding-bottom: 0;
+          //}
           a {
-            padding: 5px 1px;
+            padding: 20px 15px;
             &.menuparent:after {
               font-family: "cdpp-icons";
               font-style: normal;
@@ -153,8 +154,8 @@
           }
         }
         ul {
-          margin-top: -0.5em;
-          margin-left: 2.5em;
+          margin-top: 0;
+          margin-left: 4.3em;
         }
       }
     }

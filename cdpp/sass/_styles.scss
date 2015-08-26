@@ -194,24 +194,24 @@ div.breadcrumb-row {
       .panels-ipe-paneid-6 .jumbotron,
       &:first-of-type .jumbotron {
         background-color: $caseReportsColour;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        //border-top-right-radius: 0;
+        //border-bottom-right-radius: 0;
       }
       .panels-ipe-paneid-7 .jumbotron,
       &:nth-of-type(3) .jumbotron {
         background-color: $prosecuteColour;
-        border-radius: 0;
+        //border-radius: 0;
       }
       .panels-ipe-paneid-8 .jumbotron,
       &:last-of-type .jumbotron {
-        background-color: $victimColour;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        background-color: $statsColour;
+        //border-top-left-radius: 0;
+        //border-bottom-left-radius: 0;
       }
     }
     .jumbotron {
       border-radius: $borderRadius;
-      padding: 30px;
+      padding: 28px;
       margin-bottom: 0;
       a {
         text-decoration: none;
@@ -229,6 +229,7 @@ div.breadcrumb-row {
         }
       }
       p {
+        font-size: 14px;
         &:last-of-type {
           margin-top: 10px;
           text-decoration: underline;
@@ -250,6 +251,12 @@ div.breadcrumb-row {
         }
       }
     }
+  }
+  .panel-col-top,
+  .panel-col-middle {
+    //&.panel-panel {
+      margin-top: 0;
+    //}
   }
 
   .thumbnail {
@@ -303,7 +310,7 @@ div.breadcrumb-row {
      padding: 2px 2px 1px 2px;
      width: 1.2em;
    }
-   article .field {
+   .not-front article .field {
      margin-bottom: 1em;
      .field-label {
        color: $lightTextColour;
@@ -320,9 +327,10 @@ body.front .thumbnail {
 
 .node-page {
   .thumbnail {
-    .caption {
-      bottom: 19px; // for case reports page etc.
-    }
+    margin-bottom: 2em;
+    //.caption {
+    //  bottom: 19px; // for case reports page etc.
+    //}
   }
 }
 
@@ -333,7 +341,7 @@ body.front .thumbnail {
   padding-left: 0px;
 }
 
-div.main-container {
+.not-front div.main-container {
   margin-top: 15px;
 }
 
