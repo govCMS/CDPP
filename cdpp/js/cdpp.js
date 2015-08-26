@@ -51,9 +51,9 @@ var Drupal = Drupal || {};
             jQuery('#prevSlides').click(function() {
                 clearInterval(interval);
                 if(jQuery("li.rslides_here").is(':nth-child(2)')) {
-                    jQuery("li.rslides_here").next().find("a").not('.skip').click();
+                    jQuery("ul.rslides1_tabs").find(":nth-last-child(2)").find("a").click();
                 } else {
-                    jQuery("a.rslides1_s1").click();
+                    jQuery("li.rslides_here").prev().find("a").not('.skip').click();
                 }
             });
 
