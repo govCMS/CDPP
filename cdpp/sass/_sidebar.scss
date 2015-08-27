@@ -67,48 +67,30 @@
   //    //margin-top: 10px;
   //  }
   //}
-}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// RHS, Secondary sidebar
-aside.well {
-//aside.col-md-3 {
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  background-color: transparent;
-  .region-sidebar-second {
-    section {
-      margin-bottom: 2em;
-    }
-    h2 {
-      //
-    }
-    h3 {
-      font-size: 130%;
-      a {
-        color: $highlight;
-      }
-    }
-    .date-display-single {
-      color: $lightTextColour;
+  section {
+    margin-bottom: 2em;
+  }
+  h3 {
+    font-size: 130%;
+    a {
+      color: $highlight;
     }
   }
+
+  // RHS/second sidebar (that was moved the the LHS)
+  .date-display-single {
+    color: $lightTextColour;
+  }
+  section {
+    border: 1px solid $borderGrey;
+    padding: 5px;
+    h2.block-title {
+      background-color: $borderGrey;
+      margin: -5px -5px 0 -5px !important;
+      padding: 5px;
+    }
+  }
+
 }

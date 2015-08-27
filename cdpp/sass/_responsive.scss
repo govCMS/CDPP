@@ -60,6 +60,16 @@
     }
   }
 
+  .panel.panel-default .panel-heading {
+    h2 {
+      font-size: 24px;
+      i.icon-legal {
+        font-size: 132%;
+        margin-top: -2px;
+      }
+    }
+  }
+
   // Footer wrapping
   footer.footer #region-bottom-footer li {
     margin: 15px 38px 5px 0;

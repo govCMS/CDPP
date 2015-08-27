@@ -193,13 +193,13 @@ div.breadcrumb-row {
     .panel-pane {
       .panels-ipe-paneid-6 .jumbotron,
       &:first-of-type .jumbotron {
-        background-color: $caseReportsColour;
+        background-color: $prosecuteColour;
         //border-top-right-radius: 0;
         //border-bottom-right-radius: 0;
       }
       .panels-ipe-paneid-7 .jumbotron,
       &:nth-of-type(3) .jumbotron {
-        background-color: $prosecuteColour;
+        background-color: $caseReportsColour;
         //border-radius: 0;
       }
       .panels-ipe-paneid-8 .jumbotron,
@@ -323,6 +323,9 @@ div.breadcrumb-row {
 body.front .thumbnail {
   border-radius: $borderRadius;
   overflow: hidden;
+  a p {
+    color: #fff;
+  }
 }
 
 .node-page {
