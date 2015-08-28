@@ -75,7 +75,8 @@
           color: #fff;
         }
         & > a {
-          padding: 18px 40px 18px 52px;
+          //padding: 18px 40px 18px 52px;  // add this back in once its realised a home link is useful for 70%+ of users
+          padding: 18px 61px 18px 55px;
           &:hover,
           &:active,
           &:focus,
@@ -95,6 +96,9 @@
           content: "";
           float: left;
           min-height: 4em;
+        }
+        &:first-of-type { // lets just ignore usabilty for a sec
+          display: none;
         }
         &:nth-of-type(2):before {
           background-color: $processColour;

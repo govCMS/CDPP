@@ -17,7 +17,7 @@ h4 {
   font-weight: 300;
 }
 h2 {
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .btn-primary,
@@ -390,13 +390,16 @@ div.ds-2col-fluid {
       border: 2px solid $highlight;
       background-color: #fff;
       padding: 10px;
-      i:before {
-        font-size: 9em;
-        display: inline-table;
-        margin-left: 0;
-        width: 100%;
-        min-height: 128px;
-        @include color-gradient($highlight);
+      i {
+        //font-size: 9em;
+        &:before {
+          font-size: 9em;
+          display: inline-table;
+          margin-left: 0;
+          width: 100%;
+          min-height: 128px;
+          @include color-gradient($highlight);
+        }
       }
       h2 {
         margin-top: 0;
@@ -408,8 +411,8 @@ div.ds-2col-fluid {
     & > .wrapper,
     & > a {
       &:hover,
-      &:hover,
-      &:hover {
+      &:focus,
+      &:active {
         border-color: #fff;
         color: #fff;
         @include background-gradient($highlight);
@@ -418,13 +421,17 @@ div.ds-2col-fluid {
           border-color: #fff;
           background-color: transparent;
         }
-        i:before {
-          font-size: 9em;
-          display: inline-table;
-          margin-left: 0;
-          width: 100%;
-          min-height: 128px;
-          @include color-gradient(#fff);
+        i {
+          //font-size: 9em;
+          //@include color-gradient(#fff);
+          &:before {
+            font-size: 9em;
+            @include color-gradient(#fff);
+            display: inline-table;
+            margin-left: 0;
+            width: 100%;
+            min-height: 128px;
+          }
         }
       }
     }
