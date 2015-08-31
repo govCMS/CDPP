@@ -377,9 +377,9 @@ div.ds-2col-fluid {
   margin-top: 1em;
   a {
     color: $highlight;
-    //text-align: center;
   }
-  .col-md-3 {
+  .col-md-3,
+  .col-md-4 {
     margin-bottom: 3em;
     a {
       //background-color: #fff;
