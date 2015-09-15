@@ -54,7 +54,7 @@
         <div class="caption">
           <?php if (!empty($title)): ?>
             <a href="<?php print render($content['field_link_to'][0]); ?>">
-              <h2<?php print $title_attributes; ?>><?php print $title ?></h2>
+              <h2<?php print $title_attributes; ?>><?php print $content['field_bean_image']['#object']->title ?></h2>
             </a>
           <?php endif; ?>
           <?php if (!empty($content['field_bean_text'])) : ?>
