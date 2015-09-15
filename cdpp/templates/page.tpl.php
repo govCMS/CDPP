@@ -139,7 +139,7 @@
   </div>
 <?php endif; ?>
   <?php if (!empty($breadcrumb)): ?>
-    <div class="row breadcrumb-row">
+    <div class="breadcrumb-row">
       <div class="container">
         <div class="col-md-12">
           <?php print $breadcrumb; ?>

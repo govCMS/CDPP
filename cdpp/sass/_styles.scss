@@ -17,7 +17,7 @@ h4 {
   font-weight: 300;
 }
 h2 {
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .btn-primary,
@@ -101,7 +101,7 @@ h2 {
     }
   }
   .img-responsive {
-    margin-left: -17px;
+    margin-left: -25px;
   }
   .icon-circle-empty,
   .icon-circle {
@@ -193,25 +193,25 @@ div.breadcrumb-row {
     .panel-pane {
       .panels-ipe-paneid-6 .jumbotron,
       &:first-of-type .jumbotron {
-        background-color: $caseReportsColour;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        background-color: $prosecuteColour;
+        //border-top-right-radius: 0;
+        //border-bottom-right-radius: 0;
       }
       .panels-ipe-paneid-7 .jumbotron,
       &:nth-of-type(3) .jumbotron {
-        background-color: $prosecuteColour;
-        border-radius: 0;
+        background-color: $caseReportsColour;
+        //border-radius: 0;
       }
       .panels-ipe-paneid-8 .jumbotron,
       &:last-of-type .jumbotron {
-        background-color: $victimColour;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        background-color: $statsColour;
+        //border-top-left-radius: 0;
+        //border-bottom-left-radius: 0;
       }
     }
     .jumbotron {
       border-radius: $borderRadius;
-      padding: 30px;
+      padding: 28px;
       margin-bottom: 0;
       a {
         text-decoration: none;
@@ -229,6 +229,7 @@ div.breadcrumb-row {
         }
       }
       p {
+        font-size: 14px;
         &:last-of-type {
           margin-top: 10px;
           text-decoration: underline;
@@ -251,6 +252,12 @@ div.breadcrumb-row {
       }
     }
   }
+  .panel-col-top,
+  .panel-col-middle {
+    //&.panel-panel {
+      margin-top: 0;
+    //}
+  }
 
   .thumbnail {
     padding: 0;
@@ -267,6 +274,7 @@ div.breadcrumb-row {
       bottom: 0;
       display: inline-block;
       width: 100%;
+      min-height: 5em;  // comment this out for adapting height
       // text-align: center;    // ...just don't.
       h2 {
         text-transform: uppercase;
@@ -303,7 +311,7 @@ div.breadcrumb-row {
      padding: 2px 2px 1px 2px;
      width: 1.2em;
    }
-   article .field {
+   .not-front article .field {
      margin-bottom: 1em;
      .field-label {
        color: $lightTextColour;
@@ -316,13 +324,17 @@ div.breadcrumb-row {
 body.front .thumbnail {
   border-radius: $borderRadius;
   overflow: hidden;
+  a p {
+    color: #fff;
+  }
 }
 
 .node-page {
   .thumbnail {
-    .caption {
-      bottom: 19px; // for case reports page etc.
-    }
+    margin-bottom: 2em;
+    //.caption {
+    //  bottom: 19px; // for case reports page etc.
+    //}
   }
 }
 
@@ -333,7 +345,7 @@ body.front .thumbnail {
   padding-left: 0px;
 }
 
-div.main-container {
+.not-front div.main-container {
   margin-top: 15px;
 }
 
@@ -366,9 +378,9 @@ div.ds-2col-fluid {
   margin-top: 1em;
   a {
     color: $highlight;
-    //text-align: center;
   }
-  .col-md-3 {
+  .col-md-3,
+  .col-md-4 {
     margin-bottom: 3em;
     a {
       //background-color: #fff;
@@ -379,13 +391,16 @@ div.ds-2col-fluid {
       border: 2px solid $highlight;
       background-color: #fff;
       padding: 10px;
-      i:before {
-        font-size: 9em;
-        display: inline-table;
-        margin-left: 0;
-        width: 100%;
-        min-height: 128px;
-        @include color-gradient($highlight);
+      i {
+        //font-size: 9em;
+        &:before {
+          font-size: 9em;
+          display: inline-table;
+          margin-left: 0;
+          width: 100%;
+          min-height: 128px;
+          @include color-gradient($highlight);
+        }
       }
       h2 {
         margin-top: 0;
@@ -397,8 +412,8 @@ div.ds-2col-fluid {
     & > .wrapper,
     & > a {
       &:hover,
-      &:hover,
-      &:hover {
+      &:focus,
+      &:active {
         border-color: #fff;
         color: #fff;
         @include background-gradient($highlight);
@@ -407,13 +422,17 @@ div.ds-2col-fluid {
           border-color: #fff;
           background-color: transparent;
         }
-        i:before {
-          font-size: 9em;
-          display: inline-table;
-          margin-left: 0;
-          width: 100%;
-          min-height: 128px;
-          @include color-gradient(#fff);
+        i {
+          //font-size: 9em;
+          //@include color-gradient(#fff);
+          &:before {
+            font-size: 9em;
+            @include color-gradient(#fff);
+            display: inline-table;
+            margin-left: 0;
+            width: 100%;
+            min-height: 128px;
+          }
         }
       }
     }
