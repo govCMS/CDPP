@@ -274,6 +274,7 @@ div.breadcrumb-row {
       bottom: 0;
       display: inline-block;
       width: 100%;
+      min-height: 5em;  // comment this out for adapting height
       // text-align: center;    // ...just don't.
       h2 {
         text-transform: uppercase;
