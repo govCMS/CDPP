@@ -46,23 +46,18 @@
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="content"<?php print $content_attributes; ?>>
-      <div class="thumbnail grayscale grayscale-fade">
-        <a href="<?php print render($content['field_link_to'][0]); ?>">
+      <a href="<?php print render($content['field_link_to'][0]); ?>">
+        <div class="thumbnail grayscale grayscale-fade">
           <?php print render($content['field_bean_image']); ?>
-        </a>
-
-        <div class="caption">
-          <?php if (!empty($title)): ?>
-            <a href="<?php print render($content['field_link_to'][0]); ?>">
-              <h2<?php print $title_attributes; ?>><?php print $title ?></h2>
-            </a>
-          <?php endif; ?>
-          <?php if (!empty($content['field_bean_text'])) : ?>
-            <a href="<?php print render($content['field_link_to'][0]); ?>">
-              <?php print render($content['field_bean_text']); ?>
-            </a>
+          <div class="caption">
+          <?php if (!empty($content['field_bean_image']['#object']->title)): ?>
+             <h2<?php print $title_attributes; ?>><?php print $content['field_bean_image']['#object']->title ?></h2>
+              <?php if (!empty($content['field_bean_text'])) : ?>
+                <?php print render($content['field_bean_text']); ?>
+              <?php endif; ?>
           <?php endif; ?>
         </div>
       </div>
+      </a>
     </div>
 </div>
