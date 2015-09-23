@@ -86,13 +86,14 @@
     }
   }
 
-  // RHS/second sidebar (that was moved the the LHS)
+  // RHS / second sidebar (that was moved the the LHS)
   .date-display-single {
     color: $lightTextColour;
   }
   section {
     border: 1px solid $borderGrey;
     padding: 5px;
+    background-color: #fff;
     h2.block-title {
       background-color: $borderGrey;
       margin: -5px -5px 0 -5px !important;
