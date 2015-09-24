@@ -8,7 +8,13 @@
   padding: 0; // remove if bgcolour goes back to white
   ul {
     padding-left: 0;
+    margin-top: -5px;
+    margin-bottom: 0;
     li {
+      &:first-child,
+      &:last-child {
+        border-radius: 0;
+      }
       &.expanded.active-trail {
         padding-bottom: 0;
       }
@@ -26,7 +32,6 @@
           padding-left: 40px;
           &:first-child,
           &:last-child {
-            border-radius: 0;
             border-bottom: none;
           }
         }
