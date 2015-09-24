@@ -9,6 +9,11 @@
   ul {
     padding-left: 0;
     li {
+      &:first-child,
+      &:last-child {
+        border-radius: 0;
+        border-bottom: none;
+      }
       &.expanded.active-trail {
         padding-bottom: 0;
       }
@@ -24,11 +29,6 @@
         margin-bottom: 0;
         li {
           padding-left: 40px;
-          &:first-child,
-          &:last-child {
-            border-radius: 0;
-            border-bottom: none;
-          }
         }
       }
     }
