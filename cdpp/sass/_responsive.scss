@@ -195,4 +195,11 @@
       }
     }
   }
+  .panel-col-bottom .pane-node {
+    .panel-body {
+      &:after {
+        content: '' !important;
+      }
+    }
+  }
 }

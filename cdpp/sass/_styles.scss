@@ -180,9 +180,6 @@ div.breadcrumb-row {
       }
     }
   }
-  .panel-body {
-
-  }
 }
 .page-header {
   color: $highlight;
@@ -258,6 +255,29 @@ div.breadcrumb-row {
     //&.panel-panel {
       margin-top: 0;
     //}
+  }
+
+  .panel-col-bottom .pane-node {
+    .panel-body {
+      &:after {
+        //content: '\e81a';  // tower
+        content: '\e81c'; // star
+        font-family: 'cdpp-icons';
+        position: relative;
+        font-size: 6em;
+        color: $lightBG;
+        top: -1.2em;
+        float: right;
+      }
+    }
+    &:nth-of-type(3) .panel-body:after {
+      content: '\e806'; // scales
+      font-size: 7.2em;
+      top: -1em;
+    }
+    &:nth-of-type(1) .panel-body:after {
+      content: '\e81a';  // tower
+    }
   }
 
   .thumbnail {
