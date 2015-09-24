@@ -301,11 +301,11 @@ div.breadcrumb-row {
       &:after {
         content: '\e80b'; // greater than sign
         font-family: 'cdpp-icons';
-        //position: relative;
-        //font-size: 6em;
-        //color: $lightBG;
-        //margin-top: -1.2em;
-        //float: right;
+        position: relative;
+        font-size: 4em;
+        float: right;
+        margin-top: -1.28em;
+        right: -20px;
       }
       h2 {
         text-transform: uppercase;

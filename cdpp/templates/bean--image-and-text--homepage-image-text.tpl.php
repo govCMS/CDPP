@@ -47,8 +47,10 @@
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="content"<?php print $content_attributes; ?>>
       <a href="<?php print render($content['field_link_to'][0]); ?>">
-        <div class="thumbnail grayscale grayscale-fade">
+        <div class="thumbnail">
+          <div class="grayscale grayscale-fade">
           <?php print render($content['field_bean_image']); ?>
+          </div>
           <div class="caption">
           <?php if (!empty($content['field_bean_image']['#object']->title)): ?>
              <h2<?php print $title_attributes; ?>><?php print $content['field_bean_image']['#object']->title ?></h2>

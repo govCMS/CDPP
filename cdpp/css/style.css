@@ -630,7 +630,12 @@ div.breadcrumb-row {
     min-height: 5em; }
     .region-content .thumbnail .caption:after {
       content: '\e80b';
-      font-family: 'cdpp-icons'; }
+      font-family: 'cdpp-icons';
+      position: relative;
+      font-size: 4em;
+      float: right;
+      margin-top: -1.28em;
+      right: -20px; }
     .region-content .thumbnail .caption h2 {
       text-transform: uppercase;
       margin: 0; }
