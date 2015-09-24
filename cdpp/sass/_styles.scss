@@ -298,6 +298,15 @@ div.breadcrumb-row {
       width: 100%;
       min-height: 5em;  // comment this out for adapting height
       // text-align: center;    // ...just don't.
+      &:after {
+        content: '\e80b'; // greater than sign
+        font-family: 'cdpp-icons';
+        //position: relative;
+        //font-size: 6em;
+        //color: $lightBG;
+        //margin-top: -1.2em;
+        //float: right;
+      }
       h2 {
         text-transform: uppercase;
         margin: 0;
