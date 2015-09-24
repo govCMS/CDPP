@@ -421,7 +421,8 @@ div.ds-2col-fluid {
           margin-left: 0;
           width: 100%;
           min-height: 128px;
-          @include color-gradient($highlight);
+          //@include color-gradient($highlight);
+          color: $highlight;
         }
       }
       h2 {
@@ -438,7 +439,8 @@ div.ds-2col-fluid {
       &:active {
         border-color: #fff;
         color: #fff;
-        @include background-gradient($highlight);
+        //@include background-gradient($highlight);
+        background: $highlight;
         text-decoration: none;
         .wrapper {
           border-color: #fff;
@@ -449,7 +451,8 @@ div.ds-2col-fluid {
           //@include color-gradient(#fff);
           &:before {
             font-size: 9em;
-            @include color-gradient(#fff);
+            //@include color-gradient(#fff);
+            color: #fff;
             display: inline-table;
             margin-left: 0;
             width: 100%;
