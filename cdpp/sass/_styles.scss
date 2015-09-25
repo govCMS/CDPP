@@ -296,26 +296,34 @@ div.breadcrumb-row {
       bottom: 0;
       display: inline-block;
       width: 100%;
-      min-height: 5em;  // comment this out for adapting height
+      //min-height: 5em;          // comment this out for adapting height
       // text-align: center;    // ...just don't.
+      padding-right: 35px;
       &:after {
         content: '\e80b'; // greater than sign
         font-family: 'cdpp-icons';
-        position: relative;
+        //position: relative;
         font-size: 4em;
-        float: right;
-        margin-top: -1.28em;
-        right: -20px;
+        //float: right;
+        //margin-top: -1.28em;
+        //right: -20px;
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        color: $highlight;
+        //color: rgb(41,195,203);
       }
       h2 {
         text-transform: uppercase;
         margin: 0;
+        min-height: 2.2em;
         a {
           color: #fff;
         }
       }
     }
   }
+
 
   // News and media page
    .view-news-and-media-releases-views, .view-case-reports-views, .view-publications-and-policies-views  {
@@ -350,6 +358,30 @@ div.breadcrumb-row {
    }
 }
 
+body.front {
+  .region-content .thumbnail {
+    .caption {
+      min-height: 8em;
+      h2 {
+        min-height: 0 !important;
+        margin-bottom: 5px;
+      }
+      &:after {
+        right: 10px;
+        bottom: 15px;
+        color: rgb(41,195,203);
+      }
+    }
+  }
+  .panel-col-middle .panel-pane {
+    &:nth-of-type(1) .caption:after {
+      color: rgb(27,55,76);
+    }
+    &:nth-of-type(3) .caption:after {
+      color: rgb(16,136,150);
+    }
+  }
+}
 
 // Make consistent with rest of homepage elements
 body.front .thumbnail {
