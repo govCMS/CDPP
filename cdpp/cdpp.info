@@ -59,7 +59,6 @@ stylesheets[all][] = libraries/gray/css/gray.min.css
 ; settings[bootstrap_cdn] = ''
 scripts[] = js/cdpp.js
 scripts[] = js/jquery.browser.min.js
-;scripts[] = libraries/gray/js/jquery.gray.js
 scripts[] = js/responsiveslides.js
 
 ; ;-------------------------
