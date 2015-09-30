@@ -118,6 +118,14 @@ function cdpp_preprocess_node(&$variables) {
   }
 }
 
+function cdpp_preprocess_field(&$variables) {
+  if($variables['element']['#field_name'] == 'field_bean_image'){
+    foreach($variables['items'] as $key => $item){
+      $variables['items'][ $key ]['#item']['attributes']['class'][] = 'grayscale grayscale-fade';
+    }
+  }
+}
+
 function cdpp_preprocess_page(&$variables) {
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
