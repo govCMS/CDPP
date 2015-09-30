@@ -48,7 +48,7 @@
     <div class="content"<?php print $content_attributes; ?>>
       <a href="<?php print render($content['field_link_to'][0]); ?>">
         <div class="thumbnail">
-          <div class="grayscale grayscale-fade">
+          <div class="thumbnail-extra">
           <?php print render($content['field_bean_image']); ?>
           </div>
           <div class="caption">
