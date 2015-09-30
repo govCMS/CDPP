@@ -294,7 +294,7 @@ div.breadcrumb-row {
       color: #fff;
       top: auto;
       bottom: 0;
-      display: inline-block;
+      //display: inline-block; //Fix for IE10
       width: 100%;
       //min-height: 5em;          // comment this out for adapting height
       // text-align: center;    // ...just don't.
