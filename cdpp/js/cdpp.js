@@ -138,6 +138,34 @@ var Drupal = Drupal || {};
         }
     });
 
+    //handle hoverstate for crimes we prosecute
+    $('.grid-icons > .row a > img').hover(
+        //handlerIn
+        function() {
+            //get .image-hover-hidden src
+            var $elA = $(this);
+            var $elASrc = $elA.attr('src');
+
+            var $elB = $(this).next('.image-hover-hidden');
+            var $elBSrc = $elB.attr('src');
+
+            $elA.attr('src', $elBSrc);
+            $elB.attr('src', $elASrc);
+        },
+        //handlerOut
+        function() {
+            //get .image-hover-hidden src
+            var $elA = $(this);
+            var $elASrc = $elA.attr('src');
+
+            var $elB = $(this).next('.image-hover-hidden');
+            var $elBSrc = $elB.attr('src');
+
+            $elA.attr('src', $elBSrc);
+            $elB.attr('src', $elASrc);
+        }
+    );
+
 })(jQuery, Drupal);
 
 
