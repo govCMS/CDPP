@@ -356,7 +356,8 @@
     .region-sidebar-first h3 a {
       color: #876E4C; }
   .region-sidebar-first .date-display-single {
-    color: #666; }
+    color: #666;
+    font-size: 10px; }
   .region-sidebar-first section {
     border: 1px solid #E2E2E2;
     padding: 5px;
