@@ -204,4 +204,11 @@ var Drupal = Drupal || {};
             $($select).html($options);
         }
     };
+
+    Drupal.behaviors.addViewAllButton = {
+        attach: function(context, settings) {
+            //add 'View All' button/link next to 'Apply' button on case reports filter
+            $('#edit-submit-case-reports-views').after($('<a href="/case-reports/filter?field_category_tid=All&field_report_location_tid=All" class="btn btn-info">View All</a>'));
+        }
+    };
 })(jQuery, Drupal, window, document, undefined);
