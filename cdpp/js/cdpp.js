@@ -210,9 +210,6 @@ var Drupal = Drupal || {};
             //add 'View All' button/link next to 'Apply' button on case reports filter
             var $form = $('#views-exposed-form-case-reports-views-page-1');
             var $submit = $form.find('.views-submit-button');
-            console.log('test2');
-            console.log($form);
-            console.log($submit);
             $submit.append($('<a href="/case-reports/filter?field_category_tid=All&field_report_location_tid=All" class="btn btn-info">View All</a>'));
         }
     };

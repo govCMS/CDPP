@@ -343,6 +343,8 @@
     padding: .5em 1em 0 0; }
   .region-sidebar-first .views-exposed-widget {
     margin-bottom: 10px; }
+    .region-sidebar-first .views-exposed-widget.views-submit-button a {
+      margin-left: 5px; }
     .region-sidebar-first .views-exposed-widget:nth-last-of-type(2) {
       margin-bottom: 0; }
   .region-sidebar-first .menu-block-wrapper {

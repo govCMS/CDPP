@@ -63,6 +63,11 @@
   }
   .views-exposed-widget {
     margin-bottom: 10px;
+    
+    &.views-submit-button a {
+        margin-left:5px;
+    }
+    
     &:nth-last-of-type(2) {
       margin-bottom: 0;
     }
