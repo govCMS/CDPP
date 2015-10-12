@@ -195,9 +195,11 @@ var Drupal = Drupal || {};
             //sort year filters in decending order
             var $select = $('#edit-field-year-value, #edit-field-date-value-value-year');
             var $options = $select.find('option');
+            console.log('test');
+            console.log($options);
             $options.sort(function(a, b) {
-                if(a.text > b.text) { return 1; }
-                else if(a.text < b.text) { return -1; }
+                if(a.text < b.text) { return 1; }
+                else if(a.text > b.text) { return -1; }
                 else { return 0; }
             });
 
