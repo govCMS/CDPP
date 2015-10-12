@@ -189,4 +189,19 @@ var Drupal = Drupal || {};
             );
     	}
     };
+
+    Drupal.behaviors.orderByYears = {
+        attach: function(context, settings) {
+            //sort year filters in decending order
+            var $select = $('#edit-field-year-value, #edit-field-date-value-value-year');
+            var $options = $select.find('option');
+            $options.sort(function(a, b) {
+                if(a.text > b.text) { return 1; }
+                else if(a.text < b.text) { return -1; }
+                else { return 0; }
+            });
+
+            $($select).html($options);
+        }
+    };
 })(jQuery, Drupal, window, document, undefined);
