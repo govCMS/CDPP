@@ -588,7 +588,7 @@ div.breadcrumb-row {
       font-size: 14px; }
       .region-content .panel-panel .jumbotron p:last-of-type {
         margin-top: 10px;
-        text-decoration: underline; }
+        /*text-decoration: underline;*/ }
     .region-content .panel-panel .jumbotron:hover, .region-content .panel-panel .jumbotron:active, .region-content .panel-panel .jumbotron:focus {
       opacity: 0.85; }
       .region-content .panel-panel .jumbotron:hover h2 .hide-hover, .region-content .panel-panel .jumbotron:active h2 .hide-hover, .region-content .panel-panel .jumbotron:focus h2 .hide-hover {
