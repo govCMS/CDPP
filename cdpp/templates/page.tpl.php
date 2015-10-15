@@ -75,9 +75,11 @@
 ?>
 <div id="region-top-menu">
   <div class="container">
+    <?php if($site_name): ?>
     <div id="full-site-name" class="pull-left">
-      <?php print $site_name; ?>
+      <a href="/about-us"><?php print $site_name; ?></a>
     </div>
+    <?php endif; ?>
     <div id="skip-link">
       <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
     </div>
