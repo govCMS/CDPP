@@ -49,6 +49,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- open graph settings -->
+  <meta property="og:title" content="<?php print $head_title; ?>">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="http://cdpp.govcms.gov.au/sites/g/files/net391/f/cdpp_logo_current.png">
+  <meta property="og:image:secure_url" content="https://cdpp.govcms.gov.au/sites/g/files/net391/f/cdpp_logo_current.png">
+  <meta property="og:image:type" content="image/png">
+  <!-- end open graph settings -->
+
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
