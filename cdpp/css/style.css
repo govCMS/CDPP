@@ -712,6 +712,9 @@ div.ds-2col-fluid div.field-type-taxonomy-term-reference {
   margin-top: 1em; }
   .grid-icons a {
     color: #876E4C; }
+  .grid-icons img {
+    max-height: 190px;
+    max-width: 100%; }
   .grid-icons .col-md-3,
   .grid-icons .col-md-4 {
     margin-bottom: 3em; }

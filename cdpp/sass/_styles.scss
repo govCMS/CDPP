@@ -442,6 +442,10 @@ div.ds-2col-fluid {
   a {
     color: $highlight;
   }
+  img {
+    max-height:190px;
+    max-width:100%;
+  }
   .col-md-3,
   .col-md-4 {
     margin-bottom: 3em;
