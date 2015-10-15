@@ -749,7 +749,7 @@ div.ds-2col-fluid div.field-type-taxonomy-term-reference {
     .grid-icons .col-md-4 > a:active {
       border-color: #fff;
       color: #fff;
-      background: #876E4C;
+      /*background: $highlight;*/
       text-decoration: none; }
       .grid-icons .col-md-3 > .wrapper:hover .wrapper, .grid-icons .col-md-3 > .wrapper:focus .wrapper, .grid-icons .col-md-3 > .wrapper:active .wrapper, .grid-icons .col-md-3 > a:hover .wrapper, .grid-icons .col-md-3 > a:focus .wrapper, .grid-icons .col-md-3 > a:active .wrapper,
       .grid-icons .col-md-4 > .wrapper:hover .wrapper,
