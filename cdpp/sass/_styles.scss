@@ -305,6 +305,9 @@ div.breadcrumb-row {
     border: 0;
     margin-bottom: 0;
     position: relative;
+    .thumbnail-extra {
+        background:url(/sites/g/files/net391/themes/site/cdpp/images/front-page/right-arrow-com.png) right 15px bottom 15px no-repeat;
+    }
     .caption {
       position: absolute;
       margin-top: -6.8em;
@@ -318,6 +321,7 @@ div.breadcrumb-row {
       //min-height: 5em;          // comment this out for adapting height
       // text-align: center;    // ...just don't.
       padding-right: 35px;
+      /*
       &:after {
         content: '\e80b'; // greater than sign
         font-family: 'cdpp-icons';
@@ -331,7 +335,7 @@ div.breadcrumb-row {
         bottom: 0;
         color: $highlight;
         //color: rgb(41,195,203);
-      }
+      }*/
       h2 {
         text-transform: uppercase;
         margin: 0;

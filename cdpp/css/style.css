@@ -646,6 +646,8 @@ div.breadcrumb-row {
     border: 0;
     margin-bottom: 0;
     position: relative; }
+    .region-content .thumbnail .thumbnail-extra {
+      background: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/right-arrow-com.png) right 15px bottom 15px no-repeat; }
     .region-content .thumbnail .caption {
       position: absolute;
       margin-top: -6.8em;
@@ -656,15 +658,22 @@ div.breadcrumb-row {
       top: auto;
       bottom: 0;
       width: 100%;
-      padding-right: 35px; }
-      .region-content .thumbnail .caption:after {
-        content: '\e80b';
+      padding-right: 35px;
+      /*
+      &:after {
+        content: '\e80b'; // greater than sign
         font-family: 'cdpp-icons';
+        //position: relative;
         font-size: 4em;
+        //float: right;
+        //margin-top: -1.28em;
+        //right: -20px;
         position: absolute;
         right: 10px;
         bottom: 0;
-        color: #876E4C; }
+        color: $highlight;
+        //color: rgb(41,195,203);
+      }*/ }
       .region-content .thumbnail .caption h2 {
         text-transform: uppercase;
         margin: 0;
