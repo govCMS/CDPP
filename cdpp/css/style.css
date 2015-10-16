@@ -431,6 +431,7 @@ h2 {
 
 .carousel {
   /*@include background-gradient($highlight);*/
+  background-color: #876E4C;
   color: #fff; }
   .carousel a {
     color: #fff; }

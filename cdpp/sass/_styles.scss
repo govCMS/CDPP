@@ -71,6 +71,7 @@ h2 {
 // Homepage Carousel/Slider
 .carousel {
   /*@include background-gradient($highlight);*/
+  background-color: $highlight;
   color: #fff;
   a {
     color: #fff;
