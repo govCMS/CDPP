@@ -649,7 +649,7 @@ div.breadcrumb-row {
     .region-content .thumbnail .caption {
       position: absolute;
       margin-top: -6.8em;
-      background-color: rgba(68, 68, 68, 0.85) url(/sites/g/files/net391/themes/site/cdpp/images/front-page/right-arrow-com.png) right 15px bottom 15px no-repeat;
+      background: rgba(68, 68, 68, 0.85) url(/sites/g/files/net391/themes/site/cdpp/images/front-page/right-arrow-com.png) right 10px bottom 20px no-repeat;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       color: #fff;
