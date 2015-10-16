@@ -73,7 +73,11 @@
 .icon-angle-circled-right,
 .icon-circle-empty,
 .icon-circle {
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: top left;
+  width: 27px;
+  height: 26px;
+  display: inline-block; }
 
 .icon-angle-circled-left {
   background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/arrow-left.png); }

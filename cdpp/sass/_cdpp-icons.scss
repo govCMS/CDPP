@@ -71,12 +71,24 @@
 .icon-circle-empty,
 .icon-circle {
   background-repeat:no-repeat;
+  background-position:top left;
+  width:27px;
+  height:26px;
+  display:inline-block;
 }
 
-.icon-angle-circled-left { background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/arrow-left.png); }
-.icon-angle-circled-right { background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/arrow-right.png); }
-.icon-circle-empty { background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-empty.png); }
-.icon-cirle { background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-filled.png); }
+.icon-angle-circled-left {
+  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/arrow-left.png);
+}
+.icon-angle-circled-right {
+  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/arrow-right.png);
+}
+.icon-circle-empty {
+  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-empty.png);
+}
+.icon-cirle {
+  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-filled.png);
+}
 
 //.icon-circle:before { content: '\e800'; } /* '' */
 //.icon-circle-empty:before { content: '\e801'; } /* '' */
