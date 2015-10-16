@@ -430,9 +430,38 @@ h2 {
   display: none; }
 
 .carousel {
-  /*@include background-gradient($highlight);*/
   background-color: #876E4C;
+  background: linear-gradient(573deg, #6d593d, #a1835b);
+  background-size: 400% 400%;
+  -webkit-animation: bg 30s ease infinite;
+  -moz-animation: bg 30s ease infinite;
+  animation: bg 30s ease infinite;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   color: #fff; }
+@-webkit-keyframes bg {
+  0% {
+    background-position: 90% 0%; }
+  50% {
+    background-position: 11% 100%; }
+  100% {
+    background-position: 90% 0%; } }
+@-moz-keyframes bg {
+  0% {
+    background-position: 90% 0%; }
+  50% {
+    background-position: 11% 100%; }
+  100% {
+    background-position: 90% 0%; } }
+@keyframes bg {
+  0% {
+    background-position: 90% 0%; }
+  50% {
+    background-position: 11% 100%; }
+  100% {
+    background-position: 90% 0%; } }
   .carousel a {
     color: #fff; }
   .carousel ul {
