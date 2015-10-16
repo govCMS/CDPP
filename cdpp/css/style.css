@@ -627,12 +627,13 @@ div.breadcrumb-row {
   .region-content .panel-col-middle {
     margin-top: 0; }
   .region-content .panel-col-bottom .pane-node .panel-body {
-    background-position: right bottom; }
-  .region-content .panel-col-bottom .pane-node:nth-of-type(1) .panel-body {
+    background-position: right 15px bottom 15px;
+    background-repeat: no-repeat; }
+  .region-content .panel-col-bottom .pane-node #node-1 .panel-body {
     background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-news.png); }
-  .region-content .panel-col-bottom .pane-node:nth-of-type(2) .panel-body {
+  .region-content .panel-col-bottom .pane-node #node-2 .panel-body {
     background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-prosecutions.png); }
-  .region-content .panel-col-bottom .pane-node:nth-of-type(3) .panel-body {
+  .region-content .panel-col-bottom .pane-node #node-3 .panel-body {
     background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-about-us.png); }
   .region-content .thumbnail {
     padding: 0;

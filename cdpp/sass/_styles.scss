@@ -285,15 +285,16 @@ div.breadcrumb-row {
 
   .panel-col-bottom .pane-node {
     .panel-body {
-      background-position:right bottom;
+      background-position:right 15px bottom 15px;
+      background-repeat:no-repeat;
     }
-    &:nth-of-type(1) .panel-body {
+    #node-1 .panel-body {
       background-image:url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-news.png);
     }
-    &:nth-of-type(2) .panel-body {
+    #node-2 .panel-body {
       background-image:url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-prosecutions.png);
     }
-    &:nth-of-type(3) .panel-body {
+    #node-3 .panel-body {
       background-image:url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-about-us.png);
     }
   }
