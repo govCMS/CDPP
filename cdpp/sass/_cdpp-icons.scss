@@ -71,7 +71,7 @@
 .icon-circle-empty,
 .icon-circle {
   background-repeat:no-repeat;
-  background-position:top left;
+  background-position:center;
   width:27px;
   height:26px;
   display:inline-block;
@@ -86,8 +86,8 @@
 .icon-circle-empty {
   background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-empty.png);
 }
-.icon-cirle {
-  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-filled.png);
+.icon-circle {
+  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-filled.png); 
 }
 
 //.icon-circle:before { content: '\e800'; } /* '' */
