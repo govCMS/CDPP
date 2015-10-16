@@ -257,6 +257,7 @@ div.breadcrumb-row {
     //}
   }
 
+  /*
   .panel-col-bottom .pane-node {
     .panel-body {
       &:after {
@@ -278,6 +279,22 @@ div.breadcrumb-row {
     }
     &:nth-of-type(1) .panel-body:after {
       content: '\e81a';  // tower
+    }
+  }
+  */
+
+  .panel-col-bottom .pane-node {
+    .panel-body {
+      background-position:right bottom;
+    }
+    &:nth-of-type(1) .panel-body {
+      background-image:url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-news.png);
+    }
+    &:nth-of-type(2) .panel-body {
+      background-image:url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-prosecutions.png);
+    }
+    &:nth-of-type(3) .panel-body {
+      background-image:url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-about-us.png);
     }
   }
 

@@ -563,107 +563,127 @@ div.breadcrumb-row {
 .page-header {
   color: #876E4C; }
 
-.region-content .panel-panel {
-  margin-top: 2em; }
-  .region-content .panel-panel .panel-pane .panels-ipe-paneid-6 .jumbotron, .region-content .panel-panel .panel-pane:first-of-type .jumbotron {
-    background-color: #00BEC8; }
-  .region-content .panel-panel .panel-pane .panels-ipe-paneid-7 .jumbotron, .region-content .panel-panel .panel-pane:nth-of-type(3) .jumbotron {
-    background-color: #008B97; }
-  .region-content .panel-panel .panel-pane .panels-ipe-paneid-8 .jumbotron, .region-content .panel-panel .panel-pane:last-of-type .jumbotron {
-    background-color: #07364C; }
-  .region-content .panel-panel .jumbotron {
-    border-radius: 4px;
-    padding: 28px;
-    margin-bottom: 0; }
-    .region-content .panel-panel .jumbotron a {
-      text-decoration: none;
-      color: #fff; }
-    .region-content .panel-panel .jumbotron h2 {
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      margin-top: 0;
-      font-size: 22px; }
-      .region-content .panel-panel .jumbotron h2 .hide-hover {
-        color: #444;
-        opacity: 0;
-        transition: 0.26s opacity, 0.9s color; }
-    .region-content .panel-panel .jumbotron p {
-      font-size: 14px; }
-      .region-content .panel-panel .jumbotron p:last-of-type {
-        margin-top: 10px;
-        /*text-decoration: underline;*/ }
-    .region-content .panel-panel .jumbotron:hover, .region-content .panel-panel .jumbotron:active, .region-content .panel-panel .jumbotron:focus {
-      opacity: 0.85; }
-      .region-content .panel-panel .jumbotron:hover h2 .hide-hover, .region-content .panel-panel .jumbotron:active h2 .hide-hover, .region-content .panel-panel .jumbotron:focus h2 .hide-hover {
-        opacity: 1;
+.region-content {
+  /*
+  .panel-col-bottom .pane-node {
+    .panel-body {
+      &:after {
+        //content: '\e81a';  // tower
+        content: '\e81c'; // star
+        font-family: 'cdpp-icons';
+        //position: relative;
+        font-size: 6em;
+        color: $lightBG;
+        margin-top: -1.2em;
+        float: right;
+      }
+    }
+    &:nth-of-type(3) .panel-body:after {
+      content: '\e806'; // scales
+      font-size: 7.5em;
+      margin-top: -1.05em;
+      margin-right: -10px;
+    }
+    &:nth-of-type(1) .panel-body:after {
+      content: '\e81a';  // tower
+    }
+  }
+  */ }
+  .region-content .panel-panel {
+    margin-top: 2em; }
+    .region-content .panel-panel .panel-pane .panels-ipe-paneid-6 .jumbotron, .region-content .panel-panel .panel-pane:first-of-type .jumbotron {
+      background-color: #00BEC8; }
+    .region-content .panel-panel .panel-pane .panels-ipe-paneid-7 .jumbotron, .region-content .panel-panel .panel-pane:nth-of-type(3) .jumbotron {
+      background-color: #008B97; }
+    .region-content .panel-panel .panel-pane .panels-ipe-paneid-8 .jumbotron, .region-content .panel-panel .panel-pane:last-of-type .jumbotron {
+      background-color: #07364C; }
+    .region-content .panel-panel .jumbotron {
+      border-radius: 4px;
+      padding: 28px;
+      margin-bottom: 0; }
+      .region-content .panel-panel .jumbotron a {
+        text-decoration: none;
         color: #fff; }
-.region-content .panel-col-top,
-.region-content .panel-col-middle {
-  margin-top: 0; }
-.region-content .panel-col-bottom .pane-node .panel-body:after {
-  content: '\e81c';
-  font-family: 'cdpp-icons';
-  font-size: 6em;
-  color: #EFEDE8;
-  margin-top: -1.2em;
-  float: right; }
-.region-content .panel-col-bottom .pane-node:nth-of-type(3) .panel-body:after {
-  content: '\e806';
-  font-size: 7.5em;
-  margin-top: -1.05em;
-  margin-right: -10px; }
-.region-content .panel-col-bottom .pane-node:nth-of-type(1) .panel-body:after {
-  content: '\e81a'; }
-.region-content .thumbnail {
-  padding: 0;
-  border: 0;
-  margin-bottom: 0;
-  position: relative; }
-  .region-content .thumbnail .caption {
-    position: absolute;
-    margin-top: -6.8em;
-    background-color: rgba(68, 68, 68, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: #fff;
-    top: auto;
-    bottom: 0;
-    width: 100%;
-    padding-right: 35px; }
-    .region-content .thumbnail .caption:after {
-      content: '\e80b';
-      font-family: 'cdpp-icons';
-      font-size: 4em;
+      .region-content .panel-panel .jumbotron h2 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-top: 0;
+        font-size: 22px; }
+        .region-content .panel-panel .jumbotron h2 .hide-hover {
+          color: #444;
+          opacity: 0;
+          transition: 0.26s opacity, 0.9s color; }
+      .region-content .panel-panel .jumbotron p {
+        font-size: 14px; }
+        .region-content .panel-panel .jumbotron p:last-of-type {
+          margin-top: 10px;
+          /*text-decoration: underline;*/ }
+      .region-content .panel-panel .jumbotron:hover, .region-content .panel-panel .jumbotron:active, .region-content .panel-panel .jumbotron:focus {
+        opacity: 0.85; }
+        .region-content .panel-panel .jumbotron:hover h2 .hide-hover, .region-content .panel-panel .jumbotron:active h2 .hide-hover, .region-content .panel-panel .jumbotron:focus h2 .hide-hover {
+          opacity: 1;
+          color: #fff; }
+  .region-content .panel-col-top,
+  .region-content .panel-col-middle {
+    margin-top: 0; }
+  .region-content .panel-col-bottom .pane-node .panel-body {
+    background-position: right bottom; }
+  .region-content .panel-col-bottom .pane-node:nth-of-type(1) .panel-body {
+    background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-news.png); }
+  .region-content .panel-col-bottom .pane-node:nth-of-type(2) .panel-body {
+    background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-prosecutions.png); }
+  .region-content .panel-col-bottom .pane-node:nth-of-type(3) .panel-body {
+    background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/cdpp-about-us.png); }
+  .region-content .thumbnail {
+    padding: 0;
+    border: 0;
+    margin-bottom: 0;
+    position: relative; }
+    .region-content .thumbnail .caption {
       position: absolute;
-      right: 10px;
+      margin-top: -6.8em;
+      background-color: rgba(68, 68, 68, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #fff;
+      top: auto;
       bottom: 0;
-      color: #876E4C; }
-    .region-content .thumbnail .caption h2 {
-      text-transform: uppercase;
-      margin: 0;
-      min-height: 2.2em; }
-      .region-content .thumbnail .caption h2 a {
-        color: #fff; }
-.region-content .view-news-and-media-releases-views h2, .region-content .view-case-reports-views h2, .region-content .view-publications-and-policies-views h2 {
-  margin-top: 0; }
-  .region-content .view-news-and-media-releases-views h2 a, .region-content .view-case-reports-views h2 a, .region-content .view-publications-and-policies-views h2 a {
-    color: #444;
-    text-decoration: underline; }
-.region-content .views-row {
-  margin-top: 1.5em; }
-.region-content .field-name-post-date,
-.region-content .date-display-single {
-  color: #876E4C;
-  text-transform: uppercase; }
-.region-content .icon-rss:before {
-  background-color: #F29100;
-  color: #fff;
-  padding: 2px 2px 1px 2px;
-  width: 1.2em; }
-.region-content .not-front article .field {
-  margin-bottom: 1em; }
-  .region-content .not-front article .field .field-label {
-    color: #666; }
+      width: 100%;
+      padding-right: 35px; }
+      .region-content .thumbnail .caption:after {
+        content: '\e80b';
+        font-family: 'cdpp-icons';
+        font-size: 4em;
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        color: #876E4C; }
+      .region-content .thumbnail .caption h2 {
+        text-transform: uppercase;
+        margin: 0;
+        min-height: 2.2em; }
+        .region-content .thumbnail .caption h2 a {
+          color: #fff; }
+  .region-content .view-news-and-media-releases-views h2, .region-content .view-case-reports-views h2, .region-content .view-publications-and-policies-views h2 {
+    margin-top: 0; }
+    .region-content .view-news-and-media-releases-views h2 a, .region-content .view-case-reports-views h2 a, .region-content .view-publications-and-policies-views h2 a {
+      color: #444;
+      text-decoration: underline; }
+  .region-content .views-row {
+    margin-top: 1.5em; }
+  .region-content .field-name-post-date,
+  .region-content .date-display-single {
+    color: #876E4C;
+    text-transform: uppercase; }
+  .region-content .icon-rss:before {
+    background-color: #F29100;
+    color: #fff;
+    padding: 2px 2px 1px 2px;
+    width: 1.2em; }
+  .region-content .not-front article .field {
+    margin-bottom: 1em; }
+    .region-content .not-front article .field .field-label {
+      color: #666; }
 
 body.front .region-content .thumbnail .caption {
   /*min-height: 8em;*/ }
