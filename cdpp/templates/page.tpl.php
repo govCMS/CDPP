@@ -103,7 +103,7 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php if (!empty($page['header'])): ?>
-        <div class="col-sm-12 col-md-6 pull-right">
+        <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
           <div class="pull-right">
             <?php print render($page['header']); ?>
           </div>
