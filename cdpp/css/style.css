@@ -658,7 +658,7 @@ div.breadcrumb-row {
       color: #fff;
       top: auto;
       bottom: 0;
-      width: 350px;
+      width: 100%;
       padding-right: 35px;
       /*
       &:after {
@@ -703,7 +703,8 @@ div.breadcrumb-row {
       color: #666; }
 
 body.front .region-content .thumbnail .caption {
-  /*min-height: 8em;*/ }
+  /*min-height: 8em;*/
+  width: 350px; }
   body.front .region-content .thumbnail .caption h2 {
     min-height: 0 !important;
     margin-bottom: 5px; }
