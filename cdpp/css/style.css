@@ -913,7 +913,10 @@ footer.footer {
   body.front .main-container .panel-pane,
   body.front .main-container .no-right-padding,
   body.front .main-container .no-left-padding {
-    padding: 0 !important; } }
+    padding: 0 !important; }
+
+  .region-content .panel-panel .jumbotron h2 .hide-hover {
+    display: none; } }
 @media screen and (max-width: 725px) {
   #region-header .pull-right {
     float: none !important; }
@@ -960,7 +963,4 @@ footer.footer {
       padding-left: 4px; }
 
   .panel-col-bottom .pane-node .panel-body:after {
-    content: '' !important; }
-
-  .region-content .panel-panel .jumbotron h2 .hide-hover {
-    display: none; } }
+    content: '' !important; } }
