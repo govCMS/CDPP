@@ -900,7 +900,7 @@ footer.footer {
     margin: 15px 38px 5px 0; }
 
   h2 .hide-hover {
-    display: inline; } }
+    display: inline !important; } }
 @media screen and (max-width: 991px) {
   body.front .carousel .rslides_tabs {
     margin-top: 10px;
