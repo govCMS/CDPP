@@ -397,6 +397,7 @@ body.front {
     }
   }
   .panel-col-middle .panel-pane {
+    max-width:350px;
     &:nth-of-type(1) .caption:after {
       color: rgb(27,55,76);
     }
