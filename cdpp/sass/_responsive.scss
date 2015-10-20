@@ -8,6 +8,16 @@
 // 1200px +
 @media screen and (min-width: 1200px) {
   //...
+  region-content .panel-panel .jumbotron h2 .hide-hover {
+    display:inline;
+  }
+}
+
+// < 1200px
+@media screen and (max-width: 1199px) {
+  region-content .panel-panel .jumbotron h2 .hide-hover {
+    display:none;
+  }
 }
 
 
@@ -74,12 +84,6 @@
   footer.footer #region-bottom-footer li {
     margin: 15px 38px 5px 0;
   }
-
-  // front page hover (advise / prosecute / educate)
-  .region-content .panel-panel .jumbotron h2 .hide-hover {
-    display:inline;
-  }
-
 }
 
 
@@ -108,10 +112,6 @@
         padding: 0 !important;
       }
     }
-  }
-  // front page hover (advise / prosecute / educate)
-  .region-content .panel-panel .jumbotron h2 .hide-hover {
-    display:none;
   }
 }
 
