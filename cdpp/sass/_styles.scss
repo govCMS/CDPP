@@ -220,6 +220,8 @@ div.breadcrumb-row {
         margin-bottom: 20px;
         margin-top: 0;
         font-size: 22px;
+        max-height:24px;
+        overflow:hidden;
         .hide-hover {
           //@extend .sr-only;
           color: $textColour;

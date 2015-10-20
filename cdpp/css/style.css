@@ -614,7 +614,9 @@ div.breadcrumb-row {
         text-transform: uppercase;
         margin-bottom: 20px;
         margin-top: 0;
-        font-size: 22px; }
+        font-size: 22px;
+        max-height: 24px;
+        overflow: hidden; }
         .region-content .panel-panel .jumbotron h2 .hide-hover {
           color: #444;
           opacity: 0;
@@ -863,12 +865,6 @@ footer.footer {
 .img-responsive {
   width: auto; }
 
-@media screen and (min-width: 1200px) {
-  region-content .panel-panel .jumbotron h2 .hide-hover {
-    display: inline; } }
-@media screen and (max-width: 1199px) {
-  region-content .panel-panel .jumbotron h2 .hide-hover {
-    display: none; } }
 @media screen and (min-width: 991px) and (max-width: 1200px) {
   #navbar #region-navigation.navbar #main-nav .block-superfish > ul > li > a {
     padding: 18px 27px 18px 30px; }
