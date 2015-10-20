@@ -618,6 +618,7 @@ div.breadcrumb-row {
         max-height: 24px;
         overflow: hidden; }
         .region-content .panel-panel .jumbotron h2 .hide-hover {
+          white-space: nowrap;
           color: #444;
           opacity: 0;
           transition: 0.26s opacity, 0.9s color; }

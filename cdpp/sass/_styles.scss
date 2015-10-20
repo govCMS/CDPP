@@ -224,6 +224,7 @@ div.breadcrumb-row {
         overflow:hidden;
         .hide-hover {
           //@extend .sr-only;
+          white-space:nowrap;
           color: $textColour;
           opacity: 0;
           transition: 0.26s opacity, 0.9s color;
