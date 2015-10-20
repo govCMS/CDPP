@@ -222,6 +222,7 @@ div.breadcrumb-row {
         font-size: 22px;
         .hide-hover {
           //@extend .sr-only;
+          display:none; // this gets enabled if the screen is wide enough. See _responsive.
           color: $textColour;
           opacity: 0;
           transition: 0.26s opacity, 0.9s color;
