@@ -76,8 +76,8 @@
   }
 
   // front page hover (advise / prosecute / educate)
-  h2 .hide-hover {
-    display:inline !important;
+  .region-content .panel-panel .jumbotron h2 .hide-hover {
+    display:inline;
   }
 
 }
@@ -206,5 +206,10 @@
         content: '' !important;
       }
     }
+  }
+
+  // front page hover (advise / prosecute / educate)
+  .region-content .panel-panel .jumbotron h2 .hide-hover {
+    display:none;
   }
 }

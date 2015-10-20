@@ -616,7 +616,6 @@ div.breadcrumb-row {
         margin-top: 0;
         font-size: 22px; }
         .region-content .panel-panel .jumbotron h2 .hide-hover {
-          display: none;
           color: #444;
           opacity: 0;
           transition: 0.26s opacity, 0.9s color; }
@@ -899,8 +898,8 @@ footer.footer {
   footer.footer #region-bottom-footer li {
     margin: 15px 38px 5px 0; }
 
-  h2 .hide-hover {
-    display: inline !important; } }
+  .region-content .panel-panel .jumbotron h2 .hide-hover {
+    display: inline; } }
 @media screen and (max-width: 991px) {
   body.front .carousel .rslides_tabs {
     margin-top: 10px;
@@ -961,4 +960,7 @@ footer.footer {
       padding-left: 4px; }
 
   .panel-col-bottom .pane-node .panel-body:after {
-    content: '' !important; } }
+    content: '' !important; }
+
+  .region-content .panel-panel .jumbotron h2 .hide-hover {
+    display: none; } }
