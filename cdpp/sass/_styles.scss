@@ -317,7 +317,7 @@ div.breadcrumb-row {
       top: auto;
       bottom: 0;
       //display: inline-block; //Fix for IE10
-      width: 100%;
+      width: 350px;
       //min-height: 5em;          // comment this out for adapting height
       // text-align: center;    // ...just don't.
       padding-right: 35px;
@@ -397,7 +397,6 @@ body.front {
     }
   }
   .panel-col-middle .panel-pane {
-    max-width:350px;
     &:nth-of-type(1) .caption:after {
       color: rgb(27,55,76);
     }

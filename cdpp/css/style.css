@@ -658,7 +658,7 @@ div.breadcrumb-row {
       color: #fff;
       top: auto;
       bottom: 0;
-      width: 100%;
+      width: 350px;
       padding-right: 35px;
       /*
       &:after {
@@ -711,12 +711,10 @@ body.front .region-content .thumbnail .caption {
     right: 10px;
     bottom: 15px;
     color: #29c3cb; }
-body.front .panel-col-middle .panel-pane {
-  max-width: 350px; }
-  body.front .panel-col-middle .panel-pane:nth-of-type(1) .caption:after {
-    color: #1b374c; }
-  body.front .panel-col-middle .panel-pane:nth-of-type(3) .caption:after {
-    color: #108896; }
+body.front .panel-col-middle .panel-pane:nth-of-type(1) .caption:after {
+  color: #1b374c; }
+body.front .panel-col-middle .panel-pane:nth-of-type(3) .caption:after {
+  color: #108896; }
 
 body.front .thumbnail {
   border-radius: 4px;
