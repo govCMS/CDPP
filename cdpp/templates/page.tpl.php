@@ -81,7 +81,7 @@
     </div>
     <?php endif; ?>
     <div id="skip-link">
-      <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+      <a href="#main-content" tabindex="1" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
     </div>
     <div class="navbar-header pull-right">
       <?php if (!empty($page['top_menu'])): ?>
