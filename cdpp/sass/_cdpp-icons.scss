@@ -85,9 +85,12 @@
 }
 .icon-circle-empty {
   background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-empty.png);
-}
+  text-indent: -9999px;
+} 
+
 .icon-circle {
   background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-filled.png); 
+  text-indent: -9999px;
 }
 
 //.icon-circle:before { content: '\e800'; } /* '' */
