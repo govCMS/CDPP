@@ -876,7 +876,8 @@ footer.footer {
 
   .carousel .icon-circle-empty,
   .carousel .icon-circle {
-    top: -4px; }
+    top: -4px;
+    text-indent: -9999px; }
   .carousel .rslides_tabs {
     margin-top: -3em;
     margin-bottom: 0; }

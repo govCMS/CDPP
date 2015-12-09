@@ -136,12 +136,12 @@
             if(n == 1) {
               tabMarkup +=
                   "<li>" +
-                  "<a href='#' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle">' + n + '</i>' + "</a>" +
+                  "<a role='button' href='#" + n + "' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle">' + n + '</i>' + "</a>" +
                   "</li>";
             } else {
               tabMarkup +=
                   "<li>" +
-                  "<a href='#' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle-empty">' + n + '</i>' + "</a>" +
+                  "<a role='button' href='#" + n + "' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle-empty">' + n + '</i>' + "</a>" +
                   "</li>";
             }
           });
