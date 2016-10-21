@@ -86,12 +86,10 @@
   background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/arrow-right.png); }
 
 .icon-circle-empty {
-  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-empty.png);
-  text-indent: -9999px; }
+  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-empty.png); }
 
 .icon-circle {
-  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-filled.png);
-  text-indent: -9999px; }
+  background-image: url(/sites/g/files/net391/themes/site/cdpp/images/front-page/circle-filled.png); }
 
 .icon-home:before {
   content: '\e804'; }
@@ -492,8 +490,7 @@ h2 {
   .carousel .icon-circle-empty,
   .carousel .icon-circle {
     top: -7px;
-    position: relative;
-    text-indent: -9999px; }
+    position: relative; }
   .carousel .icon-angle-circled-left,
   .carousel .icon-angle-circled-right {
     font-size: 200%; }
@@ -568,6 +565,9 @@ div.breadcrumb-row {
         margin-top: -5px; }
       .panel .panel-heading h2 i.icon-fed-star {
         font-size: 88%; }
+        
+.webform-client-form .panel .panel-heading {
+  background-color: #EFEDE8; }
 
 .page-header {
   color: #876E4C; }
@@ -879,8 +879,7 @@ footer.footer {
 
   .carousel .icon-circle-empty,
   .carousel .icon-circle {
-    top: -4px;
-    text-indent: -9999px; }
+    top: -4px; }
   .carousel .rslides_tabs {
     margin-top: -3em;
     margin-bottom: 0; }

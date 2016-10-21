@@ -108,7 +108,6 @@ h2 {
   .icon-circle {
     top: -7px;
     position: relative;
-    text-indent: -9999px;
   }
   .icon-angle-circled-left,
   .icon-angle-circled-right {
@@ -180,6 +179,16 @@ div.breadcrumb-row {
           font-size: 88%;
         }
       }
+    }
+  }
+}
+
+//Override panel heading background for webforms
+//from dark brown on black to light brown on black
+.webform-client-form {
+  .panel {
+    .panel-heading {
+      background-color: $lightBG;
     }
   }
 }

@@ -95,7 +95,13 @@ var Drupal = Drupal || {};
                 function() {jQuery(this).addClass('grayscale')},
                 function() {jQuery(this).removeClass('grayscale')}
             );
+        }); 
+        
+        jQuery('.form-item .description').each(function(){
+            var parent = jQuery(this).parent();
+            parent.children('label').after(jQuery(this));
         });
+
     });
 
     equalheight = function(container){
