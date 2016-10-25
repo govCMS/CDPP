@@ -52,8 +52,8 @@
   <!-- open graph settings -->
   <meta property="og:title" content="<?php print $head_title; ?>">
   <meta property="og:description" content="">
-  <meta property="og:image" content="http://cdpp.govcms.gov.au/sites/g/files/net391/f/cdpp_logo_current.png">
-  <meta property="og:image:secure_url" content="https://cdpp.govcms.gov.au/sites/g/files/net391/f/cdpp_logo_current.png">
+  <meta property="og:image" content="https://www.cdpp.gov.au/sites/g/files/net2061/f/cdpp_logo_current.png">
+  <meta property="og:image:secure_url" content="https://www.cdpp.gov.au/sites/g/files/net2061/f/cdpp_logo_current.png">
   <meta property="og:image:type" content="image/png">
   <!-- end open graph settings -->
 
