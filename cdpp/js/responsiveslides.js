@@ -136,12 +136,12 @@
             if(n == 1) {
               tabMarkup +=
                   "<li>" +
-                  "<a role='button' href='#" + n + "' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle">' + n + '</i>' + "</a>" +
+                  "<a role='button' href='#" + n + "' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle"></i>' + "</a>" +
                   "</li>";
             } else {
               tabMarkup +=
                   "<li>" +
-                  "<a role='button' href='#" + n + "' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle-empty">' + n + '</i>' + "</a>" +
+                  "<a role='button' href='#" + n + "' class='" + slideClassPrefix + n + "'>" + '<i class="icon-circle-empty"></i>' + "</a>" +
                   "</li>";
             }
           });
