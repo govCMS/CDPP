@@ -479,6 +479,7 @@ h2 {
     margin-bottom: 0; }
   .carousel .rslides_tabs {
     margin-top: -4em;
+    clear: both;
     padding-left: 30px; }
   .carousel .group-left {
     padding-left: 0;
