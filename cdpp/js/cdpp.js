@@ -214,7 +214,7 @@ var Drupal = Drupal || {};
     Drupal.behaviors.addViewAllButton = {
         attach: function(context, settings) {
             //add 'View All' button/link next to 'Apply' button on case reports filter
-            var $form = $('#views-exposed-form-case-reports-views-page-1');
+            var $form = $('#views-exposed-form-case-reports-views-page-1', context);
             var $submit = $form.find('.views-submit-button');
             $submit.append($('<a href="/case-reports/filter?field_category_tid=All&field_report_location_tid=All" class="btn btn-info">View All</a>'));
         }
