@@ -49,6 +49,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="wvzqalsdtWD9Z6J71YP0PNgqkATbG2dIf13uK_yN20o" />
   <!-- open graph settings -->
   <meta property="og:title" content="<?php print $head_title; ?>">
   <meta property="og:description" content="">
