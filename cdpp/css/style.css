@@ -23,6 +23,7 @@
   src: url("../font/cdpp-icons.eot#iefix") format("embedded-opentype"), url("../font/cdpp-icons.woff") format("woff"), url("../font/cdpp-icons.ttf") format("truetype"), url("../font/cdpp-icons.svg#cdpp-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
@@ -86,10 +87,12 @@
   background-image: url(/sites/g/files/net2061/themes/site/cdpp/images/front-page/arrow-right.png); }
 
 .icon-circle-empty {
-  background-image: url(/sites/g/files/net2061/themes/site/cdpp/images/front-page/circle-empty.png); }
+  background-image: url(/sites/g/files/net2061/themes/site/cdpp/images/front-page/circle-empty.png);
+  text-indent: -9999px; }
 
 .icon-circle {
-  background-image: url(/sites/g/files/net2061/themes/site/cdpp/images/front-page/circle-filled.png); }
+  background-image: url(/sites/g/files/net2061/themes/site/cdpp/images/front-page/circle-filled.png);
+  text-indent: -9999px; }
 
 .icon-home:before {
   content: '\e804'; }
@@ -204,6 +207,15 @@
     float: left; }
     #region-top-menu #skip-link a:hover, #region-top-menu #skip-link a:active, #region-top-menu #skip-link a:focus {
       text-decoration: underline; }
+  #region-top-menu .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #region-top-menu .container:before, #region-top-menu .container:after {
+      display: none; }
+  #region-top-menu .navbar-header {
+    margin-right: 20px;
+    margin-left: auto; }
 
 #region-header {
   background-color: #fff;
@@ -365,7 +377,8 @@
       color: #876E4C; }
   .region-sidebar-first .date-display-single {
     color: #666;
-    font-size: 10px; }
+    font-size: 10px;
+    font-size: 1rem; }
   .region-sidebar-first section {
     border: 1px solid #E2E2E2;
     padding: 5px;
@@ -391,7 +404,8 @@ h4 {
   font-weight: 300; }
 
 h2 {
-  font-size: 24px; }
+  font-size: 24px;
+  font-size: 2.4rem; }
 
 .btn-primary,
 .btn-info {
@@ -413,7 +427,7 @@ h2 {
   .search-form-widget .form-group {
     float: left;
     min-width: 85.5%;
-    min-width: calc( 100% - 4.5em ); }
+    min-width: calc( 100% - 4.5em); }
     .search-form .form-group .form-text,
     .search-form-widget .form-group .form-text {
       padding-right: 25px; }
@@ -438,13 +452,11 @@ h2 {
   background: linear-gradient(573deg, #6d593d, #a1835b);
   background-size: 400% 400%;
   -webkit-animation: bg 30s ease infinite;
-  -moz-animation: bg 30s ease infinite;
   animation: bg 30s ease infinite;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   color: #fff; }
+
 @-webkit-keyframes bg {
   0% {
     background-position: 90% 0%; }
@@ -452,13 +464,7 @@ h2 {
     background-position: 11% 100%; }
   100% {
     background-position: 90% 0%; } }
-@-moz-keyframes bg {
-  0% {
-    background-position: 90% 0%; }
-  50% {
-    background-position: 11% 100%; }
-  100% {
-    background-position: 90% 0%; } }
+
 @keyframes bg {
   0% {
     background-position: 90% 0%; }
@@ -479,8 +485,8 @@ h2 {
     margin-bottom: 0; }
   .carousel .rslides_tabs {
     margin-top: -4em;
-    clear: both;
-    padding-left: 30px; }
+    padding-left: 30px;
+    clear: both; }
   .carousel .group-left {
     padding-left: 0;
     padding-right: 0; }
@@ -506,12 +512,10 @@ div.breadcrumb-row {
   background: linear-gradient(573deg, #6d593d, #a1835b);
   background-size: 400% 400%;
   -webkit-animation: bg 30s ease infinite;
-  -moz-animation: bg 30s ease infinite;
   animation: bg 30s ease infinite;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover; }
+
 @-webkit-keyframes bg {
   0% {
     background-position: 90% 0%; }
@@ -519,13 +523,7 @@ div.breadcrumb-row {
     background-position: 11% 100%; }
   100% {
     background-position: 90% 0%; } }
-@-moz-keyframes bg {
-  0% {
-    background-position: 90% 0%; }
-  50% {
-    background-position: 11% 100%; }
-  100% {
-    background-position: 90% 0%; } }
+
 @keyframes bg {
   0% {
     background-position: 90% 0%; }
@@ -554,6 +552,7 @@ div.breadcrumb-row {
   .panel .panel-heading h2 {
     text-transform: uppercase;
     font-size: 25px;
+    font-size: 2.5rem;
     color: #fff;
     margin: 0;
     font-weight: 400; }
@@ -566,7 +565,7 @@ div.breadcrumb-row {
         margin-top: -5px; }
       .panel .panel-heading h2 i.icon-fed-star {
         font-size: 88%; }
-        
+
 .webform-client-form .panel .panel-heading {
   background-color: #EFEDE8; }
 
@@ -601,11 +600,14 @@ div.breadcrumb-row {
   */ }
   .region-content .panel-panel {
     margin-top: 2em; }
-    .region-content .panel-panel .panel-pane .panels-ipe-paneid-6 .jumbotron, .region-content .panel-panel .panel-pane:first-of-type .jumbotron {
+    .region-content .panel-panel .panel-pane .panels-ipe-paneid-6 .jumbotron,
+    .region-content .panel-panel .panel-pane:first-of-type .jumbotron {
       background-color: #00BEC8; }
-    .region-content .panel-panel .panel-pane .panels-ipe-paneid-7 .jumbotron, .region-content .panel-panel .panel-pane:nth-of-type(3) .jumbotron {
+    .region-content .panel-panel .panel-pane .panels-ipe-paneid-7 .jumbotron,
+    .region-content .panel-panel .panel-pane:nth-of-type(3) .jumbotron {
       background-color: #008B97; }
-    .region-content .panel-panel .panel-pane .panels-ipe-paneid-8 .jumbotron, .region-content .panel-panel .panel-pane:last-of-type .jumbotron {
+    .region-content .panel-panel .panel-pane .panels-ipe-paneid-8 .jumbotron,
+    .region-content .panel-panel .panel-pane:last-of-type .jumbotron {
       background-color: #07364C; }
     .region-content .panel-panel .jumbotron {
       border-radius: 4px;
@@ -619,6 +621,7 @@ div.breadcrumb-row {
         margin-bottom: 20px;
         margin-top: 0;
         font-size: 22px;
+        font-size: 2.2rem;
         max-height: 24px;
         overflow: hidden; }
         .region-content .panel-panel .jumbotron h2 .hide-hover {
@@ -627,7 +630,8 @@ div.breadcrumb-row {
           opacity: 0;
           transition: 0.26s opacity, 0.9s color; }
       .region-content .panel-panel .jumbotron p {
-        font-size: 14px; }
+        font-size: 14px;
+        font-size: 1.4rem; }
         .region-content .panel-panel .jumbotron p:last-of-type {
           margin-top: 10px;
           /*text-decoration: underline;*/ }
@@ -716,8 +720,10 @@ body.front .region-content .thumbnail .caption {
     right: 10px;
     bottom: 15px;
     color: #29c3cb; }
+
 body.front .panel-col-middle .panel-pane:nth-of-type(1) .caption:after {
   color: #1b374c; }
+
 body.front .panel-col-middle .panel-pane:nth-of-type(3) .caption:after {
   color: #108896; }
 
@@ -744,9 +750,11 @@ body.front .thumbnail {
 
 div.ds-2col-fluid .field-name-field-year {
   color: #876E4C; }
+
 div.ds-2col-fluid h2 {
   margin-top: 0px;
   margin-bottom: 5px; }
+
 div.ds-2col-fluid div.field-type-taxonomy-term-reference {
   font-weight: bold; }
 
@@ -785,7 +793,10 @@ div.ds-2col-fluid div.field-type-taxonomy-term-reference {
       .grid-icons .col-md-4 .wrapper p,
       .grid-icons .col-md-4 .wrapper a {
         text-align: center; }
-    .grid-icons .col-md-3 > .wrapper:hover, .grid-icons .col-md-3 > .wrapper:focus, .grid-icons .col-md-3 > .wrapper:active, .grid-icons .col-md-3 > a:hover, .grid-icons .col-md-3 > a:focus, .grid-icons .col-md-3 > a:active,
+    .grid-icons .col-md-3 > .wrapper:hover, .grid-icons .col-md-3 > .wrapper:focus, .grid-icons .col-md-3 > .wrapper:active,
+    .grid-icons .col-md-3 > a:hover,
+    .grid-icons .col-md-3 > a:focus,
+    .grid-icons .col-md-3 > a:active,
     .grid-icons .col-md-4 > .wrapper:hover,
     .grid-icons .col-md-4 > .wrapper:focus,
     .grid-icons .col-md-4 > .wrapper:active,
@@ -796,7 +807,10 @@ div.ds-2col-fluid div.field-type-taxonomy-term-reference {
       color: #fff;
       /*background: $highlight;*/
       text-decoration: none; }
-      .grid-icons .col-md-3 > .wrapper:hover .wrapper, .grid-icons .col-md-3 > .wrapper:focus .wrapper, .grid-icons .col-md-3 > .wrapper:active .wrapper, .grid-icons .col-md-3 > a:hover .wrapper, .grid-icons .col-md-3 > a:focus .wrapper, .grid-icons .col-md-3 > a:active .wrapper,
+      .grid-icons .col-md-3 > .wrapper:hover .wrapper, .grid-icons .col-md-3 > .wrapper:focus .wrapper, .grid-icons .col-md-3 > .wrapper:active .wrapper,
+      .grid-icons .col-md-3 > a:hover .wrapper,
+      .grid-icons .col-md-3 > a:focus .wrapper,
+      .grid-icons .col-md-3 > a:active .wrapper,
       .grid-icons .col-md-4 > .wrapper:hover .wrapper,
       .grid-icons .col-md-4 > .wrapper:focus .wrapper,
       .grid-icons .col-md-4 > .wrapper:active .wrapper,
@@ -805,7 +819,10 @@ div.ds-2col-fluid div.field-type-taxonomy-term-reference {
       .grid-icons .col-md-4 > a:active .wrapper {
         border-color: #fff;
         background-color: transparent; }
-      .grid-icons .col-md-3 > .wrapper:hover i:before, .grid-icons .col-md-3 > .wrapper:focus i:before, .grid-icons .col-md-3 > .wrapper:active i:before, .grid-icons .col-md-3 > a:hover i:before, .grid-icons .col-md-3 > a:focus i:before, .grid-icons .col-md-3 > a:active i:before,
+      .grid-icons .col-md-3 > .wrapper:hover i:before, .grid-icons .col-md-3 > .wrapper:focus i:before, .grid-icons .col-md-3 > .wrapper:active i:before,
+      .grid-icons .col-md-3 > a:hover i:before,
+      .grid-icons .col-md-3 > a:focus i:before,
+      .grid-icons .col-md-3 > a:active i:before,
       .grid-icons .col-md-4 > .wrapper:hover i:before,
       .grid-icons .col-md-4 > .wrapper:focus i:before,
       .grid-icons .col-md-4 > .wrapper:active i:before,
@@ -820,14 +837,15 @@ div.ds-2col-fluid div.field-type-taxonomy-term-reference {
         min-height: 128px; }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .region-content .panel-col-bottom .pane-node:nth-of-type(1) .panel-body:after, .region-content .panel-col-bottom .pane-node:nth-of-type(3) .panel-body:after,
+  .region-content .panel-col-bottom .pane-node:nth-of-type(1) .panel-body:after,
+  .region-content .panel-col-bottom .pane-node:nth-of-type(3) .panel-body:after,
   .region-content .panel-col-bottom .pane-node .panel-body:after {
     content: '' !important; }
-
   .panel-panel.panel-col-bottom {
     line-height: 1; }
     .panel-panel.panel-col-bottom ul li {
       line-height: 1.4; } }
+
 .image-hover-hidden {
   display: none; }
 
@@ -877,10 +895,10 @@ footer.footer {
   #navbar #region-navigation.navbar #main-nav ul ul ul {
     margin-top: -1em;
     margin-left: 0; }
-
   .carousel .icon-circle-empty,
   .carousel .icon-circle {
-    top: -4px; }
+    top: -4px;
+    text-indent: -9999px; }
   .carousel .rslides_tabs {
     margin-top: -3em;
     margin-bottom: 0; }
@@ -891,20 +909,19 @@ footer.footer {
     margin-right: 5px; }
   .carousel .icon-angle-circled-right {
     margin-left: 5px; }
-
   .node-page .thumbnail {
     margin-bottom: 2em; }
     .node-page .thumbnail .caption {
       bottom: 0; }
-
   .panel.panel-default .panel-heading h2 {
-    font-size: 24px; }
+    font-size: 24px;
+    font-size: 2.4rem; }
     .panel.panel-default .panel-heading h2 i.icon-legal {
       font-size: 132%;
       margin-top: -2px; }
-
   footer.footer #region-bottom-footer li {
     margin: 15px 38px 5px 0; } }
+
 @media screen and (max-width: 991px) {
   body.front .carousel .rslides_tabs {
     margin-top: 10px;
@@ -918,8 +935,23 @@ footer.footer {
   body.front .main-container .panel-pane,
   body.front .main-container .no-right-padding,
   body.front .main-container .no-left-padding {
-    padding: 0 !important; } }
-@media screen and (max-width: 725px) {
+    padding: 0 !important; }
+  #region-top-menu .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    #region-top-menu .container #full-site-name {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center; }
+  #region-top-menu .navbar-header {
+    margin: 0; } }
+
+@media screen and (max-width: 767px) {
+  #region-top-menu .google_translate {
+    margin-right: 30px; }
   #region-header .pull-right {
     float: none !important; }
     #region-header .pull-right .pull-right {
@@ -929,14 +961,14 @@ footer.footer {
     float: left !important; }
     #region-header .region-header section.block .list-inline li {
       float: left; }
-
   #main-nav {
     padding-bottom: 10px; }
     #main-nav ul#superfish-1 li {
       width: 100%; }
       #main-nav ul#superfish-1 li ul {
         display: none !important; } }
-@media screen and (max-width: 455px) {
+
+@media screen and (max-width: 470px) {
   #region-header a img {
     width: 100%; }
   #region-header .region-header section.block {
@@ -949,10 +981,37 @@ footer.footer {
     margin-left: -10px; }
   #region-header .search-form-widget .btn.form-submit {
     margin-left: -12px; }
-
-  .navbar-header {
-    margin: 0 !important; }
-
+  #region-top-menu .full-site-name {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  #region-top-menu .google_translate {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-right: 0; }
+  #region-top-menu .navbar-header {
+    margin: 0 !important;
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
+    #region-top-menu .navbar-header .contextual-links-region {
+      margin-top: 10px; }
+      #region-top-menu .navbar-header .contextual-links-region > ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
   body.front .carousel .group-right {
     padding-left: 0;
     margin-left: -15px; }
@@ -963,6 +1022,7 @@ footer.footer {
       margin-top: 20px;
       padding-right: 4px;
       padding-left: 4px; }
-
   .panel-col-bottom .pane-node .panel-body:after {
     content: '' !important; } }
+
+/*# sourceMappingURL=style.css.map */

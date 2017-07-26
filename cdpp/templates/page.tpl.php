@@ -74,15 +74,18 @@
  */
 ?>
 <div id="region-top-menu">
+  <div id="skip-link">
+    <a href="#main-content" tabindex="1" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+  </div>
+
   <div class="container">
+
     <?php if($site_name): ?>
     <div id="full-site-name" class="pull-left">
       <a href="/about-us"><?php print $site_name; ?></a>
     </div>
     <?php endif; ?>
-    <div id="skip-link">
-      <a href="#main-content" tabindex="1" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-    </div>
+
     <div class="navbar-header pull-right">
       <?php if (!empty($page['top_menu'])): ?>
         <nav role="navigation">
@@ -90,6 +93,19 @@
         </nav>
       <?php endif; ?>
     </div>
+
+    <div class="google_translate">
+      <div id="google_translate_element">
+      </div>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+      </script>
+    </div>
+
   </div>
 </div>
 
