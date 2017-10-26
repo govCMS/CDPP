@@ -3,6 +3,21 @@ var Drupal = Drupal || {};
 (function($, Drupal){
 
     jQuery(document).ready(function($) {
+      
+        // Back to top button on report
+        if(jQuery('.annual-report_table-of-content').length > 0){
+          jQuery('body').append('<div class="annual-report_back-to-top">Back</div>');          
+          window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                jQuery('.annual-report_back-to-top').addClass('active');
+            } else {
+                jQuery('.annual-report_back-to-top').removeClass('active');
+            }
+          };
+          jQuery('.annual-report_back-to-top').on("click",function() {jQuery('html, body').animate({ scrollTop: 0 }, 'slow', function () {});});
+        }
+        
+        
         $('table').each(function() {
             $(this).addClass('table');
         });
@@ -143,6 +158,7 @@ var Drupal = Drupal || {};
             // equalheight('body.front ul.rslides li');
         }
     });
+        
 })(jQuery, Drupal);
 
 

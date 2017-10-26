@@ -886,6 +886,396 @@ footer.footer {
       footer.footer #region-bottom-footer li a {
         color: #fff; }
 
+.annual-report_download-link {
+  background: #202020;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #cdcdcd;
+  display: inline-block; }
+  .annual-report_download-link a {
+    font-weight: bold;
+    color: white;
+    text-decoration: underline; }
+
+.annual-report_table-of-content ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+  .annual-report_table-of-content ul li {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2); }
+
+.annual-report_table-of-content a {
+  display: block;
+  padding: 7px 0px; }
+
+.annual-report_block-quote {
+  position: relative;
+  margin: 20px 0;
+  padding: 30px 50px;
+  font-size: 2em; }
+  @media screen and (max-width: 1000px) {
+    .annual-report_block-quote {
+      font-size: 1.5em; } }
+  .annual-report_block-quote .footer {
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    border-top: 0;
+    font-size: 0.5em;
+    position: relative; }
+    .annual-report_block-quote .footer:after {
+      content: '\201D';
+      position: absolute;
+      font-size: 90px;
+      font-size: 9rem;
+      top: -50px;
+      right: -30px; }
+  .annual-report_block-quote:before {
+    content: '\201C';
+    position: absolute;
+    font-size: 90px;
+    font-size: 9rem;
+    top: 0;
+    left: 0; }
+
+.annual-report_section-box {
+  margin-bottom: 40px; }
+  .annual-report_section-box:after {
+    content: "";
+    clear: both;
+    display: table; }
+  .annual-report_section-box > div {
+    border: 1px solid #505050;
+    margin: 5px 0;
+    padding: 20px;
+    float: left;
+    width: 48%;
+    margin-right: 10px;
+    min-height: 350px;
+    border-radius: 5px; }
+    @media screen and (max-width: 1000px) {
+      .annual-report_section-box > div {
+        width: 100%;
+        min-height: 20px; } }
+    .annual-report_section-box > div h5 {
+      margin: 0 0 10px;
+      font-weight: bold;
+      font-size: 1.3em; }
+    .annual-report_section-box > div .text2 {
+      margin-top: 5px;
+      /*font-weight: bold;*/ }
+
+.annual-report_chapter-summary {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  margin-bottom: 30px; }
+  .annual-report_chapter-summary h5 {
+    background: #505050;
+    color: white;
+    margin: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding: 12px 10px; }
+    .annual-report_chapter-summary h5 + p {
+      margin-top: -20px; }
+  .annual-report_chapter-summary p {
+    background: #505050;
+    padding: 12px 10px;
+    font-size: 0.9em;
+    letter-spacing: 0.8px;
+    letter-spacing: 0.08rem;
+    color: white;
+    margin: 0px; }
+    .annual-report_chapter-summary p + ul {
+      width: 100%;
+      padding: 10px; }
+      .annual-report_chapter-summary p + ul li {
+        width: 100%;
+        padding: 5px; }
+        .annual-report_chapter-summary p + ul li span {
+          font-weight: normal !important;
+          color: #cdcdcd !important; }
+  .annual-report_chapter-summary ul {
+    padding: 30px;
+    margin: 0px;
+    background: #202020;
+    color: #cdcdcd;
+    list-style: none; }
+    .annual-report_chapter-summary ul:after {
+      content: "";
+      clear: both;
+      display: table; }
+    .annual-report_chapter-summary ul li {
+      /*margin: -1px -1px 0 0;*/
+      float: left;
+      padding: 10px;
+      box-sizing: border-box;
+      width: 20%; }
+      .annual-report_chapter-summary ul li span {
+        line-height: 12px;
+        font-size: 11px;
+        font-size: 1.1rem;
+        display: inline-block;
+        font-size: 13px;
+        font-size: 1.3rem; }
+        .annual-report_chapter-summary ul li span:first-child {
+          display: block;
+          font-size: 25px;
+          font-size: 2.5rem;
+          padding-bottom: 0px;
+          font-weight: bold;
+          color: white;
+          line-height: 30px; }
+        .annual-report_chapter-summary ul li span:last-child {
+          line-height: 15px;
+          font-size: 13px;
+          font-size: 1.3rem;
+          display: inline-block;
+          font-size: 13px; }
+      .annual-report_chapter-summary ul li:nth-child(6) {
+        clear: both; }
+        @media screen and (max-width: 800px) {
+          .annual-report_chapter-summary ul li:nth-child(6) {
+            clear: none; } }
+      @media screen and (max-width: 800px) {
+        .annual-report_chapter-summary ul li {
+          width: 25%; }
+          .annual-report_chapter-summary ul li:nth-child(5) {
+            clear: both; } }
+      @media screen and (max-width: 600px) {
+        .annual-report_chapter-summary ul li {
+          width: 33.3333333333%; }
+          .annual-report_chapter-summary ul li:nth-child(5) {
+            clear: none; }
+          .annual-report_chapter-summary ul li:nth-child(4) {
+            clear: both; }
+          .annual-report_chapter-summary ul li:nth-child(7) {
+            clear: both; } }
+      @media screen and (max-width: 400px) {
+        .annual-report_chapter-summary ul li {
+          width: 50%; }
+          .annual-report_chapter-summary ul li:nth-child(4) {
+            clear: none; }
+          .annual-report_chapter-summary ul li:nth-child(7) {
+            clear: none; }
+          .annual-report_chapter-summary ul li:nth-child(3), .annual-report_chapter-summary ul li:nth-child(5), .annual-report_chapter-summary ul li:nth-child(7) {
+            clear: both; } }
+  .annual-report_chapter-summary h2 {
+    margin: 0px;
+    padding: 20px 10px;
+    font-weight: bold;
+    background: #505050;
+    color: white; }
+
+.annual-report_case-studies {
+  background: #202020;
+  color: #efefef;
+  padding: 30px;
+  margin: 30px 0;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  .annual-report_case-studies h4 {
+    margin: -30px -30px 20px;
+    background: #505050; }
+    @media screen and (max-width: 1000px) {
+      .annual-report_case-studies h4 {
+        padding: 30px; } }
+    .annual-report_case-studies h4 span {
+      display: inline-block;
+      padding: 30px; }
+      .annual-report_case-studies h4 span:first-child {
+        background: #ffcc26;
+        color: black;
+        margin-right: 30px; }
+        @media screen and (max-width: 1000px) {
+          .annual-report_case-studies h4 span:first-child {
+            background: transparent;
+            color: white;
+            padding: 0px;
+            font-size: 20px;
+            font-size: 2rem;
+            margin-bottom: 10px; } }
+      .annual-report_case-studies h4 span + span {
+        padding: 30px 0; }
+        @media screen and (max-width: 1000px) {
+          .annual-report_case-studies h4 span + span {
+            padding: 0px; } }
+
+.annual-report_chapter-cover {
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  margin: 80px 0 40px; }
+  .annual-report_chapter-cover .intro {
+    background: #202020;
+    padding: 30px 30px 80px; }
+    .annual-report_chapter-cover .intro h3 {
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold; }
+      .annual-report_chapter-cover .intro h3 + p {
+        color: white; }
+  .annual-report_chapter-cover .summary {
+    background: #505050;
+    /*border: 1px solid #505050;*/ }
+    .annual-report_chapter-cover .summary:after {
+      content: "";
+      clear: both;
+      display: table; }
+    .annual-report_chapter-cover .summary h3, .annual-report_chapter-cover .summary h4, .annual-report_chapter-cover .summary h5 {
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: bold; }
+    .annual-report_chapter-cover .summary ul {
+      margin: 0 0 20px;
+      padding: 0px 0 0 17px; }
+    .annual-report_chapter-cover .summary .left, .annual-report_chapter-cover .summary .right {
+      padding: 30px;
+      float: left;
+      box-sizing: border-box;
+      width: 50%; }
+      @media screen and (max-width: 1000px) {
+        .annual-report_chapter-cover .summary .left, .annual-report_chapter-cover .summary .right {
+          width: 100%; } }
+    .annual-report_chapter-cover .summary .left {
+      min-height: 400px;
+      background: #ffcc26; }
+    .annual-report_chapter-cover .summary .right {
+      color: #efefef; }
+      .annual-report_chapter-cover .summary .right .numbers {
+        margin: 0px;
+        padding: 10px;
+        list-style: none;
+        border: 1px dashed rgba(255, 255, 255, 0.3);
+        padding-top: 20px;
+        margin-bottom: 20px;
+        border-left: 0px;
+        border-right: 0px; }
+        @media screen and (max-width: 1000px) {
+          .annual-report_chapter-cover .summary .right .numbers {
+            border-bottom: 0px; } }
+        .annual-report_chapter-cover .summary .right .numbers:after {
+          content: "";
+          clear: both;
+          display: table; }
+        .annual-report_chapter-cover .summary .right .numbers li {
+          width: 33.3333333333%;
+          text-align: center;
+          box-sizing: 10px;
+          min-height: 80px;
+          text-align: center;
+          float: left; }
+          @media screen and (max-width: 500px) {
+            .annual-report_chapter-cover .summary .right .numbers li {
+              width: 50%; } }
+          @media screen and (max-width: 350px) {
+            .annual-report_chapter-cover .summary .right .numbers li {
+              width: 100%;
+              text-align: left; } }
+          .annual-report_chapter-cover .summary .right .numbers li > span {
+            display: block;
+            font-size: 12px;
+            font-size: 1.2rem;
+            color: #cdcdcd;
+            line-height: 12px;
+            text-transform: lowercase; }
+          .annual-report_chapter-cover .summary .right .numbers li span + span {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            font-size: 2rem;
+            line-height: 23px;
+            display: block;
+            color: white; }
+
+.annual-report_summary-block {
+  background: #202020;
+  margin-bottom: 30px;
+  padding: 30px;
+  color: #efefef;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  .annual-report_summary-block h5, .annual-report_summary-block h3 {
+    margin: -30px -30px 20px;
+    background: #505050;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px; }
+  .annual-report_summary-block ul {
+    padding: 0 0 0 15px; }
+    .annual-report_summary-block ul li span + span {
+      margin-left: 5px; }
+
+.annual-report_table {
+  width: 100%;
+  overflow: auto; }
+  .annual-report_table caption {
+    background: #202020;
+    color: white;
+    font-size: 12px;
+    font-size: 1.2rem;
+    padding: 10px; }
+  .annual-report_table table tr:first-child td {
+    border-top-color: black; }
+
+.annual-report_back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: #ffcc26;
+  padding: 10px;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0; }
+  .annual-report_back-to-top.active {
+    opacity: 1; }
+  @media screen and (max-width: 600px) {
+    .annual-report_back-to-top {
+      display: none; } }
+  .annual-report_back-to-top:before {
+    content: "\2039";
+    display: block;
+    font-size: 40px;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 10px;
+    margin-bottom: 5px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    width: 49px;
+    margin: 3px 0 2px; }
+
+.annual-report_banner img {
+  max-width: 100%;
+  height: auto; }
+
+.annual-report_chapter-title {
+  font-size: 38px;
+  font-size: 3.8rem;
+  font-weight: bold;
+  margin: 40px 0 50px;
+  letter-spacing: -1px;
+  letter-spacing: -0.1rem;
+  position: relative; }
+  .annual-report_chapter-title:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: -9px;
+    border-top: 5px solid #ffcc26; }
+
 .img-responsive {
   width: auto; }
 
