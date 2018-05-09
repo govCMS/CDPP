@@ -236,14 +236,4 @@ var Drupal = Drupal || {};
         }
     };
 
-    Drupal.behaviors.cdppPartnerPortalMsg = {
-        attach: function(context, settings) {
-          jQuery('a[href*="//agencies.cdpp.gov.au"]', context).click(function(e){
-            e.preventDefault();
-            alert('The CDPP Partner Agency Portal is temporarily unavailable due to maintenance work. \n\n' +
-                'Please return later or email partneragencies@cdpp.gov.au for assistance.');            
-          });
-       }
-    };
-
 })(jQuery, Drupal, window, document, undefined);
