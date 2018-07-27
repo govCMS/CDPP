@@ -69,6 +69,19 @@ var Drupal = Drupal || {};
           };
           jQuery('.annual-report_back-to-top').on("click",function() {jQuery('html, body').animate({ scrollTop: 0 }, 'slow', function () {});});
         }
+        
+        //bacl to top button on report new element
+        if(jQuery('.report-new-element_table-of-content').length > 0){
+          jQuery('body').append('<div class="report-new-element_back-to-top">Back</div>');
+          window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                jQuery('.report-new-element_back-to-top').addClass('active');
+            } else {
+                jQuery('.report-new-element_back-to-top').removeClass('active');
+            }
+          };
+          jQuery('.report-new-element_back-to-top').on("click",function() {jQuery('html, body').animate({ scrollTop: 0 }, 'slow', function () {});});
+        }
 
 
         $('table').each(function() {
@@ -286,4 +299,5 @@ var Drupal = Drupal || {};
             $submit.append($('<a href="/case-reports/filter?field_category_tid=All&field_report_location_tid=All" class="btn btn-info">View All</a>'));
         }
     };
+
 })(jQuery, Drupal, window, document, undefined);
