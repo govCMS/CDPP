@@ -1,0 +1,1 @@
+{"version":3,"sources":["email-styles.scss"],"names":[],"mappings":"AAAA;EACC,gBAAgB,EAChB","file":"email-styles.css","sourcesContent":["* {\r\n\tbackground: red;\r\n}"],"sourceRoot":"/source/"}

@@ -235,5 +235,4 @@ var Drupal = Drupal || {};
             $submit.append($('<a href="/case-reports/filter?field_category_tid=All&field_report_location_tid=All" class="btn btn-info">View All</a>'));
         }
     };
-
 })(jQuery, Drupal, window, document, undefined);

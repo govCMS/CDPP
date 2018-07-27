@@ -5,12 +5,14 @@
  * template.php
  */
 
+// Include helper files.
+include_once dirname(__FILE__) . '/includes/cdpp_webform_hooks.inc';
+include_once dirname(__FILE__) . '/includes/cdpp_theme_hooks.inc';
 
 /**
  * Implement hook_js_alter()
  * Attempt to replace the system jQuery on non admin and non node admin pages with a newer version provided by the theme
  */
-
 function cdpp_js_alter(&$javascript) {
   $node_admin_paths = array(
     'node/*/edit',
@@ -31,6 +33,11 @@ function cdpp_js_alter(&$javascript) {
 // Swap out jQuery to use an updated version of the library.
   if ($replace_jquery) {
     $javascript['misc/jquery.js']['data'] = '//code.jquery.com/jquery-2.1.4.min.js';
+  }
+  // Swap out jquery.form.js to avoid handleError is not a function on webform
+  // ajax.
+  if (isset($javascript['misc/jquery.form.js'])) {
+    $javascript['misc/jquery.form.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js';
   }
 }
 
@@ -106,7 +113,6 @@ function cdpp_menu_link($variables) {
  * Implements hook_preprocess_node().
  */
 function cdpp_preprocess_node(&$variables) {
-
   // Slides get a special read more link.
   if ($variables['type'] == 'slide') {
     if (!empty($variables['field_read_more'][0]['url'])) {
@@ -114,6 +120,14 @@ function cdpp_preprocess_node(&$variables) {
     }
     else {
       $variables['title_link'] = check_plain($variables['title']);
+    }
+  }
+  // Optionally, run node-type-specific preprocess functions, like
+  // foo_preprocess_node__page().
+  if (isset($variables['node']->type)) {
+    $function = __FUNCTION__ . '__' . $variables['node']->type;
+    if (function_exists($function)) {
+      $function($variables);
     }
   }
 }

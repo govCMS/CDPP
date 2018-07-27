@@ -184,6 +184,80 @@ div.breadcrumb-row {
   }
 }
 
+.webform-datepicker {
+  display: flex;
+  align-items: center;
+
+  .form-item {
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  input[type=image] {
+    flex: none;
+  }
+}
+
+.form-item .description {
+  margin-bottom: 10px;
+}
+
+select {
+  display: block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+@supports (appearance: none) {
+  input[type=radio], input[type=checkbox] {
+    appearance: none;
+
+    height: 1em;
+    width: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: inset 0 1px 1px rgba(#000, 0.075);
+    border: 1px solid darken($borderGrey, 10%);
+    transition: 0.5s;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 50%;
+      width: 50%;
+      background: $caseReportsColour;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    &:checked {
+      border-color: $caseReportsColour;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  input[type=radio] {
+    &, &::before {
+      border-radius: 50%;
+    }
+  }
+}
+
 //Override panel heading background for webforms
 //from dark brown on black to light brown on black
 .webform-client-form {
@@ -392,6 +466,50 @@ div.breadcrumb-row {
    }
 }
 
+.region-above-content .block-webform {
+
+  .block-title {
+    background: $borderGrey;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  .webform-client-form, .webform-confirmation {
+    background: #fff;
+    padding: 10px 20px 20px;
+    border: 1px solid $borderGrey;
+
+    > div {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+
+  .form-item {
+    flex-grow: 1;
+    margin: 0;
+  }
+  .form-actions {
+    flex: none;
+  }
+
+  input[type=email] {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  // Hide Close button after submission.
+  .links {
+    display: none;
+  }
+}
+
 body.front {
   .region-content .thumbnail {
     .caption {
@@ -558,7 +676,7 @@ div.ds-2col-fluid {
 
     .panel-panel.panel-col-bottom {
         line-height:1;
-        
+
         ul li {
             line-height:1.4;
         }

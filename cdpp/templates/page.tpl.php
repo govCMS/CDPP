@@ -194,6 +194,7 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      <?php print render($page['above_content']); ?>
       <?php print render($page['content']); ?>
     </section>
 

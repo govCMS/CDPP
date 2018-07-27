@@ -63,6 +63,15 @@
       }
     }
   }
+  // Stop links being above search bar not being clickable with
+  // contextual links region.
+  .block-search-api-page {
+    clear: both;
+  }
+  // With Clear both above, the margin should be reduced.
+  .search-form-widget {
+    margin-top: 0;
+  }
 }
 
 
