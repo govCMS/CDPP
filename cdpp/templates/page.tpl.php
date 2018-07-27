@@ -123,6 +123,7 @@
           <div class="pull-right">
             <?php print render($page['header']); ?>
           </div>
+          <?php print render($page['header_2']); ?>
         </div>
       <?php endif; ?>
     <?php endif; ?>

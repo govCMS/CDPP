@@ -8,6 +8,7 @@
 // Include helper files.
 include_once dirname(__FILE__) . '/includes/cdpp_webform_hooks.inc';
 include_once dirname(__FILE__) . '/includes/cdpp_theme_hooks.inc';
+include_once dirname(__FILE__) . '/includes/cdpp_govcms_text_resize_hooks.inc';
 
 /**
  * Implement hook_js_alter()
@@ -39,6 +40,7 @@ function cdpp_js_alter(&$javascript) {
   if (isset($javascript['misc/jquery.form.js'])) {
     $javascript['misc/jquery.form.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js';
   }
+  _cdpp_js_alter__text_resize($javascript);
 }
 
 function cdpp_menu_tree__menu_footer_sub_menu($variables) {

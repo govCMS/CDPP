@@ -1,12 +1,65 @@
 var Drupal = Drupal || {};
 
+/**
+ * @file
+ * This file controls accessibility functions on the theme layer.
+ * Based on: http://www.acfonline.org.au/sites/all/themes/acf/js/acf.accessibility.js
+ */
+
+(function ($) {
+
+    localStorage.size = localStorage.size || 'normal';
+
+    /*
+     * @function govAccessibilityTextSize
+     * Controls the text resizer
+     */
+    Drupal.behaviors.govAccessibilityTextSize = {
+      attach: function (context, settings) {
+
+          function enlarge(){
+            $('html').addClass('large-fonts');
+            $('.font-large').attr('aria-selected',true);
+            $('.font-small').attr('aria-selected',false);
+            localStorage.size = 'large';
+          }
+
+          function shrink(){
+            $('html').removeClass('large-fonts');
+            $('.font-large').attr('aria-selected',false);
+            $('.font-small').attr('aria-selected',true);
+            localStorage.size = 'normal';
+          }
+
+          if (localStorage.size === 'large') {
+            enlarge();
+          }
+
+          $('.font-large, .font-small').on('click keypress',function(e) {
+            if (e.type === 'click' || e.type === 'keypress' && e.key === 'Enter' ) {
+              var isLargeBtn = $(this).hasClass('font-large');
+              e.preventDefault();
+
+              if (isLargeBtn) {
+                enlarge();
+              } else {
+                shrink();
+              }
+            }
+          });
+        }
+    };
+
+}(jQuery));
+
+
 (function($, Drupal){
 
     jQuery(document).ready(function($) {
-      
+
         // Back to top button on report
         if(jQuery('.annual-report_table-of-content').length > 0){
-          jQuery('body').append('<div class="annual-report_back-to-top">Back</div>');          
+          jQuery('body').append('<div class="annual-report_back-to-top">Back</div>');
           window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 jQuery('.annual-report_back-to-top').addClass('active');
@@ -16,8 +69,8 @@ var Drupal = Drupal || {};
           };
           jQuery('.annual-report_back-to-top').on("click",function() {jQuery('html, body').animate({ scrollTop: 0 }, 'slow', function () {});});
         }
-        
-        
+
+
         $('table').each(function() {
             $(this).addClass('table');
         });
@@ -110,8 +163,8 @@ var Drupal = Drupal || {};
                 function() {jQuery(this).addClass('grayscale')},
                 function() {jQuery(this).removeClass('grayscale')}
             );
-        }); 
-        
+        });
+
         jQuery('.form-item .description').each(function(){
             var parent = jQuery(this).parent();
             parent.children('label').after(jQuery(this));
@@ -152,13 +205,11 @@ var Drupal = Drupal || {};
 
     jQuery(window).load(function() {
         if(jQuery(window).width() >= 650){
-            equalheight('body.front div.panel-col-bottom div.panel-pane div.panel-default div.panel-body > div.row');
-            equalheight('body.front div.panel-col-top div.jumbotron');
             equalheight('.grid-icons .row .wrapper');
             // equalheight('body.front ul.rslides li');
         }
     });
-        
+
 })(jQuery, Drupal);
 
 
