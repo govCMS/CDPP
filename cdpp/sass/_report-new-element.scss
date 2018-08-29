@@ -223,6 +223,10 @@
       p {
 
       }
+
+      &.left{
+        text-align: left;
+      }
     }
   }
 
@@ -493,6 +497,11 @@
     overflow: auto;
     table {
       width: 700px;
+
+      &.width100{
+        width: 100%;
+      }
+
       tr{
 
         td{
@@ -670,4 +679,16 @@
     }
   }
 
+  &_separator {
+    border-top: 1px solid #3abac5;
+    clear: both;
+    display: block;
+    padding: 30px 0 0 0;
+  }
+
+}
+
+//if required to decrease margin on each element
+*[class^="report-new-element"].less-margin {
+  margin: 15px 0!important;
 }
