@@ -7,10 +7,19 @@ $lighterBG:         lighten($lightBG, 5%);
 $textColour:        #444;
 $lightTextColour:   #666;
 $borderGrey:        #E2E2E2;
+$pale-grey:         #EDF5F6;
 $aqua:              #3abac5;
+$yellow:            #ffcc26;
 $orange:            #eb5a11;
-$dark-blue:         #1a364b;
 
+$light-blue:        #abced3;
+$dim-blue:          #284B5D;
+$dark-blue:         #1a364b;
+$darker-blue:       #0B2A3A;
+
+$green-primary:     #347D87;
+$green-light:       #44939D; //Careful text must be 20px+bold or 25px to pass accessibility
+$brown-primary:     $highlight;
 
 //$processColour:     #f39c12;
 //$prosecuteColour:   #d35400;
@@ -26,3 +35,23 @@ $victimColour:      $highlight;
 
 
 $borderRadius:      4px;
+
+
+// === BREAK POINTS ===
+// Use the `min` value for `min-width` media queries
+// Use the `max` value for `max-width` media queries
+
+$bp-small-max: 470px;
+$bp-small-min: $bp-small-max + 1;
+
+$bp-mobile-max: 768px;
+$bp-mobile-min: $bp-mobile-max + 1;
+
+$bp-tablet-max: 991px;
+$bp-tablet-min: $bp-tablet-max + 1;
+
+$bp-large-max: 1100px;
+$bp-large-min: $bp-large-max + 1;
+
+$bp-desktop-max: 1200px;
+$bp-desktop-min: $bp-desktop-max + 1;

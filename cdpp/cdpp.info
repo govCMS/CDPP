@@ -28,9 +28,11 @@ regions[bottom_footer]  = 'Bottom Footer'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
+;TO DO: load from CDN: https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css
+stylesheets[all][] = libraries/slick-carousel/slick.min.css
+
 stylesheets[all][] = css/style.css
 stylesheets[all][] = libraries/gray/css/gray.min.css
-
 
 ; For information on choosing the desired method, please read the Drupal
 ; Bootstrap sub-theme "how-to" documentation:
@@ -59,9 +61,14 @@ stylesheets[all][] = libraries/gray/css/gray.min.css
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 ; settings[bootstrap_cdn] = ''
+
+;This script is only needed on the home page.
+;TO DO: only load on home page
+;TO DO: load from CDN: http://cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick/slick.min.js
+scripts[] = libraries/slick-carousel/slick.min.js
+
 scripts[] = js/cdpp.js
 scripts[] = js/jquery.browser.min.js
-scripts[] = js/responsiveslides.js
 
 ; ;-------------------------
 ; ; METHOD 2: Bootstrap CDN

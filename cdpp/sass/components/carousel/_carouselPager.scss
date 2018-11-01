@@ -1,0 +1,74 @@
+
+// styles for the carousel pagination
+
+.carouselPager {
+	padding: 0;
+	margin: 0;
+	margin-left: -10px;
+	list-style: none;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	@media (max-width: $bp-mobile-max) {
+		justify-content: center;
+	}
+
+	&__item {
+		margin-left: 10px;
+	}
+
+	&__btn {
+		overflow: hidden;
+		color: transparent;
+		line-height: 0;
+		text-indent: -10rem;
+		opacity: 0.5;
+		background: transparent;
+		border: 0;
+		width: 50px;
+		height: 30px;
+		position: relative;
+		transition: opacity 0.3s;
+
+		&::before {
+			content: '';
+			display: block;
+			border-bottom: 5px solid $lightTextColour;
+			width: calc(100% - 5px);
+			height: 0;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transition: border-color 0.3s;
+		}
+
+		&:focus {
+			outline: none;
+
+			&::before {
+				outline: 2px dashed $green-primary;
+				outline-offset: 1px;
+			}
+		}
+
+		&:hover:not([aria-current="true"]) {
+			opacity: 1;
+
+			&::before {
+				border-color: $darkBG;
+			}
+		}
+
+		&[aria-current="true"] {
+			opacity: 1;
+
+			&::before {
+				border-color: $green-primary;
+			}
+		}
+	}
+}

@@ -1,0 +1,123 @@
+
+// Styles for individual carousel slides
+
+.node-slide {
+	position: relative;
+	min-height: 440px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	@media (max-width: $bp-mobile-max){
+		flex-direction: column;
+		align-items: stretch;
+
+		&::before, &::after {
+			display: none;
+		}
+	}
+
+	&__tag {
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		padding: 10px 30px;
+		background-color: $green-primary;
+		color: #fff;
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0;
+		display: inline-block;
+	}
+
+
+	.group-left {
+		padding: 0;
+		width: 100%;
+		// z-index: -1;
+
+		@media (min-width: $bp-mobile-min){
+			flex-direction: column;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			//object-fit polyfill
+			font-family: "object-fit: cover;";
+		}
+
+		> *,
+		> * > *,
+		> * > * > *,
+		> * > * > * > *,
+		> * > * > * > * > * {
+			display: block;
+			height: 100%;
+		}
+	}
+
+	.group-right {
+		padding: 0;
+		right: 0;
+
+		@media (min-width: $bp-mobile-min) {
+			margin: 7.5rem 0 4.5rem;
+			width: 80%;
+			max-width: 700px;
+		}
+
+		.field-name-body {
+			font-size: 1.6rem;
+
+			@media (min-width: $bp-mobile-min) {
+				width: calc(100% - 130px);
+				max-width: 48rem;
+				margin-right: 100px;
+			}
+		}
+
+		.field-name-field-read-more {
+			@media (max-width: $bp-mobile-max) {
+				.field-item {
+					display: flex;
+					justify-content: center;
+				}
+			}
+		}
+
+		.content {
+			background: rgba(#fff, 0.9);
+			position: relative;
+			padding: 30px 60px;
+
+			@media (max-width: $bp-mobile-max) {
+				padding: 20px;
+				width: 100%;
+			}
+		}
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 1.5rem;
+			font-weight: bold;
+			font-size: 2.6rem;
+
+			a {
+				color: #000;
+			}
+
+			@media (min-width: $bp-mobile-min) {
+				font-size: 3.2rem;
+				margin-right: 100px;
+			}
+		}
+	}
+}

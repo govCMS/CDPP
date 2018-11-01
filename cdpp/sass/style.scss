@@ -5,14 +5,34 @@
 
 @import "cdpp-icons";
 
-@import "header";
-@import "sidebar";
+@import "mixin-components/btn";
+@import "mixin-components/restrictor";
+
+@import "components/region-top-menu";
+@import "components/header";
+@import "components/navbar";
+@import "components/text-resize";
+@import "components/sidebar";
+@import "components/breadcrumb";
+
 @import "styles";
-@import "footer";
 
-@import "report.scss";
-@import "report-new-element.scss";
+@import "components/carousel/carousel";
+@import "components/carousel/node-slide";
+@import "components/carousel/carouselControls";
+@import "components/carousel/carouselPager";
+@import "components/carousel/pauseBtn";
 
+@import "components/exhibition-block";
+@import "components/footer";
+@import "components/report";
+@import "components/report-new-element";
+@import "components/case-bundles";
+@import "components/crime-bundle";
+@import "components/information-bundle";
+@import "components/subscribe";
+@import "components/cdpp-homepage-base";
+@import "components/home-latest-updates";
 
 @import "responsive";
 @import "print";

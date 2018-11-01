@@ -72,5 +72,10 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
   <script src="//cdn.jsdelivr.net/jquery.gray/1.4.5/jquery.gray.min.js"></script>
+
+  <!-- object-fit CSS polyfill -->
+  <!-- Documentation: https://www.npmjs.com/package/object-fit-images -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"></script>
+  <script> if (!getComputedStyle(document.documentElement).objectFit) objectFitImages(); </script>
 </body>
 </html>

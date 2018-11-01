@@ -4,24 +4,25 @@
   width: auto;
 }
 
-// 1200px +
-@media screen and (min-width: 1200px) {
+// 1201px +
+@media (min-width: $bp-desktop-min) {
   //...
 }
 
-// < 1200px
-@media screen and (max-width: 1199px) {
+// =< 1200px
+@media (max-width: $bp-desktop-max) {
   //...
 }
 
 
-// 1100px - 1200px
-@media screen and (min-width: 1100px) and (max-width: 1200px) {
+// 1101px - 1200px
+@media (min-width: $bp-large-min) and (max-width: $bp-desktop-max) {
   //...
 }
+
 
 // => 768px
-@media screen and (min-width: 991px) and (max-width: 1200px) {
+@media (min-width: $bp-tablet-min) and (max-width: $bp-desktop-max) {
   // Main Nav
   #navbar #region-navigation.navbar #main-nav {
     .block-superfish>ul>li>a {
@@ -30,29 +31,6 @@
     ul ul ul {
       margin-top: -1em;
       margin-left: 0;
-    }
-  }
-
-  // Homepage Carousel/Slider
-  .carousel {
-    .icon-circle-empty,
-    .icon-circle {
-      top: -4px;
-      text-indent: -9999px;
-    }
-    .rslides_tabs {
-      margin-top: -3em;
-      margin-bottom: 0;
-    }
-    .icon-angle-circled-left,
-    .icon-angle-circled-right {
-      font-size: 180%;
-    }
-    .icon-angle-circled-left {
-      margin-right: 5px;
-    }
-    .icon-angle-circled-right {
-      margin-left: 5px;
     }
   }
 
@@ -82,16 +60,21 @@
 }
 
 
-
 // <= 991px
-@media screen and (max-width: 991px) {
+@media (max-width: $bp-tablet-max) {
+  .main-container {
+    > .row {
+      display: flex;
+      flex-direction: column-reverse;
+
+      > section {
+        width: 100%;
+      }
+    }
+  }
+
   // front page only
   body.front {
-    // Slider
-    .carousel .rslides_tabs {
-      margin-top: 10px;
-      text-align: center;
-    }
     // Main content
     .main-container {
       .jumbotron,
@@ -127,18 +110,13 @@
 }
 
 
-// => 768px
-@media screen and (min-width: 768px) {
+// < 768px
+@media (min-width: $bp-mobile-min) {
   //
 }
 
 // <= 768px
-@media screen and (max-width: 768px) {
-  //
-}
-
-// <= 725px
-@media screen and (max-width: 767px) {
+@media (max-width: $bp-mobile-max) {
   #region-top-menu {
     .google_translate {
       margin-right: 30px;
@@ -177,8 +155,8 @@
 }
 
 
-// <=455px
-@media screen and (max-width: 470px) {
+// <=470px
+@media (max-width: $bp-small-max) {
   #region-header {
     a img {
       width: 100%;
@@ -229,21 +207,6 @@
     }
   }
 
-  body.front .carousel {
-    .group-right {
-      padding-left: 0;
-      margin-left: -15px;
-    }
-    .rslides_tabs {
-      padding-left: 10px;
-      text-align: left;
-      li {
-        margin-top: 20px;
-        padding-right: 4px;
-        padding-left: 4px;
-      }
-    }
-  }
   .panel-col-bottom .pane-node {
     .panel-body {
       &:after {

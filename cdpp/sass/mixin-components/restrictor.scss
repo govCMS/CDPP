@@ -1,0 +1,14 @@
+
+//place on the inner element
+@mixin restrictor {
+	width: 100%;
+	max-width: 120rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//place on the outer element
+@mixin restrictor_padding {
+	padding-left: 20px;
+	padding-right: 20px;
+}

@@ -1,0 +1,29 @@
+
+#block-bean-homepage-subscription-block {
+	background: $darker-blue;
+	color: #fff;
+	padding: 30px;
+	padding-bottom: 35px;
+	font-size: 1.6rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 1.7rem;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	.field-name-field-body {
+		font-size: 1em;
+	}
+
+	.field-name-field-link-to {
+		a {
+			@include btn;
+		}
+	}
+}

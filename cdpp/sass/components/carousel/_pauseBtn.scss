@@ -1,0 +1,36 @@
+
+// Pause button styles (could be used on things other than the carousel)
+
+.pauseBtn {
+	background: transparent;
+	border: 0;
+	padding: 5px;
+
+	&__icon {
+		display: block;
+		height: 16px;
+		width: 14px;
+		border: 0 solid $lightTextColour;
+		border-width: 0 5px;
+
+		&:hover {
+			border-color: $darkBG;
+		}
+
+		.-play & {
+			width: 0;
+			height: 0;
+			border-width: 8px 0 8px 14px;
+			border-color: transparent;
+			border-left-color: $lightTextColour;
+
+			&:hover {
+				border-left-color: $darkBG;
+			}
+		}
+	}
+
+	&:focus {
+		outline: 2px dashed $darkBG;
+	}
+}

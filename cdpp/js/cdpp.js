@@ -59,15 +59,23 @@ var Drupal = Drupal || {};
 
         // Back to top button on report
         if(jQuery('.annual-report_table-of-content').length > 0){
-          jQuery('body').append('<div class="annual-report_back-to-top">Back</div>');
+          jQuery('body').append('<button type="button" class="annual-report_back-to-top" title="Back to top">Back</button>');
+          var $toTop = jQuery('.annual-report_back-to-top');
+          var theme_regex = /\-theme\:([\w-]*)/;
+          var _$themeElement = document.querySelector('[class*="-theme:"]');
+          if (_$themeElement) {
+              var classes = _$themeElement.attributes.class.nodeValue;
+              var theme = theme_regex.exec(classes)[1];
+              $toTop.addClass('-theme:'+theme);
+          }
           window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                jQuery('.annual-report_back-to-top').addClass('active');
+                $toTop.addClass('active');
             } else {
-                jQuery('.annual-report_back-to-top').removeClass('active');
+                $toTop.removeClass('active');
             }
           };
-          jQuery('.annual-report_back-to-top').on("click",function() {jQuery('html, body').animate({ scrollTop: 0 }, 'slow', function () {});});
+          $toTop.on("click",function() {jQuery('html, body').animate({ scrollTop: 0 }, 'slow', function () {});});
         }
         
         //bacl to top button on report new element
@@ -230,12 +238,77 @@ var Drupal = Drupal || {};
     Drupal.behaviors.responsiveSlides = {
         attach: function(context, settings) {
 
-            $(".view-slideshow ul:not(.contextual-links)").responsiveSlides({
-                "auto": false,
-                "pager": true,         // Boolean: Show pager, true or false
-                "pauseButton": false   // Boolean: Create Pause Button
-                // "pauseButton": true   // Boolean: Create Pause Button
+            function arrow_template(classes, icon, text){
+                return [
+                    '<button type="button" class="carousel__arrow ',classes,'" title="',text,'">',
+                        // '<span class="sr-only">',text,'</span>',
+                        '<svg class="carousel__arrowIcon"><use xlink:href="#',icon,'"></use><svg>',
+                    '</button>'
+                ].join('');
+            }
+
+            var $slideshow = $('.view-slideshow');
+            var $slick = $slideshow.find('.view-content').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                pauseOnDotsHover: true,
+                // adaptiveHeight: true,
+                dots: false,
+                prevArrow: arrow_template('-prev', 'arrow-left', 'Previous slide'),
+                nextArrow: arrow_template('-next', 'arrow-right', 'Next slide'),
             });
+
+            var $arrowButtons = $slick.find('.carousel__arrow');
+            var $pauseBtn = $slideshow.find('.pauseBtn');
+            var $pauseBtn_text = $pauseBtn.find('.pauseBtn__text');
+            var $pagers = $slick.find('.carouselPager');
+
+            $arrowButtons.click(pause_carousel);
+
+            $pagers.each(function(){
+                init_carousel_pager($(this));
+            })
+
+            var isPaused = false;
+
+            $pauseBtn.click(toggle_autoplay);
+
+            function toggle_autoplay(){
+                if (isPaused) {
+                    play_carousel()
+                } else {
+                    pause_carousel();
+                }
+            }
+
+            function pause_carousel(){
+                $slick.slick('slickPause');
+                isPaused = true;
+                update_pause_text('Play carousel');
+                $pauseBtn.addClass('-play');
+            }
+            function play_carousel(){
+                $slick.slick('slickPlay').slick('slickNext');
+                isPaused = false;
+                update_pause_text('Pause carousel');
+                $pauseBtn.removeClass('-play');
+            }
+
+            function update_pause_text(text){
+                $pauseBtn.attr('title', 'Toggle carousel autoplay: ' + text);
+                $pauseBtn_text.text(text);
+            }
+
+            function init_carousel_pager($pager) {
+                var $buttons = $pager.find('.carouselPager__btn');
+
+                $buttons.click(function(){
+                    var $this = $(this);
+                    var index = $this.parent().index();
+                    $slick.slick('slickGoTo', index);
+                    pause_carousel();
+                })
+            }
 
         }
     };

@@ -1,0 +1,87 @@
+
+// Styles for the carousel wrapper
+
+.carousel {
+	background-color: $pale-grey;
+
+	.container {
+		max-width: 1300px;
+		margin: auto;
+		width: auto;
+		position: relative;
+	}
+
+	.slick-slider {
+		overflow: hidden;
+	}
+
+	.slick-track {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50 / 320 * 100vw;
+		z-index: 1;
+		height: 30px;
+		width: 30px;
+		border: 0;
+		background-color: rgba($darkBG, 0.8);
+		color: #fff;
+		transition: background-color 0.3s;
+		box-shadow: 0 0 5px 2px #fff;
+
+		&.-prev {
+			left: 20px;
+		}
+		&.-next {
+			right: 20px;
+		}
+
+		@media (min-width: $bp-small-min) {
+			height: 50px;
+			width: 50px;
+		}
+
+		@media (min-width: $bp-mobile-min){
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			padding: 10px;
+
+			&.-prev {
+				left: 70px;
+			}
+			&.-next {
+				right: 70px;
+			}
+		}
+
+		&:hover {
+			background-color: $darkBG;
+		}
+
+		&:focus {
+			outline: 2px dashed $darkBG;
+		}
+	}
+
+	&__arrowIcon {
+		height: 100%;
+		width: 100%;
+		fill: currentColor;
+	}
+
+	.field-name-field-read-more {
+		a {
+			@include btn($green-primary);
+		}
+	}
+}

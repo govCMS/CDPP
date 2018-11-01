@@ -1,0 +1,15 @@
+
+// structural styles holding the carousel controls together
+
+.carouselControls {
+	display: flex;
+	margin-top: 20px;
+
+	@media (max-width: $bp-mobile-max) {
+		justify-content: center;
+	}
+
+	&__pauseBtn {
+		margin-left: 15px;
+	}
+}

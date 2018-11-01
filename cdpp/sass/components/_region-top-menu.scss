@@ -1,0 +1,48 @@
+
+#region-top-menu {
+  padding: 10px 0;
+  background-color: $lightBG;
+  //margin-bottom: 10px;
+  a {
+    color: $lightTextColour;
+    margin-left: 15px;
+    text-decoration: underline;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  #skip-link {
+    float: left;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    &:before, &:after {
+      display: none;
+    }
+  }
+
+  .external-site {
+    margin-left: auto;
+  }
+
+  .navbar-header {
+    margin-right: 20px;
+    margin-left: auto;
+	}
+
+	.google_translate {
+		margin-right: 30px;
+	}
+}

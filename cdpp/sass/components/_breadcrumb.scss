@@ -1,0 +1,31 @@
+
+// Breadcrumb
+.breadcrumb-row {
+	border: 0;
+	background: $darker-blue;
+	color: #fff;
+
+	.breadcrumb {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: transparent;
+    padding-left: 0px;
+    li {
+			&, a {
+				color: #fff;
+			}
+			&:last-child {
+				font-weight: bold;
+			}
+		}
+		li + li::before {
+			font-family: "cdpp-icons";
+			content: "\E80B ";
+			padding: 0 10px;
+		}
+	}
+
+	.col-md-12 {
+		padding-left: 8px;
+	}
+}

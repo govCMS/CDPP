@@ -1,0 +1,44 @@
+
+// Header
+#region-header {
+  background-color: #fff;
+  padding-top: 10px;
+  a {
+    img {
+      /*width: 420px;*/
+      height: auto;
+      max-height: 71px;
+      margin-bottom: 15px;
+    }
+  }
+  .pull-right {
+    padding-right: 0;
+    // Secondary Menu
+    #block-menu-block-3 {
+      margin-top: 5px;
+      float: right;
+      a {
+        color: $highlight;
+      }
+    }
+  }
+  // Stop links being above search bar not being clickable with
+  // contextual links region.
+  .block-search-api-page {
+    clear: both;
+  }
+  // With Clear both above, the margin should be reduced.
+  .search-form-widget {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,63 +1,109 @@
-
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
+
 .un-sr-only {
-  position: relative;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: initial;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: initial;
 }
 
-@mixin blurBG() {
-  $blurAmount: 10px;
-  backdrop-filter: blur($blurAmount);
-  -webkit-backdrop-filter: blur($blurAmount);
-}
+@mixin blurBG {
+    $blurAmount: 10px;
 
+    backdrop-filter: blur($blurAmount);
+    -webkit-backdrop-filter: blur($blurAmount);
+}
 
 @mixin background-gradient($colour) {
-  background-color: $colour;
-  background: linear-gradient(
-    573deg, darken($colour, 8%), lighten($colour, 8%) );
-  background-size: 400% 400%;
-  -webkit-animation: bg 30s ease infinite;
-  -moz-animation: bg 30s ease infinite;
-  animation: bg 30s ease infinite;
-  @-webkit-keyframes bg {
-    0%{background-position:90% 0%}
-    50%{background-position:11% 100%}
-    100%{background-position:90% 0%}
-  }
-  @-moz-keyframes bg {
-    0%{background-position:90% 0%}
-    50%{background-position:11% 100%}
-    100%{background-position:90% 0%}
-  }
-  @keyframes bg {
-    0%{background-position:90% 0%}
-    50%{background-position:11% 100%}
-    100%{background-position:90% 0%}
-  }
+    background-color: $colour;
+    background: linear-gradient(573deg, darken($colour, 8%), lighten($colour, 8%));
+    background-size: 400% 400%;
+    -webkit-animation: bg 30s ease infinite;
+    -moz-animation: bg 30s ease infinite;
+    animation: bg 30s ease infinite;
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+    @-webkit-keyframes bg {
+        0% {
+            background-position: 90% 0%;
+        }
+
+        50% {
+            background-position: 11% 100%;
+        }
+
+        100% {
+            background-position: 90% 0%;
+        }
+    }
+
+    @-moz-keyframes bg {
+        0% {
+            background-position: 90% 0%;
+        }
+
+        50% {
+            background-position: 11% 100%;
+        }
+
+        100% {
+            background-position: 90% 0%;
+        }
+    }
+
+    @keyframes bg {
+        0% {
+            background-position: 90% 0%;
+        }
+
+        50% {
+            background-position: 11% 100%;
+        }
+
+        100% {
+            background-position: 90% 0%;
+        }
+    }
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 @mixin color-gradient($colour) {
-  color: $colour;
-  background: -webkit-linear-gradient( 573deg, darken($colour, 8%), lighten($colour, 8%) );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    color: $colour;
+    background: -webkit-linear-gradient(573deg, darken($colour, 8%), lighten($colour, 8%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin transition($type) {
+    transition-property: $type;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);;
 }

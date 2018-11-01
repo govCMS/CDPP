@@ -1,0 +1,91 @@
+
+.field-name-field-crime-bundle  {
+	overflow: hidden;
+	margin: 4.5rem 0 0;
+
+	> .field-items {
+		$gap--vertical: 38px;
+		$gap--horizontal: 50px;
+
+		display: flex;
+		flex-wrap: wrap;
+		border: 0 solid transparent;
+		// border-width: 0 $gap--horizontal 0.1px 0;
+		margin: 0 (-$gap--horizontal) (-$gap--vertical) 0;
+
+		> .field-item {
+			border: 0 solid transparent;
+			border-width: 0 $gap--horizontal $gap--vertical 0;
+			width: 33.33%;
+			background-clip: padding-box;
+			display: flex;
+
+			@media (max-width: $bp-tablet-max) {
+				width: 50%;
+			}
+
+			@media (max-width: 500px) {
+				width: 100%;
+			}
+
+			> * {
+				display: flex;
+				flex-grow: 1;
+			}
+
+			> * > a {
+				border: 1px solid $green-primary;
+				transition: 0.3s;
+				color: $dim-blue;
+				padding: 17px 15px;
+				display: block;
+				width: 100%;
+
+				&:hover, &:focus {
+					background: $green-primary;
+					color: #fff;
+					text-decoration: none;
+
+					&, * {
+						color: #fff !important;
+					}
+
+					svg {
+						&, * {
+							fill: currentColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.entity-paragraphs-item {
+		font-size: 1.6rem;
+	}
+
+	.bundle-header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	.field-name-field-icon {
+		margin-right: 20px;
+		width: 50px;
+		height: 50px;
+		flex-shrink: 0;
+
+		svg {
+			width: 100%;
+		}
+	}
+
+	.field-name-field-title {
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: #000;
+		transition: 0.3s;
+		line-height: 1.1;
+	}
+}

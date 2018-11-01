@@ -134,6 +134,88 @@ function cdpp_preprocess_node(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_block().
+ */
+function cdpp_preprocess_block(&$variables) {
+  // fix the undefined title variable warning.
+  if(!isset($variables['title'])) {
+    $variables['title'] = '';
+  }
+}
+
+/**
+ * Implements hook_preprocess_region().
+ */
+function cdpp_preprocess_region(&$variables) {
+   if(isset($variables['elements'])) {
+    if(isset($variables['elements']['#region'])) {
+      if($variables['elements']['#region'] == 'sidebar_first') {
+        if(drupal_get_path_alias() == "crimes-we-prosecute" || drupal_get_path_alias() == "case-reports") {
+          $variables['classes_array'][] = '-mobile-exclude';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_entity().
+ */
+function cdpp_preprocess_entity(&$variables) {
+  $paragraph_entity = $variables['elements']['#entity'];
+  if (isset($variables['elements']['#entity']->bundle)) {
+    $function = __FUNCTION__ . '__' . $variables['elements']['#entity']->bundle;
+    if (function_exists($function)) {
+      $function($variables,$paragraph_entity);
+    }
+  }
+
+  // Use field_svg_icon to handle svg image.
+  if(isset($variables['elements']['#entity']->bundle) && $paragraph_entity) {
+    $field_icon = field_get_items('paragraphs_item',$paragraph_entity,'field_svg_icon');
+    if ($field_icon) {
+      $icon_markup = file_get_contents($field_icon[0]['uri']);
+      $variables['icon_image'] = $icon_markup;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_entity().
+ */
+function cdpp_preprocess_entity__homepage_information_bundle_top(&$variables,&$paragraph_entity) {
+  $field_link_to = isset($paragraph_entity) ? field_get_items('paragraphs_item',$paragraph_entity,'field_link_to') : null;
+  if ($field_link_to) {
+    $variables['link_to'] = $field_link_to[0]['url'];
+    $variables['link_to_title'] = $field_link_to[0]['title'];
+  }
+}
+/**
+ * Implements hook_preprocess_entity().
+ */
+function cdpp_preprocess_entity__standard_page_crime_bundle(&$variables,&$paragraph_entity) {
+  $field_link_to = isset($paragraph_entity) ? field_get_items('paragraphs_item',$paragraph_entity,'field_link_to') : null;
+  if ($field_link_to) {
+    $variables['link_to'] = $field_link_to[0]['url'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_entity().
+ */
+function cdpp_preprocess_entity__standard_page_case_bundle(&$variables,&$paragraph_entity) {
+  $field_category = isset($paragraph_entity) ? field_get_items('paragraphs_item',$paragraph_entity,'field_category') : null;
+  if ($field_category && ($view = views_get_view('case_reports_views')) && $view->set_display('page_1')) {
+    $field_category_tid = $field_category[0]['tid'];
+    $view_url = $view->get_url();
+    $variables['link_to'] = url($view_url, array('query' => array('field_category_tid' => $field_category_tid)));
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
 function cdpp_preprocess_field(&$variables) {
   if($variables['element']['#field_name'] == 'field_bean_image'){
     foreach($variables['items'] as $key => $item){
@@ -142,7 +224,16 @@ function cdpp_preprocess_field(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_page().
+ */
 function cdpp_preprocess_page(&$variables) {
+  // Get SVG Sprites.
+  $variables['svg_sprites'] = '';
+  $svg_sprite_location = DRUPAL_ROOT . '/' . path_to_theme() . '/images/svg-sprite.svg';
+  if (file_exists($svg_sprite_location)) {
+    $variables['svg_sprites'] = file_get_contents($svg_sprite_location);
+  }
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = ' class="col-sm-6"';
@@ -198,10 +289,31 @@ function cdpp_preprocess_page(&$variables) {
   else {
     $variables['navbar_classes_array'][] = 'navbar-default';
   }
+
+  if (drupal_is_front_page()) {
+    if (isset($variables['page']['content']['bean_homepage-exhibition-block-right']) &&
+        isset($variables['page']['content']['bean_homepage-exhibition-block-left'])) {
+        if($variables['page']['content']['bean_homepage-exhibition-block-right']['#weight'] <
+            $variables['page']['content']['bean_homepage-exhibition-block-left']['#weight']) {
+          $variables['page']['content']['bean_homepage-exhibition-block-right']['#prefix'] = '<div class="cdpp-homepage-exhibition-block-wrapper">';
+          $variables['page']['content']['bean_homepage-exhibition-block-left']['#suffix'] = '</div>';
+        }
+    }
+
+    if(isset($variables['page']['content']['bean_homepage-information-block-base']) &&
+      isset($variables['page']['content']['bean_homepage-subscription-block'])) {
+        if ($variables['page']['content']['bean_homepage-information-block-base']['#weight'] <
+            $variables['page']['content']['bean_homepage-subscription-block']['#weight']) {
+          $variables['page']['content']['bean_homepage-information-block-base']['#prefix'] = '<div class="cdpp-homepage-base"><div class="cdpp-homepage-base-inner-wrapper">';
+          $variables['page']['content']['bean_homepage-subscription-block']['#suffix'] = '</div></div>';
+        }
+    }
+  }
 }
 
 function _cdpp_menu_tree_inline($variables) {
-  return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
+  //$variables['tree'] = 's';//s_string($variables['tree']) ? $variables['tree'] : 'why an i an array?';
+return '<ul class="list-inline">' . $variables['tree'] . '</ul>';
 }
 
 function _cdpp_menu_tree_no_class($variables) {

@@ -226,15 +226,26 @@
       @media screen and (max-width: 1000px) {
         padding:30px;
       }
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
       span {
+        float:left;
         display: inline-block;
         padding: 30px;
         &:first-child{
-          background: #ffcc26;
+          background: $yellow;
           color:black;
           margin-right: 30px;
+
+          .-theme\:orange & {
+            background: $orange;
+          }
+
           @media screen and (max-width: 1000px) {
-            background:transparent;
+            background:transparent !important;
             color:white;
             padding:0px;
             font-size: 20px;
@@ -242,7 +253,8 @@
           }
         }
         +span {
-          padding: 30px 0;
+          max-width: 70%;
+          padding: 30px 0 0;
           @media screen and (max-width: 1000px) {
             padding:0px;
           }
@@ -294,7 +306,11 @@
       }
       .left {
         min-height: 400px;
-        background: #ffcc26;
+        background: $yellow;
+
+        .-theme\:orange & {
+          background: $orange;
+        }
       }
       .right {
         color: #efefef;
@@ -398,7 +414,7 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
-    background: #ffcc26;
+    background: $yellow;
     padding: 10px;
     border-radius: 100%;
     width: 60px;
@@ -409,6 +425,16 @@
     cursor: pointer;
     transition: all 0.3s;
     opacity: 0;
+    border: 1px solid rgba(#000, 0.2);
+
+    &.-theme\:orange {
+      background: $orange;
+    }
+
+    &:hover {
+      background: #fff;
+    }
+
     &.active {
       opacity: 1;
     }
@@ -444,7 +470,11 @@
       width: 100%;
       position: absolute;
       bottom: -9px;
-      border-top: 5px solid #ffcc26;
+      border-top: 5px solid $yellow;
+
+      .-theme\:orange & {
+        border-top-color: $orange;
+      }
     }
   }
 }

@@ -73,26 +73,16 @@
  * @ingroup themeable
  */
 ?>
+
+<div class="svg-sprite">
+  <?php print $svg_sprites; ?>
+</div>
+
 <div id="region-top-menu">
   <div id="skip-link">
     <a href="#main-content" tabindex="1" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
-
   <div class="container">
-
-    <?php if($site_name): ?>
-    <div id="full-site-name" class="pull-left">
-      <a href="/about-us"><?php print $site_name; ?></a>
-    </div>
-    <?php endif; ?>
-
-    <div class="navbar-header pull-right">
-      <?php if (!empty($page['top_menu'])): ?>
-        <nav role="navigation">
-          <?php print render($page['top_menu']); ?>
-        </nav>
-      <?php endif; ?>
-    </div>
 
     <div class="google_translate">
       <div id="google_translate_element">
@@ -104,6 +94,16 @@
       </script>
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
       </script>
+    </div>
+
+    <div class="govcms-text-resize">
+      <?php if (!empty($page['top_menu']['govcms_text_resize_text_resize'])): ?>
+          <?php print render($page['top_menu']['govcms_text_resize_text_resize']); ?>
+      <?php endif; ?>
+    </div>
+
+    <div class="external-site partner-agency">
+      <a href="https://agencies.cdpp.gov.au/user">Partner Agency Login</a>
     </div>
 
   </div>
@@ -132,7 +132,7 @@
 
 <?php if (!empty($page['navigation'])): ?>
   <nav id="navbar" class="navbar navbar-inverse" role="navigation">
-    <div id="region-navigation" role="banner" class="<?php print $navbar_classes; ?>">
+    <div id="region-navigation" role="banner" class="<?php print isset($navbar_classes) ? $navbar_classes : ""; ?>">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
@@ -169,7 +169,13 @@
       </div>
     </div>
   <?php endif; ?>
+
+  <!-- only add container class when it is not front page-->
+<?php if($is_front): ?>
+<div class="main-container">
+<?php else: ?>
 <div class="main-container container">
+<?php endif; ?>
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>

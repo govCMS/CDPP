@@ -1,0 +1,34 @@
+
+.cdpp-homepage-base {
+	padding-right: 30px;
+
+	.cdpp-homepage-base-inner-wrapper {
+		padding-left: 30px;
+		@include restrictor;
+
+		@media (min-width: $bp-mobile-min) {
+			padding-top: 40px + 25px;
+			padding-left: 40px;
+			display: flex;
+		}
+	}
+
+	#block-bean-homepage-information-block-base {
+		border-left: 60px solid transparent;
+		margin-left: -60px;
+
+		@media (min-width: $bp-mobile-min) {
+			width: 66.66%;
+		}
+	}
+
+	#block-bean-homepage-subscription-block {
+		background-clip: padding-box;
+		flex-grow: 1;
+
+		@media (min-width: $bp-mobile-min) {
+			border-left: 60px solid transparent;
+			width: 33.33%;
+		}
+	}
+}

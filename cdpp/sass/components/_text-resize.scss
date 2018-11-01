@@ -1,0 +1,57 @@
+
+// Text resizer
+
+%text-resize--active {
+  background: $darkBG;
+  color: #fff;
+}
+
+.text-resize {
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  border: 1px solid $darkBG;
+  margin-bottom: 0;
+  margin-right: 20px;
+
+  li {
+    background: transparent;
+    padding: 3px 7px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+		justify-content: center;
+		line-height: 1;
+
+    &:hover, &:focus {
+      background-color: $lightBG;
+    }
+  }
+
+  .icon {
+    font-weight: bold;
+  }
+
+  .font-small {
+    .icon {
+      font-size: 0.8em;
+    }
+    html:not(.large-fonts) & {
+      @extend %text-resize--active;
+    }
+  }
+
+  .font-large {
+    .icon {
+      font-size: 1.2em;
+    }
+    html.large-fonts & {
+      @extend %text-resize--active;
+    }
+  }
+}
+
+html.large-fonts {
+  font-size: 125%;
+  body { font-size: 1em; }
+}
