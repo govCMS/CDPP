@@ -308,6 +308,10 @@ function cdpp_preprocess_page(&$variables) {
           $variables['page']['content']['bean_homepage-subscription-block']['#suffix'] = '</div></div>';
         }
     }
+    elseif(isset($variables['page']['content']['bean_homepage-information-block-base'])) {
+      $variables['page']['content']['bean_homepage-information-block-base']['#prefix'] = '<div class="cdpp-homepage-base"><div class="cdpp-homepage-base-inner-wrapper">';
+      $variables['page']['content']['bean_homepage-information-block-base']['#suffix'] = '</div></div>';
+    }
   }
 }
 
